@@ -3,7 +3,7 @@ Bienvenidos al repositorio del Grupo 4 del curso de Introducción a Señales Bio
 
 Somos estudiantes del 7mo ciclo de la carrera de Ingeniería Biomédica, que busca proponer un proyecto para el curso con el fin de comprender la base fundamental de distintas señales biomédicas, desde su análisis y procesamiento hasta su aplicación en un contexto real.
 
-![Señal cerebral]([[[https://www.example.com/cat.jpg](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbuBMwCDsVsAleXOzzyMK9-O-LyJu6Bvo-A&usqp=CAU)](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnXISXbsW2w9Qxeh4W9cA-QD-35FKSzOckZA&usqp=CAU)](https://www.google.com/imgres?imgurl=https%3A%2F%2Fhospital.vallhebron.com%2Fsites%2Fhospital%2Ffiles%2Fstyles%2Fcrop_16_9_large%2Fpublic%2Fbaixa_1013219206_0.jpg%3Fitok%3DiGY8pZTt&tbnid=hXPu57rutT5lRM&vet=12ahUKEwittc2jvomFAxV7FLkGHeczDb8QMygregUIARDWAQ..i&imgrefurl=https%3A%2F%2Fhospital.vallhebron.com%2Fes%2Fasistencia%2Fpruebas-diagnosticas%2Felectroencefalograma&docid=kZFay6V1mfv21M&w=552&h=368&q=elecetroencefalograma&ved=2ahUKEwittc2jvomFAxV7FLkGHeczDb8QMygregUIARDWAQ))
+![Señal cerebral](https://hospital.vallhebron.com/sites/hospital/files/styles/crop_16_9_large/public/baixa_1013219206_0.jpg?itok=iGY8pZTt)
 
 # Tabla de contenidos
 - ¿Qué es una bioseñal?
