@@ -3,6 +3,8 @@ Bienvenidos al repositorio del Grupo 4 del curso de Introducción a Señales Bio
 
 Somos estudiantes del 7mo ciclo de la carrera de Ingeniería Biomédica, que busca proponer un proyecto para el curso con el fin de comprender la base fundamental de distintas señales biomédicas, desde su análisis y procesamiento hasta su aplicación en un contexto real.
 
+![Señal cerebral]([[https://www.example.com/cat.jpg](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbuBMwCDsVsAleXOzzyMK9-O-LyJu6Bvo-A&usqp=CAU)](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnXISXbsW2w9Qxeh4W9cA-QD-35FKSzOckZA&usqp=CAU))
+
 # Tabla de contenidos
 - ¿Qué es una bioseñal?
 - Materiales
@@ -30,6 +32,8 @@ La segunda unidad se adentra en el procesamiento y análisis de estas señales, 
 
 ## UNIDAD 3: Introducción al análisis de datos estructurados e inteligencia artificial
 La tercera unidad introduce a los estudiantes en el mundo del análisis de datos estructurados y la inteligencia artificial aplicada a la medicina. Se enfoca en la creación de datasets de señales biomédicas y en el desarrollo de modelos de machine learning utilizando herramientas como TinyML y Edgeimpulse.
+
+![Señal ECG]([https://www.example.com/cat.jpg](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbuBMwCDsVsAleXOzzyMK9-O-LyJu6Bvo-A&usqp=CAU))
 
 # Participantes
  - De Moura Mendoza, John Marshello (Colaborador) | john.de.moura@upch.pe
