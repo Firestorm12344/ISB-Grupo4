@@ -1,6 +1,6 @@
 # ISB-Grupo4
 Proyecto de procesamiento de señales 
-#Tabla de contenidos
+# Tabla de contenidos
 - ¿Qué es una bioseñal?
 - Materiales
 - Metodología
