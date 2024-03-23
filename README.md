@@ -21,6 +21,15 @@ Una bioseñal es un tipo de señal que puede ser medida y controlada continuamen
 
 [2] J. F. Guerrero Martínez, “Tema 2 Bioseñales”. Disponible en: http://ocw.uv.es/ingenieria-y-arquitectura/1-5/ib_material/IB_T2_OCW.pdf. [Consultado: 23-mar-2024].
 
+# Contenido del curso
+## UNIDAD 1: Introducción y adquisición de las señales EMG, ECG YEEG
+En la primera unidad, se establece una sólida base al presentar las señales más utilizadas en el ámbito biomédico, desde el electromiograma (EMG) hasta el electrocardiograma (ECG) y el electroencefalograma (EEG). Además, se exploran conceptos cruciales como la adquisición de señales y el uso de herramientas como Git y GitHub para el control de versiones y la colaboración en proyectos.
+
+## UNIDAD 2: Procesamiento y análisis de señales ECG, EMG Y EEG
+La segunda unidad se adentra en el procesamiento y análisis de estas señales, destacando la importancia de los filtros digitales y proporcionando técnicas específicas para el tratamiento de señales EMG, ECG y EEG. Estos incluyen desde la detección de actividad muscular hasta el análisis de ritmos cerebrales y la variabilidad de la frecuencia cardíaca.
+
+## UNIDAD 3: Introducción al análisis de datos estructurados e inteligencia artificial
+La tercera unidad introduce a los estudiantes en el mundo del análisis de datos estructurados y la inteligencia artificial aplicada a la medicina. Se enfoca en la creación de datasets de señales biomédicas y en el desarrollo de modelos de machine learning utilizando herramientas como TinyML y Edgeimpulse.
 
 # Participantes
  - De Moura Mendoza, John Marshello (Colaborador) | john.de.moura@upch.pe
