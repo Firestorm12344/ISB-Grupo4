@@ -25,7 +25,7 @@ Debido a ello, las arritmias en pacientes postoperatorios no son detectadas a ti
 
 A partir de lo anteriormente expuesto, se propone la siguiente problemática: En las áreas rurales, hay una marcada deficiencia en el monitoreo adecuado de arritmias cardíacas en pacientes postoperatorios, lo cual no solo aumenta el riesgo de pasar por alto otras posibles complicaciones cardíacas graves, sino que también retrasa su detección, lo cual conlleva a una atención médica menos efectiva y a un mayor riesgo para la salud del paciente.
 
-
+## Referencias 
 [1] “Arritmia cardíaca: qué es, síntomas, tipos y tratamiento. CUN”, https://www.cun.es. [En línea]. Disponible en: https://www.cun.es/enfermedades-tratamientos/enfermedades/arritmias-cardiacas. [Consultado: 03-abr-2024].
 
 [2] “What is an arrhythmia?”, NHLBI, NIH. [En línea]. Disponible en: https://www.nhlbi.nih.gov/health/arrhythmias. [Consultado: 03-abr-2024].
