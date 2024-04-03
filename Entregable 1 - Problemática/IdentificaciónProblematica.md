@@ -15,7 +15,7 @@ En general, las arritmias que se presentan luego de 72 horas tras la cirugía su
 
 No obstante, el cuidado de pacientes postoperatorios en nuestro país es deficiente. De acuerdo a investigaciones en hospitales regionales [10], solo se cuenta con 5 enfermeras o licenciadas para el cuidado de 18 pacientes postoperatorios. El personal médico brinda una atención y cuidado limitado debido a falta de tiempo y sobrecarga laboral, lo que revela la deficiencia en el monitoreo constante de los pacientes [11]. Además, debido al carácter transitorio de las arritmias postoperatorias, estas no pueden ser monitoreadas en estado de reposo en un tiempo corto de grabación dentro del mismo centro médico, pero la mayoria centros de salud de zonas rurales no cuentan con equipos tradicionales de monitoreo como el dispositivo Holter [12].
 
-Por parte de los pacientes de zonas rurales, muchos de ellos no pueden permanecer en los centros de salud debido a los costos de cuidado y tampoco reciben un seguimiento adecuado, debido a la lejanía del centro médico [V].
+Por parte de los pacientes de zonas rurales, muchos de ellos no pueden permanecer en los centros de salud debido a los costos de cuidado y tampoco reciben un seguimiento adecuado, debido a la lejanía del centro médico [12].
 
 
 
@@ -36,7 +36,7 @@ A partir de lo anteriormente expuesto, se propone la siguiente problemática: En
 
 [5]Z. F. Mohd Apandi, R. Ikeura, S. Hayakawa, y S. Tsutsumi, “An analysis of the effects of noisy electrocardiogram signal on heartbeat detection performance”, Bioengineering (Basel), vol. 7, núm. 2, p. 53, 2020.
 
-[6]  J. Doe, "Calculation of R-wave Detection Threshold in Cardiac Complexes," Journal of Cardiology, vol. 15, no. 3, pp. 112-125, April 2024.}
+[6]  J. Doe, "Calculation of R-wave Detection Threshold in Cardiac Complexes," Journal of Cardiology, vol. 15, no. 3, pp. 112-125, April 2024.
 
 [7] G. O. González Kadashinskaia, L. M. Bello Carrasco, y D. A. Anchundia Alvia, “Cirugía cardíaca, complicaciones inmediatas post operatorias”, Universidad y Sociedad, vol. 12, núm. 2, pp. 293–300, 2020. 
 
