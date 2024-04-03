@@ -10,7 +10,7 @@ Imagen extraída de: https://www.prensa.com/impresa/vivir/Salud-mental-genetica-
 # Tabla de contenidos
 - [¿Qué es una bioseñal?](#qué-es-una-bioseñal)
 - Materiales
-- Metodología
+- [Metodología](#metodología)
 - Temática del proyecto
 - [Contenido del curso](#Contenido-del-curso)
 - [Participantes](#Participantes)
@@ -24,6 +24,18 @@ Una bioseñal es un tipo de señal que puede ser medida y controlada continuamen
 [1] “Procesamiento y Clasificación de Bioseñales con Inteligencia Computacional”, Smia.mx. [En línea]. Disponible en: https://smia.mx/comia/2017/index.php?Itemid=127&id=12&option=com_content&view=article. [Consultado: 23-mar-2024].
 
 [2] J. F. Guerrero Martínez, “Tema 2 Bioseñales”. Disponible en: http://ocw.uv.es/ingenieria-y-arquitectura/1-5/ib_material/IB_T2_OCW.pdf. [Consultado: 23-mar-2024].
+
+# Metodología
+## Distribución de carpetas
+
+- Entregable 1 - Problemática
+
+    1. Identificación de la problemática: Introducción, Contexto, Definición de la Problemática
+    2. Estado del Arte: Artículos científicos para la detección de arritmias por señales de ECG
+    3. Propuesta de Solución: Características Generales, Modo de Uso, Propósito, Características Específicas
+
+- Propuesta de Solución: Otros Entregables
+
 
 # Contenido del curso
 ## UNIDAD 1: Introducción y adquisición de las señales EMG, ECG YEEG
