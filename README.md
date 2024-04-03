@@ -6,13 +6,13 @@ Somos estudiantes del 7mo ciclo de la carrera de Ingeniería Biomédica, que bus
 ![Señal cerebral](https://hospital.vallhebron.com/sites/hospital/files/styles/crop_16_9_large/public/baixa_1013219206_0.jpg?itok=iGY8pZTt)
 
 # Tabla de contenidos
-- [¿Qué es una bioseñal?] (#¿Qué es una bioseñal??)
+- [¿Qué es una bioseñal?](#¿Qué_es_una_bioseñal?)
 - Materiales
 - Metodología
 - Temática del proyecto
-- [Contenido del curso] (#Contenido del curso)
-- [Participantes] (#Participantes)
-- [Docentes del curso] (#Docentes del curso)
+- [Contenido del curso](#Contenido_del_curso)
+- [Participantes](#Participantes)
+- [Docentes del curso](#Docentes_del_curso)
 
 # 
 # ¿Qué es una bioseñal? 
