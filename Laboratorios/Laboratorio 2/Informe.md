@@ -12,6 +12,10 @@
 | Periodo | 1 s |
 | Offset | 0 V |
 
+![alt text](image-2.png)
+![alt text](image-3.png)
+
+
 ### Señal 2
 | Característica | Valor |
 |--------------|--------------|
@@ -21,6 +25,10 @@
 | Frecuencia | 1 kHz |
 | Periodo | 1 ms |
 | Offset | 0 V |
+
+![alt text](image-4.png)
+![alt text](image-5.png)
+
 
 ### Señal 3
 | Característica | Valor |
@@ -32,6 +40,8 @@
 | Periodo | 1 ms |
 | Offset | 250 mV |
 
+![alt text](image-6.png)
+![alt text](image-7.png)
 
 
 ## Uso del Arduino Nano 33 IoT
