@@ -1,5 +1,11 @@
 # Laboratorio 2 - Adquisición de Señales y graficación en Arduino
 
+Alumnos que participaron en el laboratorio:
+- De Moura Mendoza, John Marshello
+- Espinoza Quispe, Ana Lucia
+- Flores Pérez, María Alejandra
+- Zavaleta Cavero, Juan Arturo
+
 ## Generación de señales y visualización en osciloscopio
 
 ### Señal 1
