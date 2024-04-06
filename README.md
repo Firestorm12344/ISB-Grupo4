@@ -42,7 +42,7 @@ Una bioseñal es un tipo de señal que puede ser medida y controlada continuamen
 
 # Metodología
 ## Distribución de carpetas
-<div style="text-align: justify"> 
+
 - Entregable 1 - Problemática
 
     1. Identificación de la problemática: Introducción, Contexto, Definición de la Problemática
@@ -67,7 +67,6 @@ La segunda unidad se adentra en el procesamiento y análisis de estas señales, 
 ## UNIDAD 3: Introducción al análisis de datos estructurados e inteligencia artificial
 
 La tercera unidad introduce a los estudiantes en el mundo del análisis de datos estructurados y la inteligencia artificial aplicada a la medicina. Se enfoca en la creación de datasets de señales biomédicas y en el desarrollo de modelos de machine learning utilizando herramientas como TinyML y Edgeimpulse.
-</div>
 
 ![Señal ECG](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbuBMwCDsVsAleXOzzyMK9-O-LyJu6Bvo-A&s)
 
