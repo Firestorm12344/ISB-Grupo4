@@ -1,17 +1,22 @@
 # ISB-Grupo4
+
+<div style="text-align: justify"> 
 Bienvenidos al repositorio del Grupo 4 del curso de Introducción a Señales Biomédicas ...
+
 
 Somos estudiantes del 7mo ciclo de la carrera de Ingeniería Biomédica, que busca proponer un proyecto para el curso con el fin de comprender la base fundamental de distintas señales biomédicas, desde su análisis y procesamiento hasta su aplicación en un contexto real.
 
 ![Señal cerebral](https://corprensa-la-prensa-prod.cdn.arcpublishing.com/resizer/C7WvY7BSXYcBWZqIoymt3WlzWzc=/fit-in/1200x1200/smart/arc-anglerfish-arc2-prod-corprensa.s3.amazonaws.com/public/2AI6JUCFTREWLDTC7LVWSH45DQ.jpg)
 
-Imagen extraída de: https://www.prensa.com/impresa/vivir/Salud-mental-genetica-factores-ambientales_0_4744775508.html
+
+
+Figura 1. Señal cerebral. Extraído de: https://www.prensa.com/impresa/vivir/Salud-mental-genetica-factores-ambientales_0_4744775508.html
 
 # Tabla de contenidos
 - [¿Qué es una bioseñal?](#qué-es-una-bioseñal)
-- Materiales
+- [Materiales](#materiales)
 - [Metodología](#metodología)
-- Temática del proyecto
+- [Temática del proyecto](#temática-del-proyecto)
 - [Contenido del curso](#Contenido-del-curso)
 - [Participantes](#Participantes)
 - [Docentes del curso](#docentes-del-curso)
@@ -25,6 +30,10 @@ Una bioseñal es un tipo de señal que puede ser medida y controlada continuamen
 
 [2] J. F. Guerrero Martínez, “Tema 2 Bioseñales”. Disponible en: http://ocw.uv.es/ingenieria-y-arquitectura/1-5/ib_material/IB_T2_OCW.pdf. [Consultado: 23-mar-2024].
 
+# Materiales
+
+
+
 # Metodología
 ## Distribución de carpetas
 
@@ -36,6 +45,10 @@ Una bioseñal es un tipo de señal que puede ser medida y controlada continuamen
 
 - Propuesta de Solución: Otros Entregables
 
+- Laboratorios: Experiencias de laboratorio e Informes
+    1. Laboratorio 2
+    2. Laboratorio X 
+
 
 # Contenido del curso
 ## UNIDAD 1: Introducción y adquisición de las señales EMG, ECG YEEG
@@ -45,17 +58,37 @@ En la primera unidad, se establece una sólida base al presentar las señales m�
 La segunda unidad se adentra en el procesamiento y análisis de estas señales, destacando la importancia de los filtros digitales y proporcionando técnicas específicas para el tratamiento de señales EMG, ECG y EEG. Estos incluyen desde la detección de actividad muscular hasta el análisis de ritmos cerebrales y la variabilidad de la frecuencia cardíaca.
 
 ## UNIDAD 3: Introducción al análisis de datos estructurados e inteligencia artificial
+
 La tercera unidad introduce a los estudiantes en el mundo del análisis de datos estructurados y la inteligencia artificial aplicada a la medicina. Se enfoca en la creación de datasets de señales biomédicas y en el desarrollo de modelos de machine learning utilizando herramientas como TinyML y Edgeimpulse.
 
 ![Señal ECG](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbuBMwCDsVsAleXOzzyMK9-O-LyJu6Bvo-A&s)
 
-Imagen extraída de: https://www.bmhvt.org/practice/cardiology/electrocardiogram/
+Figure 2. Señal de ECG. Extraída de: https://www.bmhvt.org/practice/cardiology/electrocardiogram/
+
+# Temática del Proyecto
 
 # Participantes
  - De Moura Mendoza, John Marshello (Colaborador) | john.de.moura@upch.pe
+
+    About me: 
+
+
  - Espinoza Quispe, Ana Lucía (Colaborador) | ana.espinoza.q@upch.pe
+
+    About me:
+
+
+
  - Flores Pérez, María Alejandra (Colaborador) |  maria.flores.perez@upch.pe
+
+    About me:
+
+
+
+
  - Zavaleta Cavero, Juan Arturo (Colaborador) | juan.zavaleta@upch.pe
+
+    About me: Estudiante de Ingeniería Biomédica de 7mo ciclo, interesado en la áreas de Señales e Imágenes Médicas, Deep Learning y Biomecánica. 
 
 # Docentes del curso
 - De la Cruz Rodriguez, Umbert Lewis
