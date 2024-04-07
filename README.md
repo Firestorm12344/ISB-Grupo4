@@ -73,7 +73,12 @@ La tercera unidad introduce a los estudiantes en el mundo del análisis de datos
 Figure 2. Señal de ECG. Extraída de: https://www.bmhvt.org/practice/cardiology/electrocardiogram/
 
 <div style="text-align: justify">
+
 # Temática del Proyecto
+
+El proyecto consistirá en el diseño de un dispositivo __wearable__ capaz de adquirir señales ECG por medio de electrdos ...
+
+
 
 # Participantes
  - De Moura Mendoza, John Marshello (Colaborador) | john.de.moura@upch.pe
