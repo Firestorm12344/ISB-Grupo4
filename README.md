@@ -101,7 +101,7 @@ El proyecto consistirá en el diseño de un dispositivo __wearable__ capaz de ad
 
  - Zavaleta Cavero, Juan Arturo (Colaborador) | juan.zavaleta@upch.pe
 
-    About me: Estudiante de Ingeniería Biomédica de 7mo ciclo, interesado en las áreas de Señales e Imágenes Médicas, Deep Learning y  Biomecánica y Rehabilitación. 
+    About me: Estudiante de Ingeniería Biomédica de 7mo ciclo, interesado en el Deep Learning aplicado a las Señales e Imágenes Médicas, y desarrollo de sistemas biomecánicos automatizados para miembros anatómicos y fisiológicos. Asimismo, me consideron entusiasta de IoT y sistemas embebidos para telemonitoreo y telecomunicación entre dispositivos. 
 
 # Docentes del curso
 - De la Cruz Rodriguez, Umbert Lewis
