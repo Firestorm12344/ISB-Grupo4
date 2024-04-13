@@ -76,7 +76,7 @@ Figura 5. Posicionamiento de los electrodos para la prueba 2
 | ![alt text](######.png)    | ![alt text](######.png)    |
 | Figura 6    | Figura 7   |
 
-| Brazo en reposo | Brazo en estado de tensión |
+| Dedo en reposo | Dedo en estado de tensión |
 |--------------|--------------|
 | VIDEO    | VIDEO    |
 
@@ -93,7 +93,7 @@ Figura 8. Posicionamiento de los electrodos para la prueba 3
 | ![alt text](######.png)    | ![alt text](######.png)    |
 | Figura 9    | Figura 10   |
 
-| Brazo en reposo | Brazo en estado de tensión |
+| Pierna en reposo | Pierna en estado de tensión |
 |--------------|--------------|
 | VIDEO    | VIDEO    |
 
