@@ -59,9 +59,43 @@ Figura 3. Brazo en estado de reposo
 
 Figura 4. Brazo en estado de tensión (máximo esfuerzo)
 
+| Brazo en reposo | Brazo en estado de tensión |
+|--------------|--------------|
+| VIDEO    | VIDEO    |
+
 ### Prueba 2
 
+En la segunda prueba se obtuvo el EMG del pulgar (Abductor pollicis brevis). Los electrodos fueron colocados como se observa en la figura 5, con una separación aproximada de 2 cm entre electrodo positivo y negativo. Se tomó registro de la señal en estado de reposo o silencio eléctrico (figura 6) y realizando la contracción muscular (figura 7).
+
+Figura 5. Posicionamiento de los electrodos para la prueba 2
+
+![alt text](######.png)
+
+| Estado de reposo| Contracción muscular |
+|--------------|--------------|
+| ![alt text](######.png)    | ![alt text](######.png)    |
+| Figura 6    | Figura 7   |
+
+| Brazo en reposo | Brazo en estado de tensión |
+|--------------|--------------|
+| VIDEO    | VIDEO    |
+
 ### Prueba 3
+
+En la segunda prueba se obtuvo el EMG del sóleo. Los electrodos fueron colocados como se observa en la figura 8. Se tomó registro de la señal en estado de reposo o silencio eléctrico (figura 9) y realizando la contracción muscular (figura 10).
+
+Figura 8. Posicionamiento de los electrodos para la prueba 3
+
+![alt text](######.png)
+
+| Estado de reposo| Contracción muscular |
+|--------------|--------------|
+| ![alt text](######.png)    | ![alt text](######.png)    |
+| Figura 9    | Figura 10   |
+
+| Brazo en reposo | Brazo en estado de tensión |
+|--------------|--------------|
+| VIDEO    | VIDEO    |
 
 ##  Ploteo de Python
 
