@@ -124,7 +124,9 @@ En la segunda prueba se obtuvo el EMG del sóleo. Los electrodos fueron colocado
 
 ### Explicación
 
-En las señales mostradas sobre los músculos en reposo, se pueden observar pequeñas perturbaciones (picos de baja amplitud). Estas son causadas por potenciales eléctricos activados involuntariamente, mayormente debido a precencia de fluctuaciones leves de concentraciones de electrolitos, actividad neurogénica residual (pequeñas concentraciones de neurotransmisores en el interticio de la unida motora) y alteración de la permeabilidad de la membrana, mayormente por hormonas como la adrenalida. Sin embargo, la presencia de espasmos leves tambien genera alteraciones en la actividad muscular
+Respecto a las mediciones tomadas sobre los músculos en estado de reposo se puede observar silencio electrónico lo que significa que el sensor no detecta actividad muscular significativa. A pesar de que el silencio electrónico es diferente respecto a sensores de electromiografía con agujas intramusculares debido a que utilizamos electrodos de superficie esto se debe a que los últimos son menos precisos. Es por esto que la señal se observa con ruido ya que es más susceptible a interferencias. 
+
+Asímismo, en dichas señales las pequeñas perturbaciones (picos de baja amplitud) también pueden causadas por potenciales eléctricos activados involuntariamente, mayormente debido a precencia de fluctuaciones leves de concentraciones de electrolitos, actividad neurogénica residual (pequeñas concentraciones de neurotransmisores en el interticio de la unida motora) y alteración de la permeabilidad de la membrana, mayormente por hormonas como la adrenalida. Sin embargo, la presencia de espasmos leves tambien genera alteraciones en la actividad muscular
 
 Por otro lado, cuando el músculo es tensionado, el flujo de electrolitos no es precisamente constante y uniforme; asi como la secreción de neurotransmisores por parte de las células nerviosas de las unidades motoras. Por ello, es que la actividad electrica del músculo no es constante, pero si es alta. 
 
