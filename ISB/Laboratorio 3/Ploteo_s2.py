@@ -22,21 +22,8 @@ plt.plot(time2, Signal2)
 # Añadir etiquetas y título
 plt.xlabel('Time')
 plt.ylabel('Signal')
-plt.title('Electromiogram Signal taken from biceps activity')
+plt.title('Electromiogram Signal taken from "Pollicis brevis abductor" activity')
 # Mostrar leyenda
 plt.legend()
 plt.savefig('scatter_plot2.png')
-plt.show()
-
-import numpy as np
-import cmath as c
-N = 999
-w = [i*2*3.1416/999 for i in range(0, N+1)]
-w = np.array(w)
-X = np.zeros(N+1, dtype=complex)
-for k in range(0, 1000):
-    arg = [-1j*i*w[k] for i in n]
-    exp_seq = np.exp(arg)
-    X[k] = sum(Signal2*exp_seq)
-plt.plot(w, X)
 plt.show()
