@@ -51,6 +51,11 @@ En la primera prueba se obtuvo el EMG del bíceps. Los electrodos fueron colocad
 
 Figura 2. Posicionamiento de los electrodos para la prueba 1
 
+| Brazo en estado de reposo| Brazo en estado de tensión |
+|--------------|--------------|
+| ![alt text](image-2.png)   | ![alt text](image-3.png)   |
+| Figura 3    | Figura 4   |
+
 | ![alt text](image-2.png)
 
 Figura 3. Brazo en estado de reposo
