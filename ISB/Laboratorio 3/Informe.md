@@ -33,9 +33,7 @@ Para la práctica se utilizó 1 kit BiTalino para la realización de EMG. El dis
 
 Para la adquisición de señales electromiográficas se utilizó la siguiente conexión en BITalino con 3 electrodos
 
-<img src="image.png" alt="alt text" width="300" height="300">
-![alt text](image.png)
-
+<img src="image.png" alt="Conexiones de BITalino para EMG" width="300" height="300">
 Figura 1. Conexiones de BITalino para EMG
 
 ## Procedimiento
