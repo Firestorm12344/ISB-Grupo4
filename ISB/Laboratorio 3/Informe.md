@@ -47,6 +47,11 @@ La colocación de los electrodos será la siguiente: Los electrodos positivo y n
 
 En la primera prueba se obtuvo el EMG del bíceps. Los electrodos fueron colocados como se observa en la figura 2. Se tomó registro de la señal en estado de reposo o silencio eléctrico (figura 3) y realizando la contracción muscular (figura 4).
 
+| Posicionamiento de los electrodos para la prueba 1|
+|:--------------:|
+|![alt text](image-1.png)  |
+|Figura 2  |
+
 ![alt text](image-1.png)
 
 Figura 2. Posicionamiento de los electrodos para la prueba 1
