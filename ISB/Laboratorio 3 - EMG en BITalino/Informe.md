@@ -56,23 +56,37 @@ En la primera prueba se obtuvo el EMG del bíceps. Los electrodos fueron colocad
 | ![alt text](image-2.png)   | ![alt text](image-3.png)   |
 | Figura 3    | Figura 4   |
 
+#### Ploteo en OpenSignals
+
+| Estado de reposo| Contracción muscular |
+|:--------------:|:--------------:|
+|   ![alt text](image-12.png)  |  ![alt text](image-13.png)  |
+| Figura 5    | Figura 6   |
+
 | Video: Brazo en reposo - Brazo en estado de tensión |
 |:----------------------------:|
 | [![alt text](videoframe_1.png)](https://youtube.com/shorts/eBpJtWsx46A?feature=share)    |
 
 ### Prueba 2
 
-En la segunda prueba se obtuvo el EMG del pulgar (Abductor pollicis brevis). Los electrodos fueron colocados como se observa en la figura 5, con una separación aproximada de 2 cm entre electrodo positivo y negativo. Se tomó registro de la señal en estado de reposo o silencio eléctrico (figura 6) y realizando la contracción muscular (figura 7).
+En la segunda prueba se obtuvo el EMG del pulgar (Abductor pollicis brevis). Los electrodos fueron colocados como se observa en la figura 7, con una separación aproximada de 2 cm entre electrodo positivo y negativo. Se tomó registro de la señal en estado de reposo o silencio eléctrico (figura 8) y realizando la contracción muscular (figura 9).
 
 | Posicionamiento de los electrodos para la prueba 2|
 |:--------------:|
 |![alt text](image-5.png)  |
-|Figura 5  |
+|Figura 7  |
 
 | Estado de reposo| Contracción muscular |
 |:--------------:|:--------------:|
 | ![alt text](image-6.png)    | ![alt text](image-7.png)    |
-| Figura 6    | Figura 7   |
+| Figura 8    | Figura 9   |
+
+#### Ploteo en OpenSignals
+
+| Estado de reposo| Contracción muscular |
+|:--------------:|:--------------:|
+| ![alt text](image-4.png)    | ![alt text](image-11.png)    |
+| Figura 10   | Figura 11   |
 
 | Video: Dedo en reposo - Dedo en estado de tensión |
 |:----------------------------:|
@@ -80,21 +94,30 @@ En la segunda prueba se obtuvo el EMG del pulgar (Abductor pollicis brevis). Los
 
 ### Prueba 3
 
-En la segunda prueba se obtuvo el EMG del sóleo. Los electrodos fueron colocados como se observa en la figura 8. Se tomó registro de la señal en estado de reposo o silencio eléctrico (figura 9) y realizando la contracción muscular (figura 10).
+En la segunda prueba se obtuvo el EMG del sóleo. Los electrodos fueron colocados como se observa en la figura 12. Se tomó registro de la señal en estado de reposo o silencio eléctrico (figura 13) y realizando la contracción muscular (figura 14).
 
 | Posicionamiento de los electrodos para la prueba 3|
 |:--------------:|
 |![alt text](image-8.png)  |
-|Figura 8  |
+|Figura 12  |
 
 | Estado de reposo| Contracción muscular |
 |:--------------:|:--------------:|
 | ![alt text](image-9.png)    | ![alt text](image-10.png)    |
-| Figura 9    | Figura 10   |
+| Figura 13    | Figura 14   |
+
+#### Ploteo en OpenSignals
+
+| Estado de reposo| Contracción muscular |
+|:--------------:|:--------------:|
+| ![alt text](image-14.png)  | ![alt text](image-15.png)   |
+| Figura 15    | Figura 16  |
 
 | Video : Pierna en reposo - Pierna en estado de tensión |
 |:----------------------------:|
 | [![alt text](videoframe_3.png)](https://youtu.be/3J8K--_KSd0)    |
+
+
 
 ##  Ploteo de Python
 
