@@ -52,20 +52,12 @@ En la primera prueba se obtuvo el EMG del bíceps. Los electrodos fueron colocad
 Figura 2. Posicionamiento de los electrodos para la prueba 1
 
 | Brazo en estado de reposo| Brazo en estado de tensión |
-|--------------|--------------|
+|:--------------:|:--------------:|
 | ![alt text](image-2.png)   | ![alt text](image-3.png)   |
 | Figura 3    | Figura 4   |
 
-| ![alt text](image-2.png)
-
-Figura 3. Brazo en estado de reposo
-
-![alt text](image-3.png)
-
-Figura 4. Brazo en estado de tensión (máximo esfuerzo)
-
 | Brazo en reposo | Brazo en estado de tensión |
-|--------------|--------------|
+|:--------------:|:--------------:|
 | VIDEO    | VIDEO    |
 
 ### Prueba 2
@@ -77,12 +69,12 @@ Figura 5. Posicionamiento de los electrodos para la prueba 2
 ![alt text](######.png)
 
 | Estado de reposo| Contracción muscular |
-|--------------|--------------|
+|:--------------:|:--------------:|
 | ![alt text](######.png)    | ![alt text](######.png)    |
 | Figura 6    | Figura 7   |
 
 | Dedo en reposo | Dedo en estado de tensión |
-|--------------|--------------|
+|:--------------:|:--------------:|
 | VIDEO    | VIDEO    |
 
 ### Prueba 3
@@ -94,12 +86,12 @@ Figura 8. Posicionamiento de los electrodos para la prueba 3
 ![alt text](######.png)
 
 | Estado de reposo| Contracción muscular |
-|--------------|--------------|
+|:--------------:|:--------------:|
 | ![alt text](######.png)    | ![alt text](######.png)    |
 | Figura 9    | Figura 10   |
 
 | Pierna en reposo | Pierna en estado de tensión |
-|--------------|--------------|
+|:--------------:|:--------------:|
 | VIDEO    | VIDEO    |
 
 ##  Ploteo de Python
