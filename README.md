@@ -11,13 +11,13 @@ Somos estudiantes del 7mo ciclo de la carrera de Ingeniería Biomédica, que bus
 
 # Tabla de contenidos
 - [Temática del proyecto](#temática-del-proyecto)
-- [Resumen] (#resumen)
-- [Motivacion] (#Motivacion)
-- [Principales Hallazgos] (#principales-hallazgos)
+- [Resumen](#resumen)
+- [Motivacion](#Motivacion)
+- [Principales Hallazgos](#principales-hallazgos)
 - [Contenido del curso](#Contenido-del-curso)
 - [Participantes](#Participantes)
 - [Docentes del curso](#docentes-del-curso)
-- [Referencias] (#referencias)
+- [Referencias](#referencias)
 
 
 # Temática del Proyecto
