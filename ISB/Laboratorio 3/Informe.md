@@ -12,6 +12,43 @@ Extraer la información de las señales EMG de software OpenSignals (r)evolution
 
 ## Introducción
 
+El electromiograma (EMG) es un procedimiento utilizado para la evaluación de la salud muscular y las células nerviosas que intervienen (neuronas motoras). En la electromiografía se utilizan electrodos para traducir las señales eléctricas producidas por las neuronas motoras que generan la contracción muscular. Los electrodos son usados para la medición de la velocidad e intensidad de las señales que se desplazan entre 2 o más puntos [1].
+
+Para la práctica se utilizó 1 kit BiTalino para la realización de EMG. El dispositivo de BITalino EMG posee una configuración bipolar, ideal para la adquisición de señales con bajo ruido [2]. Además, se utilizó el software OpenSignals (r)evolution para la adquisición de la señal y los datos para un posterior análisis.
+
+## Conexión utilizada
+
+Para la adquisición de señales electromiográficas se utilizó la siguiente conexión en BITalino con 3 electrodos
+
+![alt text](image.png)
+
+Figura 1. Conexiones de BITalino para EMG
+
+## Procedimiento
+
+Se realizaron 3 mediciones de EMG en diferentes partes del cuerpo. Para la colocación de los electrodos se tomó de referencia los ejemplos de la “Guía De Procedimiento de Electromiografía y velocidad de conducción de nervios periféricos del INSN”, el “Manual de procedimientos en electromiografía” y “BITalino (r)evolution Lab Guide”.  
+
+La colocación de los electrodos será la siguiente: Los electrodos positivo y negativo será colocados en el músculo de interés, mientras que el electrodo de referencia será colocado en una zona neutra (por ejemplo un hueso).
+
+### Prueba 1
+
+En la primera prueba se obtuvo el EMG del bíceps. Los electrodos fueron colocados como se observa en la figura 2. Se tomó registro de la señal en estado de reposo o silencio eléctrico (figura 3) y realizando la contracción muscular (figura 4).
+
+![alt text](image-1.png)
+
+Figura 2. Posicionamiento de los electrodos para la prueba 1
+
+| ![alt text](image-2.png)
+
+Figura 3. Brazo en estado de reposo
+
+![alt text](image-3.png)
+
+Figura 4. Brazo en estado de tensión (máximo esfuerzo)
+
+### Prueba 2
+
+### Prueba 3
 
 ##  Ploteo de Python
 
@@ -112,3 +149,9 @@ plt.legend()
 plt.savefig('scatter_plot3.png')
 plt.show()
 ```
+
+## Referencias
+
+[1]  “Electromiografía”, Mayoclinic.org, 21-may-2019. [En línea]. Disponible en: https://www.mayoclinic.org/es/tests-procedures/emg/about/pac-20393913. [Consultado: 13-abr-2024].
+
+[2] “Electromyography (EMG) Sensor User Manual”, Bitalino.com. [En línea]. Disponible en: https://www.bitalino.com/storage/uploads/media/electromyography-emg-user-manual.pdf. [Consultado: 13-abr-2024].
