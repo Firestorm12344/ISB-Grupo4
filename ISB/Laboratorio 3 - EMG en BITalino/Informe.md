@@ -67,6 +67,8 @@ En la primera prueba se obtuvo el EMG del bíceps. Los electrodos fueron colocad
 |:----------------------------:|
 | [![alt text](videoframe_1.png)](https://youtube.com/shorts/eBpJtWsx46A?feature=share)    |
 
+
+
 ### Prueba 2
 
 En la segunda prueba se obtuvo el EMG del pulgar (Abductor pollicis brevis). Los electrodos fueron colocados como se observa en la figura 7, con una separación aproximada de 2 cm entre electrodo positivo y negativo. Se tomó registro de la señal en estado de reposo o silencio eléctrico (figura 8) y realizando la contracción muscular (figura 9).
@@ -91,6 +93,9 @@ En la segunda prueba se obtuvo el EMG del pulgar (Abductor pollicis brevis). Los
 | Video: Dedo en reposo - Dedo en estado de tensión |
 |:----------------------------:|
 | [![alt text](videoframe_2.png)](https://www.youtube.com/shorts/tir6_gNDhgk?feature=share)    |
+
+
+
 
 ### Prueba 3
 
@@ -117,7 +122,13 @@ En la segunda prueba se obtuvo el EMG del sóleo. Los electrodos fueron colocado
 |:----------------------------:|
 | [![alt text](videoframe_3.png)](https://youtu.be/3J8K--_KSd0)    |
 
+### Explicación
 
+En las señales mostradas sobre los músculos en reposo, se pueden observar pequeñas perturbaciones (picos de baja amplitud). Estas son causadas por potenciales eléctricos activados involuntariamente, mayormente debido a precencia de fluctuaciones leves de concentraciones de electrolitos, actividad neurogénica residual (pequeñas concentraciones de neurotransmisores en el interticio de la unida motora) y alteración de la permeabilidad de la membrana, mayormente por hormonas como la adrenalida. Sin embargo, la presencia de espasmos leves tambien genera alteraciones en la actividad muscular
+
+Por otro lado, cuando el músculo es tensionado, el flujo de electrolitos no es precisamente constante y uniforme; asi como la secreción de neurotransmisores por parte de las células nerviosas de las unidades motoras. Por ello, es que la actividad electrica del músculo no es constante, pero si es alta. 
+
+En general, otra motivo por el cual la señal eléctrica puede verse distorcionada, es la circulación de iones en el torrente sanguíneo, en el tejido epitelial epidérmico, subcutáneo y adiposo; lo que físicamente significaría la formación de potenciales eléctricos.
 
 ##  Ploteo de Python
 
@@ -152,7 +163,7 @@ plt.title('Electromiogram Signal taken from biceps activity')
 plt.legend()
 plt.savefig('scatter_plot1.png')
 plt.show()
-```
+```. Ota
 - Para el ploteo de la segunda señal adquirida, que refiere al EMG del músculo __abductor pollicis brevis__, se tiene el siguiente código: 
 (Archivo: Ploteo_s2.py)
 
