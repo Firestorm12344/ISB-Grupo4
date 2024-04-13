@@ -67,12 +67,12 @@ En la segunda prueba se obtuvo el EMG del pulgar (Abductor pollicis brevis). Los
 
 | Posicionamiento de los electrodos para la prueba 2|
 |:--------------:|
-|![alt text](######.png)  |
+|![alt text](image-5.png)  |
 |Figura 5  |
 
 | Estado de reposo| Contracción muscular |
 |:--------------:|:--------------:|
-| ![alt text](######.png)    | ![alt text](######.png)    |
+| ![alt text](image-6.png)    | ![alt text](image-7.png)    |
 | Figura 6    | Figura 7   |
 
 | Dedo en reposo | Dedo en estado de tensión |
@@ -85,12 +85,12 @@ En la segunda prueba se obtuvo el EMG del sóleo. Los electrodos fueron colocado
 
 | Posicionamiento de los electrodos para la prueba 3|
 |:--------------:|
-|![alt text](######.png)  |
+|![alt text](image-8.png)  |
 |Figura 8  |
 
 | Estado de reposo| Contracción muscular |
 |:--------------:|:--------------:|
-| ![alt text](######.png)    | ![alt text](######.png)    |
+| ![alt text](image-9.png)    | ![alt text](image-10.png)    |
 | Figura 9    | Figura 10   |
 
 | Pierna en reposo | Pierna en estado de tensión |
