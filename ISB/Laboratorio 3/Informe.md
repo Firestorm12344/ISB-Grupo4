@@ -1,5 +1,5 @@
 # Lab 3 - EMG con BiTalino
-#Tabla de contenidos
+##Tabla de contenidos
 - [Objetivos](#objetivos)
 - [Materiales](#materiales)
 - [Introducción](#introducción)
@@ -15,9 +15,11 @@ Hacer una correcta configuración de BiTalino.
 Extraer la información de las señales EMG de software OpenSignals (r)evolution
 
 ## Materiales
-- Kit BiTalino
-- Laptop
-- Electrodos
+| Material | Cantidad |
+|--------------|--------------|
+| Kit BiTalino    | 1    |
+| Laptop    | 1    |
+| Electrodos    | 3    |
 
 ## Introducción
 
