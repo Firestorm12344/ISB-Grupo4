@@ -165,7 +165,8 @@ plt.title('Electromiogram Signal taken from biceps activity')
 plt.legend()
 plt.savefig('scatter_plot1.png')
 plt.show()
-```. Ota
+```
+
 - Para el ploteo de la segunda señal adquirida, que refiere al EMG del músculo __abductor pollicis brevis__, se tiene el siguiente código: 
 (Archivo: Ploteo_s2.py)
 
