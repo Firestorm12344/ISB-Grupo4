@@ -1,5 +1,6 @@
 # Lab 3 - EMG con BiTalino
-##Tabla de contenidos
+
+## Tabla de contenidos
 - [Objetivos](#objetivos)
 - [Materiales](#materiales)
 - [Introducción](#introducción)
@@ -8,11 +9,12 @@
 - [Prueba 1](#Prueba-1)
 - [Prueba 2](#Prueba-2)
 - [Prueba 3](#Prueba-3)
+- [Referencias](#referencias)
   
 ##  Objetivos
-Adquirir señales biomédicas de EMG.
-Hacer una correcta configuración de BiTalino.
-Extraer la información de las señales EMG de software OpenSignals (r)evolution
+- Adquirir señales biomédicas de EMG.
+- Hacer una correcta configuración de BiTalino.
+- Extraer la información de las señales EMG de software OpenSignals (r)evolution.
 
 ## Materiales
 | Material | Cantidad |
