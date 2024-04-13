@@ -57,9 +57,9 @@ En la primera prueba se obtuvo el EMG del bíceps. Los electrodos fueron colocad
 | ![alt text](image-2.png)   | ![alt text](image-3.png)   |
 | Figura 3    | Figura 4   |
 
-| Brazo en reposo | Brazo en estado de tensión |
-|:--------------:|:--------------:|
-| VIDEO    | VIDEO    |
+| Video: Brazo en reposo - Brazo en estado de tensión |
+|:----------------------------:|
+| [![alt text](.jpg)](https://youtube.com/shorts/eBpJtWsx46A?feature=share)    |
 
 ### Prueba 2
 
@@ -75,9 +75,9 @@ En la segunda prueba se obtuvo el EMG del pulgar (Abductor pollicis brevis). Los
 | ![alt text](image-6.png)    | ![alt text](image-7.png)    |
 | Figura 6    | Figura 7   |
 
-| Dedo en reposo | Dedo en estado de tensión |
-|:--------------:|:--------------:|
-| VIDEO    | VIDEO    |
+| Video: Dedo en reposo - Dedo en estado de tensión |
+|:----------------------------:|
+| [![alt text](.jpg)](https://www.youtube.com/shorts/tir6_gNDhgk?feature=share)    |
 
 ### Prueba 3
 
@@ -93,9 +93,9 @@ En la segunda prueba se obtuvo el EMG del sóleo. Los electrodos fueron colocado
 | ![alt text](image-9.png)    | ![alt text](image-10.png)    |
 | Figura 9    | Figura 10   |
 
-| Pierna en reposo | Pierna en estado de tensión |
-|:--------------:|:--------------:|
-| VIDEO    | VIDEO    |
+| Video : Pierna en reposo - Pierna en estado de tensión |
+|:----------------------------:|
+| [![alt text](.jpg)](https://youtu.be/3J8K--_KSd0)    |
 
 ##  Ploteo de Python
 
