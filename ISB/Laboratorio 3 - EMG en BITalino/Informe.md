@@ -33,7 +33,7 @@ Para la práctica se utilizó 1 kit BiTalino para la realización de EMG. El dis
 
 Para la adquisición de señales electromiográficas se utilizó la siguiente conexión en BITalino con 3 electrodos
 
-<img src="image.png" alt="Conexiones de BITalino para EMG" width="300" height="300">
+<img src="Imágenes\image.png" alt="Conexiones de BITalino para EMG" width="300" height="300">
 Figura 1. Conexiones de BITalino para EMG
 
 ## Procedimiento
@@ -48,17 +48,17 @@ En la primera prueba se obtuvo el EMG del bíceps. Los electrodos fueron colocad
 
 | Posicionamiento de los electrodos para la prueba 1|
 |:--------------:|
-|![alt text](image-1.png)  |
+|![alt text](Imágenes\image-1.png)  |
 |Figura 2  |
 
 | Brazo en estado de reposo| Brazo en estado de tensión |
 |:--------------:|:--------------:|
-| ![alt text](image-2.png)   | ![alt text](image-3.png)   |
+| ![alt text](Imágenes\image-2.png)   | ![alt text](Imágenes\image-3.png)   |
 | Figura 3    | Figura 4   |
 
 | Video: Brazo en reposo - Brazo en estado de tensión |
 |:----------------------------:|
-| [![alt text](videoframe_1.png)](https://youtube.com/shorts/eBpJtWsx46A?feature=share)    |
+| [![alt text](Videos\videoframe_1.png)](https://youtube.com/shorts/eBpJtWsx46A?feature=share)    |
 
 ### Prueba 2
 
@@ -66,17 +66,17 @@ En la segunda prueba se obtuvo el EMG del pulgar (Abductor pollicis brevis). Los
 
 | Posicionamiento de los electrodos para la prueba 2|
 |:--------------:|
-|![alt text](image-5.png)  |
+|![alt text](Imágenes\image-5.png)  |
 |Figura 5  |
 
 | Estado de reposo| Contracción muscular |
 |:--------------:|:--------------:|
-| ![alt text](image-6.png)    | ![alt text](image-7.png)    |
+| ![alt text](Imágenes\image-6.png)    | ![alt text](Imágenes\image-7.png)    |
 | Figura 6    | Figura 7   |
 
 | Video: Dedo en reposo - Dedo en estado de tensión |
 |:----------------------------:|
-| [![alt text](videoframe_2.png)](https://www.youtube.com/shorts/tir6_gNDhgk?feature=share)    |
+| [![alt text](Videos\videoframe_2.png)](https://www.youtube.com/shorts/tir6_gNDhgk?feature=share)    |
 
 ### Prueba 3
 
@@ -84,24 +84,24 @@ En la segunda prueba se obtuvo el EMG del sóleo. Los electrodos fueron colocado
 
 | Posicionamiento de los electrodos para la prueba 3|
 |:--------------:|
-|![alt text](image-8.png)  |
+|![alt text](Imágenes\image-8.png)  |
 |Figura 8  |
 
 | Estado de reposo| Contracción muscular |
 |:--------------:|:--------------:|
-| ![alt text](image-9.png)    | ![alt text](image-10.png)    |
+| ![alt text](Imágenes\image-9.png)    | ![alt text](Imágenes\image-10.png)    |
 | Figura 9    | Figura 10   |
 
 | Video : Pierna en reposo - Pierna en estado de tensión |
 |:----------------------------:|
-| [![alt text](videoframe_3.png)](https://youtu.be/3J8K--_KSd0)    |
+| [![alt text](Videos\videoframe_3.png)](https://youtu.be/3J8K--_KSd0)    |
 
 ##  Ploteo de Python
 
 - Para el ploteo de la primera señal adquirida, que refiere al EMG del paquete muscular **biceps braquial**, se tiene el siguiente código: 
 (Archivo: Ploteo_s1.py)
 
-![alt text](scatter_plot1.png)
+![alt text](Señales\scatter_plot1.png)
 
 ```python
 import re
@@ -133,7 +133,7 @@ plt.show()
 - Para el ploteo de la segunda señal adquirida, que refiere al EMG del músculo __abductor pollicis brevis__, se tiene el siguiente código: 
 (Archivo: Ploteo_s2.py)
 
-![alt text](scatter_plot2.png)
+![alt text](Señales\scatter_plot2.png)
 
 ```python 
 import re
@@ -166,7 +166,7 @@ plt.show()
 - Para el ploteo de la tercera señal adquirida, que refiere al EMG del músculo __sóleo__ y __gemelos__, se tiene el siguiente código: 
 (Archivo: Ploteo_s3.py)
 
-![alt text](scatter_plot3.png)
+![alt text](Señales\scatter_plot3.png)
 
 ```python
 import re
