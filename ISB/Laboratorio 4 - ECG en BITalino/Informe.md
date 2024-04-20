@@ -92,6 +92,9 @@ Para la prueba de electrocardiograma se realizó en 4 estados:
 3. Después de la realización de ejercicio moderado (figura 13)
 4. Luego de respiraciones largas (inhalación por 10 segundos, retención por 10 segundos y exhalación) (figura 14)
 
+
+***Nota**: El estado de hiperventilación se mantuvo durante el proceso de medición. La actividad física consistió en trotar durante 5 minutos, y correr a velocidad máxima durante 2 minutos*
+
 Para el estado de reposo se realizó con ambas formas de colocación de electrodos como se observa en la figura 10 y 11. Sin embargo, se observa que se obtiene una mejor señal con la colocación de electrodos en la forma 1 (clavículas y cresta iliaca), pues se obtiene mucho ruido en al colocar los electrodos de la forma 2 (muñecas y cresta iliaca). 
 
 | Figura 10. Forma 1 en reposo | Figura 11. Forma 2 en reposo |
@@ -132,6 +135,10 @@ Figura 15. Señal de ECG con accesorios
 De las imágenes mostradas anteriormente, se puede observar un periodo duración del segmento PQRS de 0.2 segundos aproximadamente en el estado de reposo, valor que pertenece al rango del periodo regular de dichas ondas en conjunto para derivaciones periféricas (0.20 a 0.24 segundos) [4]. 
 
 Por otro lado, se observan artefactos eléctricos en las zonas de las ondas P, Q y T. Es importante resaltar que el procedimiento se llevó a cabo en un aula de clase, en la proximidad de dispositivos celulares y computadoras, con alta capacidad de transmisión de señales electromagnéticas para su sistema de comunicación. Según estudios como [5, 6], se sugiere que la presencia de señales electromagnéticas en el entorno de medición genera interferencias notorias en las gráficas de ECG, sean por parte de dispositivos móviles o por la red de área local inalámbrica (WLAN).
+
+Luego de haber realizado las actividades de ejercicio, se esperaría que la señal eléctrica del corazón sufra una amplificación y un aumento de frecuencia, debido al incremento del gasto cardíaco durante dicho periodo, lo que supondría ontracciones mas fuertes y rápidas [7].. Asímismo, en el artículo [8], que estudia los cambios en las señales ECG inducidos por la actividad física en niños sanos, se obtiene que la amplitud de las ondas P, S y T se vieron amplificadas significativamente luego del ejercicio; además de que el periodo de duración de toda la onda en conjunto disminuye. Dichos fenómenos también se pueden presenciar en las gráficas de la señal adquirida. Se observa que, en reposo, el ritmo cardiaco registrado corresponde a 3 latidos por 1.6 segundos aproximadamente (1.875 Hz); mientras que, después del ejercicio, se producen 8 latidos por 3 segundos aproximadamente (2.667 Hz). Además, del artículo expuesto anteriormente, existe un estudio similar [9], cuyos resultados, respecto a alteración de la amplitud de la onda cardíaca y el periodo de cada onda y de la onda total, coinciden en que la actividad física influye en las características morfológicas de la señal ECG. 
+
+se observa una mayor magnitud de potencial eléctrico en la señal de ECG.  
 
 ### Estado de Respiración e Hiperventilación
 
@@ -254,3 +261,9 @@ plot_Customvalues(n, y, label, 41500, 45000)
 5. https://pubmed.ncbi.nlm.nih.gov/19824066/
 
 6. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3629245
+
+7. https://us.humankinetics.com/blogs/excerpt/normal-ecg-responses-during-and-postexercise
+
+8. https://journals.lww.com/aopc/fulltext/2021/14040/exercise_induced_electrocardiographic_changes.1.aspx
+
+9. https://www.sciencedirect.com/science/article/abs/pii/S0022073605802808
