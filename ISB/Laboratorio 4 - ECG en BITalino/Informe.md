@@ -37,16 +37,28 @@ Para la práctica se utilizó 1 kit BiTalino para la realización de ECG así co
 
 ## Conexión utilizada
 
-Para la adquisición de señales electrocardiográficas se utilizó la siguiente conexión en BITalino con 3 electrodos
+Primero se utilizó el dispositivo ProSim 4 Vital Signs Simulator, cuya conexión se realizó de tal manera para simular un ECG de tipo derivación III. Para ello, en el punto LL se colocó el electrodo positivo, en el punto LA se colocó el electrodo negativo y en el punto RA se colocó el de referecia (Figura 1 y 2)
 
-<img src="image.png" alt="Conexiones de BITalino para ECG" width="300" height="300">
-Figura 1. Conexiones de BITalino para ECG
+![alt text](image.png)
+Figura 1. Conexiones en ProSim 4 Vital Signs Simulator
+![alt text](image-1.png)
+Figura 2. Conexiones en ProSim 4 Vital Signs Simulator y BiTalino
+
+Para la obtención de ECG se utilizó la guía de "BITalino (r)evolution Lab Guide: EXPERIMENTAL GUIDES TO MEET & LEARN YOUR BIOSIGNALS". Se utilizó la conexión en el puerto A2 en el BiTalino y se realizó la colocación de los electrodos de acuerdo a la derivación I de Einthoven:
+
+* Forma 1 : Colocación del electrodo positivo en la clavícula izquierda, electrodo negativo en la clavícula derecha y electrodo de referencia en la cresta iliaca. Observar figura 3.
+* Forma 2: Colocación del electrodo positivo en la muñeca izquierda, electrodo negativo en la muñeca derecha y electrodo de referencia en la cresta iliaca. Observar figura 4.
+
+![alt text](image-3.png)
+Figura 3. Colocación de electrodos para la derivación I (forma 1)
+
+![alt text](image-2.png)
+Figura 4. Colocación de electrodos para la derivación I (forma 2)
 
 ## Procedimiento
 
 Se realizaron 2 mediciones de ECG en diferentes partes del cuerpo. Para la colocación de los electrodos se tomó de referencia los ejemplos de la “Guía De Procedimiento de Electromiografía y velocidad de conducción de nervios periféricos del INSN”, el “Manual de procedimientos en electromiografía” y “BITalino (r)evolution Lab Guide”.  
 
-La colocación de los electrodos será la siguiente: Los electrodos positivo y negativo será colocados en el músculo de interés, mientras que el electrodo de referencia será colocado en una zona neutra (por ejemplo un hueso).
 
 ### Prueba 1
 
