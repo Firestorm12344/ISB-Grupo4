@@ -84,12 +84,31 @@ Por cuestiones de tiempo en clase, solo se tomó registro en el simulador OpenSi
 ### Prueba ECG 
 
 Para la prueba de electrocardiograma se realizó en 4 estados:
-1. En estado de reposo con respiración normal
-2. Hiperventilación
-3. Después de la realización de ejercicio moderado
-4. Luego de respiraciones largas (inhalación por 10 segundos, retención por 10 segundos y exhalación)
+1. En estado de reposo con respiración normal (figura 10 y 11)
+2. Hiperventilación (figura 12)
+3. Después de la realización de ejercicio moderado (figura 13)
+4. Luego de respiraciones largas (inhalación por 10 segundos, retención por 10 segundos y exhalación) (figura 14)
 
-Para el estado de reposo se realizó con ambas formas de colocación de electrodos como se observa en la figura 10 y 11. Sin embargo, se observa que 
+Para el estado de reposo se realizó con ambas formas de colocación de electrodos como se observa en la figura 10 y 11. Sin embargo, se observa que se obtiene una mejor señal con la colocación de electrodos en la forma 1 (clavículas y cresta iliaca), pues se obtiene mucho ruido en al colocar los electrodos de la forma 2 (muñecas y cresta iliaca). 
+
+| Figura 10. Forma 1 en reposo | Figura 11. Forma 2 en reposo |
+|:--------------:|:--------------:|
+| ![alt text](image-9.png)    | ![alt text](image-10.png)    |
+
+Por este motivo, todas las señales obtenidas a continuación se realizarán con los electrodos colocados en la forma 1. 
+
+| Estado | Señal obtenida |
+|:--------------:|:--------------:|
+| Figura 12. Hiperventilación   | ![alt text](image-11.png)   |
+| Figura 13. Después de ejercicio| ![alt text](image-12.png)|
+| Figura 14. Respiraciones largas | ![alt text](image-13.png)|
+
+### Observaciones
+
+Durante el desarrollo de la prueba se notaron aspectos que impactaron de manera significativa en la obtención de las señales de ECG. Uno de estos aspectos fue el uso de accesorios metálicos tales como piercing, anillos, relojes u otros, lo que no permitió obtener una señal clara de ECG como se observa en la figura 15. Además, se observó que mientras se realizaba la toma de la señal de ECG y se acercaba un dispositivo electrónico como laptop o celular a la persona que realizaba la prueba, la señal también se distorsionaba de manera significativa.
+
+![alt text](image-14.png)
+Figura 15. Señal de ECG con accesorios
 
 
 ## Explicación/ Discusión de resultados
