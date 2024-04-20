@@ -92,8 +92,8 @@ Para la prueba de electrocardiograma se realizó en 4 estados:
 Para el estado de reposo se realizó con ambas formas de colocación de electrodos como se observa en la figura 10 y 11. Sin embargo, se observa que 
 
 
-
 ## Explicación/ Discusión de resultados
+
 
 
 
@@ -110,72 +110,61 @@ def get_values(path):
   df = pd.read_csv(path, sep='\t', skiprows=3)  # saltar las dos primeras filas (encabezado)
   novena_columna = df.iloc[:, 6].values
   n = [i/1000 for i in range(0, len(novena_columna))]
-  return n, novena_columna
+  signal = [(float(valor)/(2**10)-1/2)*3.3/1009*1000 for valor in novena_columna]
+  return n, signal
 
 def plot_values(n, y, label):
   plt.plot(n[1:3000], y[1:3000])
 
   # Etiquetas y título
-  plt.xlabel('Índice')
-  plt.ylabel('Valor')
+  plt.xlabel('Tiempo (s)')
+  plt.ylabel('Voltaje (mv)')
   plt.title(label)
 
   # Mostrar el gráfico
   plt.show()
-  plt.savefig(label+".png")
-  
+
 def plot_Customvalues(n, y, label, ini, fin):
   plt.plot(n[ini:fin], y[ini:fin])
 
   # Etiquetas y título
-  plt.xlabel('Índice')
-  plt.ylabel('Valor')
+  plt.xlabel('Tiempo (s)')
+  plt.ylabel('Voltaje (mv)')
   plt.title(label)
 
   # Mostrar el gráfico
   plt.show()
-  plt.savefig(label+".png")
 
 ```
 
-- Para el ploteo de la primera señal adquirida, se tiene el siguiente código: 
+( Archivo Ploteo.py) 
 
 ``` python
 
 from Funciones import *
+
+"""## RESPIRACIÓN"""
 
 path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/RESPIRACION.txt"
 [n, y] = get_values(path)
 label = "ECG durante respiración"
 plot_values(n, y, label)
 
-```
-
-- Para el ploteo de la segunda señal adquirida, se tiene el siguiente código: 
-
-``` python
+"""## POST-EJERCICIO"""
 
 path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/POS EJERCICIO.txt"
 [n, y] = get_values(path)
 label = "ECG Post-Ejercicio"
 plot_values(n, y, label)
 
-```
-
-- Para el ploteo de la tercera señal adquirida, se tiene el siguiente código: 
-
-``` python
+"""## HIPERVENTILACIÓN"""
 
 path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/HIPER.txt"
 [n, y] = get_values(path)
 label = "ECG Durante Hiperventilación"
 plot_values(n, y, label)
 
-```
-
-- Para el ploteo de la tercera señal adquirida, se tiene el siguiente código: 
-
-``` python
+"""## ESTADO BASAL: REPOSO"""
 
 path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/J1.txt"
 [n, y] = get_values(path)
@@ -183,6 +172,31 @@ label = "ECG en Estado Basal: Resposo"
 inicio = 2600
 fin = 4200
 plot_Customvalues(n, y, label, inicio, fin)
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/fase 2.txt"
+[n, y] = get_values(path)
+label = "ECG Fase 2: Simulación"
+plot_values(n, y, label)
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/fase 3.txt"
+[n, y] = get_values(path)
+label = "ECG Fase 3: Simulación"
+plot_Customvalues(n, y, label, 20000, 23000)
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/fase 4 5 y 6.txt"
+[n, y] = get_values(path)
+label = "ECG Fase 4: Simulación"
+plot_Customvalues(n, y, label, 500, 3000)
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/fase 4 5 y 6.txt"
+[n, y] = get_values(path)
+label = "ECG Fase 5: Simulación"
+plot_Customvalues(n, y, label, 14000, 16000)
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/fase 4 5 y 6.txt"
+[n, y] = get_values(path)
+label = "ECG Fase 6: Simulación"
+plot_Customvalues(n, y, label, 41500, 45000)
 
 ```
 
