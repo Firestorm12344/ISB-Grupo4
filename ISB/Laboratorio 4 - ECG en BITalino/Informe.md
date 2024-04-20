@@ -81,37 +81,19 @@ Por cuestiones de tiempo en clase, solo se tomó registro en el simulador OpenSi
 | Figura 9. Parada del corazón (muerte)|![alt text](image-8.png) |
 
 
-### Prueba 2
+### Prueba ECG 
 
-En la segunda prueba se 
+Para la prueba de electrocardiograma se realizó en 4 estados:
+1. En estado de reposo con respiración normal
+2. Hiperventilación
+3. Después de la realización de ejercicio moderado
+4. Luego de respiraciones largas (inhalación por 10 segundos, retención por 10 segundos y exhalación)
 
-| Posicionamiento de los electrodos para la prueba 2|
-|:--------------:|
-|![alt text](image-5.png)  |
-|Figura 7  |
-
-| Estado de reposo| xxx |
-|:--------------:|:--------------:|
-| ![alt text](image-6.png)    | ![alt text](image-7.png)    |
-| Figura 8    | Figura 9   |
-
-#### Ploteo en OpenSignals
-
-| Estado de reposo| xx |
-|:--------------:|:--------------:|
-| ![alt text](image-4.png)    | ![alt text](image-11.png)    |
-| Figura 10   | Figura 11   |
-
-| Video: xxx - xxxx |
-|:----------------------------:|
-| [![alt text](videoframe_2.png)](xxxx)    |
+Para el estado de reposo se realizó con ambas formas de colocación de electrodos como se observa en la figura 10 y 11. Sin embargo, se observa que 
 
 
 
-
-
-
-### Explicación
+## Explicación/ Discusión de resultados
 
 
 
