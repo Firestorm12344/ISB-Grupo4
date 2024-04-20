@@ -247,7 +247,6 @@ plot_Customvalues(n, y, label, 41500, 45000)
 
 ```
 
-
 ## Referencias
 
 1. Kundu M, Nasipuri M, Kumar Basu D. Knowledge-based ECG interpretation: a critical review. Pattern Recognit [Internet]. Marzo de 2000 [consultado el 19 de abril de 2024];33(3):351-73. Disponible en: https://doi.org/10.1016/s0031-3203(99)00065-5
@@ -256,14 +255,14 @@ plot_Customvalues(n, y, label, 41500, 45000)
 
 3. www.elsevier.com [Internet]. Interpretación del ECG: Guí­a Esencial para Profesionales Médicos; 12 de junio de 2023 [consultado el 19 de abril de 2024]. Disponible en: https://www.elsevier.com/es-es/connect/electrocardiograma-de-12-derivaciones-derivaciones-y-ejes
 
-4. https://www.my-ekg.com/generalidades-ekg/ondas-electrocardiograma.html
+4. “Ondas del Electrocardiograma”, My-ekg.com. [En línea]. Disponible en: https://www.my-ekg.com/generalidades-ekg/ondas-electrocardiograma.html. [Consultado: 20-abr-2024].
 
-5. https://pubmed.ncbi.nlm.nih.gov/19824066/
+5. A. Baranchuk et al., “Electromagnetic interference of communication devices on ECG machines”, Clin. Cardiol., vol. 32, núm. 10, pp. 588–592, 2009. Disponible en: https://pubmed.ncbi.nlm.nih.gov/19824066/. [Consultado: 20-abr-2024]
 
-6. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3629245
+6. S. Chung, J. Yi, y S. W. Park, “Electromagnetic interference of wireless local area network on electrocardiogram monitoring system: A case report”, Korean Circ. J., vol. 43, núm. 3, p. 187, 2013. Disponible en: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3629245. [Consultado: 20-abr-2024]
 
-7. https://us.humankinetics.com/blogs/excerpt/normal-ecg-responses-during-and-postexercise
+7. Normal ECG responses during and postexercise”, Human Kinetics. [En línea]. Disponible en: https://us.humankinetics.com/blogs/excerpt/normal-ecg-responses-during-and-postexercise. [Consultado: 20-abr-2024].
 
-8. https://journals.lww.com/aopc/fulltext/2021/14040/exercise_induced_electrocardiographic_changes.1.aspx
+8. E. Malakan Rad et al., “Exercise-induced electrocardiographic changes after treadmill exercise testing in healthy children: A comprehensive study”, Ann. Pediatr. Cardiol., vol. 14, núm. 4, p. 449, 2021. Disponible en: https://journals.lww.com/aopc/fulltext/2021/14040/exercise_induced_electrocardiographic_changes.1.aspx. [Consultado: 20-abr-2024]  
 
-9. https://www.sciencedirect.com/science/article/abs/pii/S0022073605802808
+9. J. He, Y. Kinouchi, H. Yamaguchi, y H. Miyamoto, “Exercise-induced changes in R wave amplitude and heart rate in normal subjects”, J. Electrocardiol., vol. 28, núm. 2, pp. 99–106, 1995. Disponible en: https://www.sciencedirect.com/science/article/abs/pii/S0022073605802808. [Consultado: 20-abr-2024]
