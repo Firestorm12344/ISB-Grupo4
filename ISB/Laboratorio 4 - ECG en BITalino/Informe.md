@@ -57,34 +57,28 @@ Figura 4. Colocación de electrodos para la derivación I (forma 2)
 
 ## Procedimiento
 
-Se realizaron 2 mediciones de ECG en diferentes partes del cuerpo. Para la colocación de los electrodos se tomó de referencia los ejemplos de la “Guía De Procedimiento de Electromiografía y velocidad de conducción de nervios periféricos del INSN”, el “Manual de procedimientos en electromiografía” y “BITalino (r)evolution Lab Guide”.  
+Se realizaron 2 mediciones de ECG en diferentes partes del cuerpo y se utilizó el dispositivo ProSim 4 Vital Signs Simulator para simular una secuencia de paro cardiaco
+
+### Prueba con ProSim 4 Vital Signs Simulator
+
+Con la ayuda de el dispositivo ProSim 4, se simuló una parada cardiaca. Esta consiste en una autosecuencia de 2 minutos y 30 segundos con 6 etapas:
+1. ECG de 80 lpm (30 s)
+2. Contracciones ventriculares prematuras (CVP) del ventrículo izquierdo (30 s)
+3. Taquicardia ventricular de 160 lpm (30 s)
+4. Fibrilación ventricular severa (30 s)
+5. Asistolia (15 s)
+6. Parada del corazón (muerte)
+
+Por cuestiones de tiempo en clase, solo se tomó registro en el simulador OpenSignals (r)evolution a partir de la fase 2 a la 6. A continuación se muestran las gráficas obtenidas en cada una de estas fases.
 
 
-### Prueba 1
-
-En la primera prueba se obtuvo el ECG del bíceps. Los electrodos fueron colocados como se observa en la figura 2. Se tomó registro de la señal en estado de reposo o silencio eléctrico (figura 3) y realizando la contracción muscular (figura 4).
-
-| Posicionamiento de los electrodos para la prueba 1|
-|:--------------:|
-|![alt text](image-1.png)  |
-|Figura 2  |
-
-| xxx | xxxx |
+| Fase | Señal obtenida |
 |:--------------:|:--------------:|
-| ![alt text](image-2.png)   | ![alt text](image-3.png)   |
-| Figura 3    | Figura 4   |
-
-#### Ploteo en OpenSignals
-
-| xxx| xxx |
-|:--------------:|:--------------:|
-|   ![alt text](image-12.png)  |  ![alt text](image-13.png)  |
-| Figura 5    | Figura 6   |
-
-| Video: xxx |
-|:----------------------------:|
-| [![alt text](videoframe_1.png)](xxx)    |
-
+| Figura 5. Contracciones ventriculares prematuras (CVP) del ventrículo izquierdo   | ![alt text](image-4.png) |
+| Figura 6. Taquicardia ventricular de 160 lpm   | ![alt text](image-5.png)   |
+| Figura 7. Fibrilación ventricular severa| ![alt text](image-6.png)|
+| Figura 8. Asistolia | ![alt text](image-7.png)|
+| Figura 9. Parada del corazón (muerte)|![alt text](image-8.png) |
 
 
 ### Prueba 2
@@ -115,30 +109,6 @@ En la segunda prueba se
 
 
 
-### Prueba 3
-
-En la segunda prueba xxx
-
-| Posicionamiento de los electrodos para la prueba 3|
-|:--------------:|
-|![alt text](image-8.png)  |
-|Figura 12  |
-
-| Estado de reposo| xxx|
-|:--------------:|:--------------:|
-| ![alt text](image-9.png)    | ![alt text](image-10.png)    |
-| Figura 13    | Figura 14   |
-
-#### Ploteo en OpenSignals
-
-| Estado de reposo| xxx|
-|:--------------:|:--------------:|
-| ![alt text](image-14.png)  | ![alt text](image-15.png)   |
-| Figura 15    | Figura 16  |
-
-| Video : xxxx  |
-|:----------------------------:|
-| [![alt text](videoframe_3.png)](xxx)    |
 
 
 ### Explicación
