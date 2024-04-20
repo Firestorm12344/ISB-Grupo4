@@ -11,17 +11,20 @@
 - [Referencias](#referencias)
   
 ##  Objetivos
+
 - Adquirir señales biomédicas de ECG.
 - Hacer una correcta configuración de BiTalino.
-- Extraer la información de las señales ECG de software OpenSignals (r)evolution.
+- Extraer la información de las señales ECG del software OpenSignals (r)evolution.
 
 ## Materiales
 | Material | Cantidad |
 |--------------|--------------|
 | Kit BiTalino    | 1    |
-| ProSim 4 Vital Signs Simulator | 1    |
+| Dispositivo *ProSim 4 Vital Signs Simulator* | 1    |
 | Laptop    | 1    |
 | Electrodos    | 3    |
+| Programa *Open Signal (r)evolution* | N.A |
+| Programa *Python* | N.A | 
 
 ## Marco Teórico
 
@@ -103,6 +106,17 @@ Por este motivo, todas las señales obtenidas a continuación se realizarán con
 | Figura 13. Después de ejercicio| ![alt text](image-12.png)|
 | Figura 14. Respiraciones largas | ![alt text](image-13.png)|
 
+A su vez, por medio de Python, se logró reproducir las señales obtenidas en el programa Open Signal. Las gráficas obtenidas se muestran a continuación:
+
+| Estado | Señal obtenida |
+|:--------------:|:--------------:|
+| Figura 15. Reposo | ![alt text](ECGEstadoBasal.png)|
+| Figura 16. Hiperventilación   | ![alt text](ECGHiperventilación.png)   |
+| Figura 17. Después de ejercicio| ![alt text](ECGPostEjercicio.png)|
+| Figura 18. Respiraciones largas | ![alt text](ECGRespiración.png)|
+
+***NOTA**: El ploteo de las señales se realizó en intervalos distintos, para una mejor apreciación de las señales.*
+
 ### Observaciones
 
 Durante el desarrollo de la prueba se notaron aspectos que impactaron de manera significativa en la obtención de las señales de ECG. Uno de estos aspectos fue el uso de accesorios metálicos tales como piercing, anillos, relojes u otros, lo que no permitió obtener una señal clara de ECG como se observa en la figura 15. Además, se observó que mientras se realizaba la toma de la señal de ECG y se acercaba un dispositivo electrónico como laptop o celular a la persona que realizaba la prueba, la señal también se distorsionaba de manera significativa.
@@ -113,6 +127,13 @@ Figura 15. Señal de ECG con accesorios
 
 ## Explicación/ Discusión de resultados
 
+### Estado de Reposo y Post-Ejercicio
+
+De las imágenes mostradas anteriormente, se puede observar un periodo duración del segmento PQRS de 0.2 segundos aproximadamente en el estado de reposo, valor que pertenece al rango del periodo regular de dichas ondas en conjunto para derivaciones periféricas (0.20 a 0.24 segundos) [4]. 
+
+Por otro lado, se observan artefactos eléctricos en las zonas de las ondas P, Q y T. Es importante resaltar que el procedimiento se llevó a cabo en un aula de clase, en la proximidad de dispositivos celulares y computadoras, con alta capacidad de transmisión de señales electromagnéticas para su sistema de comunicación. Según estudios como [5, 6], se sugiere que la presencia de señales electromagnéticas en el entorno de medición genera interferencias notorias en las gráficas de ECG, sean por parte de dispositivos móviles o por la red de área local inalámbrica (WLAN).
+
+### Estado de Respiración e Hiperventilación
 
 
 
@@ -228,3 +249,8 @@ plot_Customvalues(n, y, label, 41500, 45000)
 
 3. www.elsevier.com [Internet]. Interpretación del ECG: Guí­a Esencial para Profesionales Médicos; 12 de junio de 2023 [consultado el 19 de abril de 2024]. Disponible en: https://www.elsevier.com/es-es/connect/electrocardiograma-de-12-derivaciones-derivaciones-y-ejes
 
+4. https://www.my-ekg.com/generalidades-ekg/ondas-electrocardiograma.html
+
+5. https://pubmed.ncbi.nlm.nih.gov/19824066/
+
+6. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3629245
