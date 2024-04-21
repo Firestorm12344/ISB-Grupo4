@@ -72,16 +72,16 @@ Con la ayuda de el dispositivo ProSim 4, se simuló una parada cardiaca. Esta co
 5. Asistolia (15 s)
 6. Parada del corazón (muerte)
 
-Por cuestiones de tiempo en clase, solo se tomó registro en el simulador OpenSignals (r)evolution a partir de la fase 2 a la 6. A continuación se muestran las gráficas obtenidas en cada una de estas fases.
+ A continuación se muestran las gráficas obtenidas en cada una de estas fases.
 
 
 | Fase | Señal obtenida |
 |:--------------:|:--------------:|
-| Figura 5. Contracciones ventriculares prematuras (CVP) del ventrículo izquierdo   | ![alt text](image-4.png) |
-| Figura 6. Taquicardia ventricular de 160 lpm   | ![alt text](image-5.png)   |
-| Figura 7. Fibrilación ventricular severa| ![alt text](image-6.png)|
-| Figura 8. Asistolia | ![alt text](image-7.png)|
-| Figura 9. Parada del corazón (muerte)|![alt text](image-8.png) |
+| Figura 5. ECG de 80 lpm   | ![alt text](image-4.png) |
+| Figura 6. Contracciones ventriculares prematuras (CVP) del ventrículo izquierdo   | ![alt text](image-5.png)   |
+| Figura 7. Taquicardia ventricular de 160 lpm| ![alt text](image-6.png)|
+| Figura 8. Fibrilación ventricular severa  | ![alt text](image-7.png)|
+| Figura 9. Asistolia|![alt text](image-8.png) |
 
 
 ### Prueba ECG 
@@ -129,6 +129,12 @@ Figura 15. Señal de ECG con accesorios
 
 
 ## Explicación/ Discusión de resultados
+
+### Contracción ventricular prematura en simulacion con ProSim 4
+La contracción ventricular prematura (CVP) ocurre de manera anticipada a un latido cardiaco regular [4] y es iniciado por las fibras de Purkinje en vez del nódulo sinoauricular (NS) [5]. La CVP se caracteriza por complejos QRS prematuros y prolongados (>120 ms) [6], la pérdida de la onda R, la onda R en T en algunos casos, ondas T puntiagudas o su inversión [5].
+De la señal adquirida, se puede observar que se tiene una zona con complejo QRS prolongado y en el lugar donde debería observarse la onda T, se observa una elevación que se prolonga y luego continúa con un complejo QRS del siguiente latido. Esta es la zona que indica la presencia de una CVP, lo cual puede llegar a ser mortal para personas con problemas cardiacos [5]. Además, de acuerdo al sistema Lown Grading para CVP explicado en [5], se podría considerar que la señal obtenida es de grado 1 debido a que se muestra de manera ocasional en el tiempo de la toma de datos. 
+
+### Taquicardia en simulacion con ProSim 4
 
 ### Estado de Reposo y Post-Ejercicio
 
@@ -255,6 +261,12 @@ plot_Customvalues(n, y, label, 41500, 45000)
 
 3. www.elsevier.com [Internet]. Interpretación del ECG: Guí­a Esencial para Profesionales Médicos; 12 de junio de 2023 [consultado el 19 de abril de 2024]. Disponible en: https://www.elsevier.com/es-es/connect/electrocardiograma-de-12-derivaciones-derivaciones-y-ejes
 
+4. C. Gianni, J. D. Burkhardt, C. Trivedi, S. Mohanty, y A. Natale, “The role of the Purkinje network in premature ventricular complex-triggered ventricular fibrillation”, J. Interv. Card. Electrophysiol., vol. 52, núm. 3, pp. 375–383, 2018.
+
+5. K. Farzam y J. R. Richards, Premature Ventricular Contraction. StatPearls Publishing, 2023.
+
+6. “Premature ventricular contraction”, Medscape.com, 17-oct-2021. [En línea]. Disponible en: https://emedicine.medscape.com/article/761148-overview. [Consultado: 20-abr-2024].
+-----------------------------------------------
 4. “Ondas del Electrocardiograma”, My-ekg.com. [En línea]. Disponible en: https://www.my-ekg.com/generalidades-ekg/ondas-electrocardiograma.html. [Consultado: 20-abr-2024].
 
 5. A. Baranchuk et al., “Electromagnetic interference of communication devices on ECG machines”, Clin. Cardiol., vol. 32, núm. 10, pp. 588–592, 2009. Disponible en: https://pubmed.ncbi.nlm.nih.gov/19824066/. [Consultado: 20-abr-2024]
