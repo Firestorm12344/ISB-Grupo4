@@ -280,3 +280,7 @@ plot_Customvalues(n, y, label, 41500, 45000)
 8. E. Malakan Rad et al., “Exercise-induced electrocardiographic changes after treadmill exercise testing in healthy children: A comprehensive study”, Ann. Pediatr. Cardiol., vol. 14, núm. 4, p. 449, 2021. Disponible en: https://journals.lww.com/aopc/fulltext/2021/14040/exercise_induced_electrocardiographic_changes.1.aspx. [Consultado: 20-abr-2024]  
 
 9. J. He, Y. Kinouchi, H. Yamaguchi, y H. Miyamoto, “Exercise-induced changes in R wave amplitude and heart rate in normal subjects”, J. Electrocardiol., vol. 28, núm. 2, pp. 99–106, 1995. Disponible en: https://www.sciencedirect.com/science/article/abs/pii/S0022073605802808. [Consultado: 20-abr-2024]
+
+10. S. Sidhu and J. E. Marine, “Evaluating and managing bradycardia,” Trends in Cardiovascular Medicine, vol. 30, no. 5, pp. 265–272, Jul. 2020. doi:10.1016/j.tcm.2019.07.001
+    
+11. C. Wilson, C. Harley, and S. Steels, “How accurate is the prehospital diagnosis of hyperventilation syndrome?,” Journal of Paramedic Practice, vol. 12, no. 11, pp. 445–454, Nov. 2020. doi:10.12968/jpar.2020.12.11.445 
