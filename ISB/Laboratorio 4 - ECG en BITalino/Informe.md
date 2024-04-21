@@ -3,11 +3,12 @@
 ## Tabla de contenidos
 - [Objetivos](#objetivos)
 - [Materiales](#materiales)
-- [Introducción](#introducción)
+- [Marco teórico](#Marco-teórico)
 - [Conexión utilizada](#Conexión-utilizada)
 - [Procedimiento](#Procedimiento)
-- [Prueba 1](#Prueba-1)
-- [Prueba 2](#Prueba-2)
+- [Prueba ECG](#Prueba-ECG)
+- [Explicación/ Discusión de resultados](#Explicación/-Discusión-de-resultados)
+- [Ploteo de Python](#Ploteo-de-Python)
 - [Referencias](#referencias)
   
 ##  Objetivos
