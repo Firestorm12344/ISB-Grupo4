@@ -83,6 +83,10 @@ Con la ayuda de el dispositivo ProSim 4, se simuló una parada cardiaca. Esta co
 | Figura 8. Fibrilación ventricular severa  | ![alt text](image-7.png)|
 | Figura 9. Asistolia|![alt text](image-8.png) |
 
+| Video 1. Uso del ProSim 4 | 
+|:--------------:|
+| [![alt text](image-20.png)](https://youtu.be/UIZHlJEnGeQ)    |
+
 
 ### Prueba ECG 
 
@@ -101,9 +105,9 @@ Para el estado de reposo se realizó con ambas formas de colocación de electrod
 |:--------------:|:--------------:|
 | ![alt text](image-9.png)    | ![alt text](image-10.png)    |
 
-| Video 1. Reposo con electrodos en las manos | Video2. Reposo con electrodos en las clavículas |
+| Video 2. Reposo con electrodos en las manos | Video 3. Reposo con electrodos en las clavículas |
 |:--------------:|:--------------:|
-| <video width="320" height="240" controls> <source src="Reposo_electrodosManos.mp4" type="video/mp4">  | ![alt text](Reposo_electrodosClaviculas.mp4)    |
+| [![alt text](image-15.png)](https://youtu.be/w3UHKAbNqeg)  | [![alt text](image-16.png)](https://youtu.be/R_-ZA2TvpZo) |
 
 Por este motivo, todas las señales obtenidas a continuación se realizarán con los electrodos colocados en la forma 1. 
 
@@ -112,6 +116,10 @@ Por este motivo, todas las señales obtenidas a continuación se realizarán con
 | Figura 12. Hiperventilación   | ![alt text](image-11.png)   |
 | Figura 13. Después de ejercicio| ![alt text](image-12.png)|
 | Figura 14. Respiraciones largas | ![alt text](image-13.png)|
+
+| Video 4. Hiperventilación | Video 5. Post-ejercicio | Video 6. Respiraciones largas |
+|:--------------:|:--------------:|:--------------:|
+| [![alt text](image-17.png)]([https://youtu.be/w3UHKAbNqeg](https://youtu.be/Mtu0mNmSH4g))  | [![alt text](image-19.png)](https://youtu.be/YEAIaGd0ZK0) | [![alt text](image-18.png)](https://youtu.be/7iFbCP7fAwE) |
 
 A su vez, por medio de Python, se logró reproducir las señales obtenidas en el programa Open Signal. Las gráficas obtenidas se muestran a continuación:
 
