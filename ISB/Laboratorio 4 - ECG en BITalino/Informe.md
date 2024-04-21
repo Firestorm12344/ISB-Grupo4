@@ -146,9 +146,11 @@ Luego de haber realizado las actividades de ejercicio, se esperaría que la señ
 
 se observa una mayor magnitud de potencial eléctrico en la señal de ECG.  
 
-### Estado de Respiración e Hiperventilación
+### Estado de Respiración profunda e Hiperventilación
 
+Luego de realizar el electrocardiograma post-ejercicio, se realizaron respiraciones largas y profundas para que el sistema nervioso parasimpático puede ser más dominante, lo que puede resultar en una disminución de la frecuencia cardíaca y una mayor variabilidad en el ritmo cardíaco, reflejándose en el ECG como cambios en la distancia entre los complejos QRS y en la forma de las ondas P y T [10]. En la figura 14, se puede observar que la onda se asemeja a la onda resultante del estado de reposo de la figura 10. Esto se puede comprobar si revisamos el ploteo de la figura 18, donde se puede notar que el periodo de la onda es de 0.5 segundos, lo cual es menor en 0.1 segundos comparado al estado de reposo. Esta diferencia es probablemente debido a que no hubo una completa relajación luego del ejercicio. Además, hay que tener en cuenta que una completa y profunda relajación traería consigo una disminución de la frecuencia cardiaca por debajo del estado de reposo, específicamente en el rango de 50 a 60 pulsos por minuto, lo cual no se llevó a cabo en esta actividad [10]. Respecto a la amplitud, se puede observar que el pico R se redujo casi a la mitad si lo comparamos con el estado de reposo.  
 
+En contraste, la hiperventilación se espera observar cambios en la frecuencia respiratoria y en el equilibrio ácido-base del cuerpo. En términos de ECG, estos cambios pueden manifestarse como una variación en la frecuencia cardíaca y en la morfología de las ondas P, QRS y T, ya que la hiperventilación estimula el sistema nervioso simpático [11]. Esto se puede comprobar si revisamos el ploteo de la figura 16, donde se puede notar que el periodo de la onda es de  aproximadamente de 0.6 a 0.7 segundos, lo cual es similar comparado al estado de reposo. Esta igualdad es debido a que probablemente el aumento de la frecuencia en la respiración que se realizó voluntariamente no fue durante el tiempo suficiente para estimular el sistema simpático lo suficiente para lograr que la frecuencia cardiaca aumente. Por otro lado, si observamos la figura 12, se puede evidenciar que la señal tiene mucho ruido, ya que hubo mucho movimiento debido a las repetidas expansiones de la caja torácica que fueron realizadas mientras los electrodos estaban puestos en el sujeto de prueba.   
 
 ##  Ploteo de Python
 
