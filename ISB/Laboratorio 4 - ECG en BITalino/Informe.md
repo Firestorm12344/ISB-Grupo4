@@ -101,6 +101,10 @@ Para el estado de reposo se realizó con ambas formas de colocación de electrod
 |:--------------:|:--------------:|
 | ![alt text](image-9.png)    | ![alt text](image-10.png)    |
 
+| Video 1. Reposo con electrodos en las manos | Video2. Reposo con electrodos en las clavículas |
+|:--------------:|:--------------:|
+| ![alt text](Reposo_electrodosManos.mp4)    | ![alt text](Reposo_electrodosClaviculas.mp4)    |
+
 Por este motivo, todas las señales obtenidas a continuación se realizarán con los electrodos colocados en la forma 1. 
 
 | Estado | Señal obtenida |
