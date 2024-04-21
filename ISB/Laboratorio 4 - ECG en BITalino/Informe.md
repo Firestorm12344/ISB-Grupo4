@@ -135,14 +135,21 @@ La contracción ventricular prematura (CVP) ocurre de manera anticipada a un lat
 De la señal adquirida, se puede observar que se tiene una zona con complejo QRS prolongado y en el lugar donde debería observarse la onda T, se observa una elevación que se prolonga y luego continúa con un complejo QRS del siguiente latido. Esta es la zona que indica la presencia de una CVP, lo cual puede llegar a ser mortal para personas con problemas cardiacos [5]. Además, de acuerdo al sistema Lown Grading para CVP explicado en [5], se podría considerar que la señal obtenida es de grado 1 debido a que se muestra de manera ocasional en el tiempo de la toma de datos. 
 
 ### Taquicardia en simulacion con ProSim 4
+La taquicardia ventricular está caracterizada por un ritmo cardíaco anormal en el que el origen del impulso eléctrico está en los ventrículos en vez del nodo sinusal [7]. Esto genera un aumento en la frecuencia cardiaca, usualmente mayor a 100 latidos por minuto, como se puede observar en la Figura 7 ya que el complejo QRS se presenta más veces en un un mismo periodo de tiempo a diferencia de la Figura 5 [7].  Asimismo, se observa la ausencia de la onda P previa al complejo QRS esto debido posiblemente al aumento de la frecuencia cardiaca. Usualmente dicho complejo QRS en una persona con esta condición es más ancho que en el ECG de una persona sana como se puede observar en la Figura 7 [7].
 
-### Estado de Reposo y Post-Ejercicio
+### Fibrilación ventricular en simulacion con ProSim 4
+La fibrilación ventricular severa está caracterizada por un ritmo cardíaco irregular en el que los ventrículos tienen contracciones irregulares y laten de manera acelerada. Esto se debe a que la actividad eléctrica es justamente desorganizada [8]. Por ende, el ECG de esta condición cardiaca está caracterizado por ser caótico y descoordinado generando en un primer lugar que los complejos QRS no sean regulares y no se puedan distinguir sus respectivas ondas como se puede observar en la Figura 8 [8]. Asimismo, se observa un aumento irregular en la frecuencia cardiaca y ausencia de las ondas P.
 
-De las imágenes mostradas anteriormente, se puede observar un periodo duración del segmento PQRS de 0.2 segundos aproximadamente en el estado de reposo, valor que pertenece al rango del periodo regular de dichas ondas en conjunto para derivaciones periféricas (0.20 a 0.24 segundos) [4]. 
+### Asistolia en simulacion con ProSim 4
+La asistolia se presenta como una línea isoeléctrica "plana" debido a falta de ondas P, complejos QRS y ondas T [9]. Ello se evidencia en la figura 9, donde no se registra ninguna dinámica eléctrica del corazón.
 
-Por otro lado, se observan artefactos eléctricos en las zonas de las ondas P, Q y T. Es importante resaltar que el procedimiento se llevó a cabo en un aula de clase, en la proximidad de dispositivos celulares y computadoras, con alta capacidad de transmisión de señales electromagnéticas para su sistema de comunicación. Según estudios como [5, 6], se sugiere que la presencia de señales electromagnéticas en el entorno de medición genera interferencias notorias en las gráficas de ECG, sean por parte de dispositivos móviles o por la red de área local inalámbrica (WLAN).
+### Estado de Reposo y Post-Ejercicio en ECG
 
-Luego de haber realizado las actividades de ejercicio, se esperaría que la señal eléctrica del corazón sufra una amplificación y un aumento de frecuencia, debido al incremento del gasto cardíaco durante dicho periodo, lo que supondría ontracciones mas fuertes y rápidas [7].. Asímismo, en el artículo [8], que estudia los cambios en las señales ECG inducidos por la actividad física en niños sanos, se obtiene que la amplitud de las ondas P, S y T se vieron amplificadas significativamente luego del ejercicio; además de que el periodo de duración de toda la onda en conjunto disminuye. Dichos fenómenos también se pueden presenciar en las gráficas de la señal adquirida. Se observa que, en reposo, el ritmo cardiaco registrado corresponde a 3 latidos por 1.6 segundos aproximadamente (1.875 Hz); mientras que, después del ejercicio, se producen 8 latidos por 3 segundos aproximadamente (2.667 Hz). Además, del artículo expuesto anteriormente, existe un estudio similar [9], cuyos resultados, respecto a alteración de la amplitud de la onda cardíaca y el periodo de cada onda y de la onda total, coinciden en que la actividad física influye en las características morfológicas de la señal ECG. 
+De las imágenes mostradas anteriormente, se puede observar un periodo duración del segmento PQRS de 0.2 segundos aproximadamente en el estado de reposo, valor que pertenece al rango del periodo regular de dichas ondas en conjunto para derivaciones periféricas (0.20 a 0.24 segundos) [10]. 
+
+Por otro lado, se observan artefactos eléctricos en las zonas de las ondas P, Q y T. Es importante resaltar que el procedimiento se llevó a cabo en un aula de clase, en la proximidad de dispositivos celulares y computadoras, con alta capacidad de transmisión de señales electromagnéticas para su sistema de comunicación. Según estudios como [11, 12], se sugiere que la presencia de señales electromagnéticas en el entorno de medición genera interferencias notorias en las gráficas de ECG, sean por parte de dispositivos móviles o por la red de área local inalámbrica (WLAN).
+
+Luego de haber realizado las actividades de ejercicio, se esperaría que la señal eléctrica del corazón sufra una amplificación y un aumento de frecuencia, debido al incremento del gasto cardíaco durante dicho periodo, lo que supondría ontracciones mas fuertes y rápidas [13]. Asímismo, en el artículo [14], que estudia los cambios en las señales ECG inducidos por la actividad física en niños sanos, se obtiene que la amplitud de las ondas P, S y T se vieron amplificadas significativamente luego del ejercicio; además de que el periodo de duración de toda la onda en conjunto disminuye. Dichos fenómenos también se pueden presenciar en las gráficas de la señal adquirida. Se observa que, en reposo, el ritmo cardiaco registrado corresponde a 3 latidos por 1.6 segundos aproximadamente (1.875 Hz); mientras que, después del ejercicio, se producen 8 latidos por 3 segundos aproximadamente (2.667 Hz). Además, del artículo expuesto anteriormente, existe un estudio similar [15], cuyos resultados, respecto a alteración de la amplitud de la onda cardíaca y el periodo de cada onda y de la onda total, coinciden en que la actividad física influye en las características morfológicas de la señal ECG. 
 
 se observa una mayor magnitud de potencial eléctrico en la señal de ECG.  
 
@@ -266,15 +273,21 @@ plot_Customvalues(n, y, label, 41500, 45000)
 5. K. Farzam y J. R. Richards, Premature Ventricular Contraction. StatPearls Publishing, 2023.
 
 6. “Premature ventricular contraction”, Medscape.com, 17-oct-2021. [En línea]. Disponible en: https://emedicine.medscape.com/article/761148-overview. [Consultado: 20-abr-2024].
------------------------------------------------
-4. “Ondas del Electrocardiograma”, My-ekg.com. [En línea]. Disponible en: https://www.my-ekg.com/generalidades-ekg/ondas-electrocardiograma.html. [Consultado: 20-abr-2024].
 
-5. A. Baranchuk et al., “Electromagnetic interference of communication devices on ECG machines”, Clin. Cardiol., vol. 32, núm. 10, pp. 588–592, 2009. Disponible en: https://pubmed.ncbi.nlm.nih.gov/19824066/. [Consultado: 20-abr-2024]
+7. Wellens HJ. ELECTROPHYSIOLOGY: Ventricular tachycardia: diagnosis of broad QRS complex tachycardia. Heart [Internet]. 1 de noviembre de 2001 [consultado el 21 de abril de 2024];86(5):579-85. Disponible en: https://doi.org/10.1136/heart.86.5.579
 
-6. S. Chung, J. Yi, y S. W. Park, “Electromagnetic interference of wireless local area network on electrocardiogram monitoring system: A case report”, Korean Circ. J., vol. 43, núm. 3, p. 187, 2013. Disponible en: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3629245. [Consultado: 20-abr-2024]
+8. Ludhwani D, Goyal A, Jagtap M. National Center for Biotechnology Information [Internet]. Ventricular Fibrillation - StatPearls - NCBI Bookshelf; 8 de agosto de 2023 [consultado el 21 de abril de 2024]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK537120/.
 
-7. Normal ECG responses during and postexercise”, Human Kinetics. [En línea]. Disponible en: https://us.humankinetics.com/blogs/excerpt/normal-ecg-responses-during-and-postexercise. [Consultado: 20-abr-2024].
+9. M. R. Jordan, R. A. Lopez, y D. Morrisonponce, Asystole. StatPearls Publishing, 2023. 
 
-8. E. Malakan Rad et al., “Exercise-induced electrocardiographic changes after treadmill exercise testing in healthy children: A comprehensive study”, Ann. Pediatr. Cardiol., vol. 14, núm. 4, p. 449, 2021. Disponible en: https://journals.lww.com/aopc/fulltext/2021/14040/exercise_induced_electrocardiographic_changes.1.aspx. [Consultado: 20-abr-2024]  
+10. “Ondas del Electrocardiograma”, My-ekg.com. [En línea]. Disponible en: https://www.my-ekg.com/generalidades-ekg/ondas-electrocardiograma.html. [Consultado: 20-abr-2024].
 
-9. J. He, Y. Kinouchi, H. Yamaguchi, y H. Miyamoto, “Exercise-induced changes in R wave amplitude and heart rate in normal subjects”, J. Electrocardiol., vol. 28, núm. 2, pp. 99–106, 1995. Disponible en: https://www.sciencedirect.com/science/article/abs/pii/S0022073605802808. [Consultado: 20-abr-2024]
+11. A. Baranchuk et al., “Electromagnetic interference of communication devices on ECG machines”, Clin. Cardiol., vol. 32, núm. 10, pp. 588–592, 2009. Disponible en: https://pubmed.ncbi.nlm.nih.gov/19824066/. [Consultado: 20-abr-2024]
+
+12. S. Chung, J. Yi, y S. W. Park, “Electromagnetic interference of wireless local area network on electrocardiogram monitoring system: A case report”, Korean Circ. J., vol. 43, núm. 3, p. 187, 2013. Disponible en: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3629245. [Consultado: 20-abr-2024]
+
+13. Normal ECG responses during and postexercise”, Human Kinetics. [En línea]. Disponible en: https://us.humankinetics.com/blogs/excerpt/normal-ecg-responses-during-and-postexercise. [Consultado: 20-abr-2024].
+
+14. E. Malakan Rad et al., “Exercise-induced electrocardiographic changes after treadmill exercise testing in healthy children: A comprehensive study”, Ann. Pediatr. Cardiol., vol. 14, núm. 4, p. 449, 2021. Disponible en: https://journals.lww.com/aopc/fulltext/2021/14040/exercise_induced_electrocardiographic_changes.1.aspx. [Consultado: 20-abr-2024]  
+
+15. J. He, Y. Kinouchi, H. Yamaguchi, y H. Miyamoto, “Exercise-induced changes in R wave amplitude and heart rate in normal subjects”, J. Electrocardiol., vol. 28, núm. 2, pp. 99–106, 1995. Disponible en: https://www.sciencedirect.com/science/article/abs/pii/S0022073605802808. [Consultado: 20-abr-2024]
