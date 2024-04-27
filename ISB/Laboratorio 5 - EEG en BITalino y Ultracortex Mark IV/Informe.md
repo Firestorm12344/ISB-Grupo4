@@ -130,9 +130,31 @@ Durante el desarrollo de la prueba se notaron aspectos que impactaron de manera 
 Para el ploteo de las señales se utilizaron funciones (Archivo: Funciones.py) para realizar el ploteo de la señal (Archivo: Ploteo.py)
 
 ``` python
+def get_values(path):
+  df = pd.read_csv(path, sep='\t', skiprows=3)  # saltar las dos primeras filas (encabezado)
+  novena_columna = df.iloc[:, 8].values
+  n = [i/1000 for i in range(0, len(novena_columna))]
+  signal = [(float(valor)/(2**10)-1/2)*3.3/1009*1000*1000 for valor in novena_columna]
+  return n, signal
 
+```
+``` python
+def plot_values(n, y, label, ini, fin):
+  plt.plot(n[ini:fin], y[ini:fin])
 
+  # Etiquetas y título
+  plt.xlabel('Tiempo (s)')
+  plt.ylabel('Voltaje (uv)')
+  plt.title(label)
 
+  # Mostrar el gráfico
+  plt.show()
+```
+``` python
+path = "url"
+[n, y] = get_values(path)
+label = "Título"
+plot_values(n, y, label, valor_inicial, valor_final)
 ```
 
 ## Referencias
