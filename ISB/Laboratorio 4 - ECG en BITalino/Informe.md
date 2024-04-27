@@ -3,11 +3,12 @@
 ## Tabla de contenidos
 - [Objetivos](#objetivos)
 - [Materiales](#materiales)
-- [Introducción](#introducción)
+- [Marco teórico](#Marco-teórico)
 - [Conexión utilizada](#Conexión-utilizada)
 - [Procedimiento](#Procedimiento)
-- [Prueba 1](#Prueba-1)
-- [Prueba 2](#Prueba-2)
+- [Prueba ECG](#Prueba-ECG)
+- [Explicación/ Discusión de resultados](#Explicación/-Discusión-de-resultados)
+- [Ploteo de Python](#Ploteo-de-Python)
 - [Referencias](#referencias)
   
 ##  Objetivos
@@ -83,6 +84,10 @@ Con la ayuda de el dispositivo ProSim 4, se simuló una parada cardiaca. Esta co
 | Figura 8. Fibrilación ventricular severa  | ![alt text](image-7.png)|
 | Figura 9. Asistolia|![alt text](image-8.png) |
 
+| Video 1. Uso del ProSim 4 | 
+|:--------------:|
+| [![alt text](image-20.png)](https://youtu.be/UIZHlJEnGeQ)    |
+
 
 ### Prueba ECG 
 
@@ -101,6 +106,10 @@ Para el estado de reposo se realizó con ambas formas de colocación de electrod
 |:--------------:|:--------------:|
 | ![alt text](image-9.png)    | ![alt text](image-10.png)    |
 
+| Video 2. Reposo con electrodos en las manos | Video 3. Reposo con electrodos en las clavículas |
+|:--------------:|:--------------:|
+| [![alt text](image-15.png)](https://youtu.be/w3UHKAbNqeg)  | [![alt text](image-16.png)](https://youtu.be/R_-ZA2TvpZo) |
+
 Por este motivo, todas las señales obtenidas a continuación se realizarán con los electrodos colocados en la forma 1. 
 
 | Estado | Señal obtenida |
@@ -108,6 +117,10 @@ Por este motivo, todas las señales obtenidas a continuación se realizarán con
 | Figura 12. Hiperventilación   | ![alt text](image-11.png)   |
 | Figura 13. Después de ejercicio| ![alt text](image-12.png)|
 | Figura 14. Respiraciones largas | ![alt text](image-13.png)|
+
+| Video 4. Hiperventilación | Video 5. Post-ejercicio | Video 6. Respiraciones largas |
+|:--------------:|:--------------:|:--------------:|
+| [![alt text](image-17.png)]([https://youtu.be/w3UHKAbNqeg](https://youtu.be/Mtu0mNmSH4g))  | [![alt text](image-19.png)](https://youtu.be/YEAIaGd0ZK0) | [![alt text](image-18.png)](https://youtu.be/7iFbCP7fAwE) |
 
 A su vez, por medio de Python, se logró reproducir las señales obtenidas en el programa Open Signal. Las gráficas obtenidas se muestran a continuación:
 
@@ -151,13 +164,20 @@ Por otro lado, se observan artefactos eléctricos en las zonas de las ondas P, Q
 
 Luego de haber realizado las actividades de ejercicio, se esperaría que la señal eléctrica del corazón sufra una amplificación y un aumento de frecuencia, debido al incremento del gasto cardíaco durante dicho periodo, lo que supondría ontracciones mas fuertes y rápidas [13]. Asímismo, en el artículo [14], que estudia los cambios en las señales ECG inducidos por la actividad física en niños sanos, se obtiene que la amplitud de las ondas P, S y T se vieron amplificadas significativamente luego del ejercicio; además de que el periodo de duración de toda la onda en conjunto disminuye. Dichos fenómenos también se pueden presenciar en las gráficas de la señal adquirida. Se observa que, en reposo, el ritmo cardiaco registrado corresponde a 3 latidos por 1.6 segundos aproximadamente (1.875 Hz); mientras que, después del ejercicio, se producen 8 latidos por 3 segundos aproximadamente (2.667 Hz). Además, del artículo expuesto anteriormente, existe un estudio similar [15], cuyos resultados, respecto a alteración de la amplitud de la onda cardíaca y el periodo de cada onda y de la onda total, coinciden en que la actividad física influye en las características morfológicas de la señal ECG. 
 
-se observa una mayor magnitud de potencial eléctrico en la señal de ECG.  
+
+### Estado de Reposo y Post-Ejercicio en ECG
+
+De las imágenes mostradas anteriormente, se puede observar un periodo duración del segmento PQRS de 0.2 segundos aproximadamente en el estado de reposo, valor que pertenece al rango del periodo regular de dichas ondas en conjunto para derivaciones periféricas (0.20 a 0.24 segundos) [10]. 
+
+Por otro lado, se observan artefactos eléctricos en las zonas de las ondas P, Q y T. Es importante resaltar que el procedimiento se llevó a cabo en un aula de clase, en la proximidad de dispositivos celulares y computadoras, con alta capacidad de transmisión de señales electromagnéticas para su sistema de comunicación. Según estudios como [11, 12], se sugiere que la presencia de señales electromagnéticas en el entorno de medición genera interferencias notorias en las gráficas de ECG, sean por parte de dispositivos móviles o por la red de área local inalámbrica (WLAN).
+
+Luego de haber realizado las actividades de ejercicio, se esperaría que la señal eléctrica del corazón sufra una amplificación y un aumento de frecuencia, debido al incremento del gasto cardíaco durante dicho periodo, lo que supondría ontracciones mas fuertes y rápidas [13]. Asímismo, en el artículo [14], que estudia los cambios en las señales ECG inducidos por la actividad física en niños sanos, se obtiene que la amplitud de las ondas P, S y T se vieron amplificadas significativamente luego del ejercicio; además de que el periodo de duración de toda la onda en conjunto disminuye. Dichos fenómenos también se pueden presenciar en las gráficas de la señal adquirida. Se observa que, en reposo, el ritmo cardiaco registrado corresponde a 3 latidos por 1.6 segundos aproximadamente (1.875 Hz); mientras que, después del ejercicio, se producen 8 latidos por 3 segundos aproximadamente (2.667 Hz). Además, del artículo expuesto anteriormente, existe un estudio similar [15], cuyos resultados, respecto a alteración de la amplitud de la onda cardíaca y el periodo de cada onda y de la onda total, coinciden en que la actividad física influye en las características morfológicas de la señal ECG. 
 
 ### Estado de Respiración profunda e Hiperventilación
 
-Luego de realizar el electrocardiograma post-ejercicio, se realizaron respiraciones largas y profundas para que el sistema nervioso parasimpático puede ser más dominante, lo que puede resultar en una disminución de la frecuencia cardíaca y una mayor variabilidad en el ritmo cardíaco, reflejándose en el ECG como cambios en la distancia entre los complejos QRS y en la forma de las ondas P y T [10]. En la figura 14, se puede observar que la onda se asemeja a la onda resultante del estado de reposo de la figura 10. Esto se puede comprobar si revisamos el ploteo de la figura 18, donde se puede notar que el periodo de la onda es de 0.5 segundos, lo cual es menor en 0.1 segundos comparado al estado de reposo. Esta diferencia es probablemente debido a que no hubo una completa relajación luego del ejercicio. Además, hay que tener en cuenta que una completa y profunda relajación traería consigo una disminución de la frecuencia cardiaca por debajo del estado de reposo, específicamente en el rango de 50 a 60 pulsos por minuto, lo cual no se llevó a cabo en esta actividad [10]. Respecto a la amplitud, se puede observar que el pico R se redujo casi a la mitad si lo comparamos con el estado de reposo.  
+Luego de realizar el electrocardiograma post-ejercicio, se realizaron respiraciones largas y profundas para que el sistema nervioso parasimpático puede ser más dominante, lo que puede resultar en una disminución de la frecuencia cardíaca y una mayor variabilidad en el ritmo cardíaco, reflejándose en el ECG como cambios en la distancia entre los complejos QRS y en la forma de las ondas P y T [16]. En la figura 14, se puede observar que la onda se asemeja a la onda resultante del estado de reposo de la figura 10. Esto se puede comprobar si revisamos el ploteo de la figura 18, donde se puede notar que el periodo de la onda es de 0.5 segundos, lo cual es menor en 0.1 segundos comparado al estado de reposo. Esta diferencia es probablemente debido a que no hubo una completa relajación luego del ejercicio. Además, hay que tener en cuenta que una completa y profunda relajación traería consigo una disminución de la frecuencia cardiaca por debajo del estado de reposo, específicamente en el rango de 50 a 60 pulsos por minuto, lo cual no se llevó a cabo en esta actividad [16]. Respecto a la amplitud, se puede observar que el pico R se redujo casi a la mitad si lo comparamos con el estado de reposo.  
 
-En contraste, la hiperventilación se espera observar cambios en la frecuencia respiratoria y en el equilibrio ácido-base del cuerpo. En términos de ECG, estos cambios pueden manifestarse como una variación en la frecuencia cardíaca y en la morfología de las ondas P, QRS y T, ya que la hiperventilación estimula el sistema nervioso simpático [11]. Esto se puede comprobar si revisamos el ploteo de la figura 16, donde se puede notar que el periodo de la onda es de  aproximadamente de 0.6 a 0.7 segundos, lo cual es similar comparado al estado de reposo. Esta igualdad es debido a que probablemente el aumento de la frecuencia en la respiración que se realizó voluntariamente no fue durante el tiempo suficiente para estimular el sistema simpático lo suficiente para lograr que la frecuencia cardiaca aumente. Por otro lado, si observamos la figura 12, se puede evidenciar que la señal tiene mucho ruido, ya que hubo mucho movimiento debido a las repetidas expansiones de la caja torácica que fueron realizadas mientras los electrodos estaban puestos en el sujeto de prueba.   
+En contraste, la hiperventilación se espera observar cambios en la frecuencia respiratoria y en el equilibrio ácido-base del cuerpo. En términos de ECG, estos cambios pueden manifestarse como una variación en la frecuencia cardíaca y en la morfología de las ondas P, QRS y T, ya que la hiperventilación estimula el sistema nervioso simpático [17]. Esto se puede comprobar si revisamos el ploteo de la figura 16, donde se puede notar que el periodo de la onda es de  aproximadamente de 0.6 a 0.7 segundos, lo cual es similar comparado al estado de reposo. Esta igualdad es debido a que probablemente el aumento de la frecuencia en la respiración que se realizó voluntariamente no fue durante el tiempo suficiente para estimular el sistema simpático lo suficiente para lograr que la frecuencia cardiaca aumente. Por otro lado, si observamos la figura 12, se puede evidenciar que la señal tiene mucho ruido, ya que hubo mucho movimiento debido a las repetidas expansiones de la caja torácica que fueron realizadas mientras los electrodos estaban puestos en el sujeto de prueba.
 
 ##  Ploteo de Python
 
@@ -293,3 +313,7 @@ plot_Customvalues(n, y, label, 41500, 45000)
 14. E. Malakan Rad et al., “Exercise-induced electrocardiographic changes after treadmill exercise testing in healthy children: A comprehensive study”, Ann. Pediatr. Cardiol., vol. 14, núm. 4, p. 449, 2021. Disponible en: https://journals.lww.com/aopc/fulltext/2021/14040/exercise_induced_electrocardiographic_changes.1.aspx. [Consultado: 20-abr-2024]  
 
 15. J. He, Y. Kinouchi, H. Yamaguchi, y H. Miyamoto, “Exercise-induced changes in R wave amplitude and heart rate in normal subjects”, J. Electrocardiol., vol. 28, núm. 2, pp. 99–106, 1995. Disponible en: https://www.sciencedirect.com/science/article/abs/pii/S0022073605802808. [Consultado: 20-abr-2024]
+
+16. S. Sidhu and J. E. Marine, “Evaluating and managing bradycardia,” Trends in Cardiovascular Medicine, vol. 30, no. 5, pp. 265–272, Jul. 2020. doi:10.1016/j.tcm.2019.07.001
+    
+17. C. Wilson, C. Harley, and S. Steels, “How accurate is the prehospital diagnosis of hyperventilation syndrome?,” Journal of Paramedic Practice, vol. 12, no. 11, pp. 445–454, Nov. 2020. doi:10.12968/jpar.2020.12.11.445
