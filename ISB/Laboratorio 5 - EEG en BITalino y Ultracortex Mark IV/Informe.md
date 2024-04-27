@@ -1,4 +1,4 @@
-# Lab 4 - EEG con BiTalino y Ultracortex Mark IV
+# Lab 5 - EEG con BiTalino y Ultracortex Mark IV
 
 ## Tabla de contenidos
 - [Objetivos](#objetivos)
@@ -37,44 +37,57 @@ Para la práctica se utilizó 1 kit BiTalino y 1 Ultracortex Mark IV para la rea
 ## Conexión utilizada
 
 
-Para la obtención de EeG se utilizó la guía de "BITalino (r)evolution Lab Guide: EXPERIMENTAL GUIDES TO MEET & LEARN YOUR BIOSIGNALS". Se utilizó la conexión en el puerto A4 en el BiTalino y se realizó la colocación de los electrodos de acuerdo a la configuración 10-20.
+Para la obtención de EEG se utilizó la guía 3 de "BITalino (r)evolution Lab Guide: EXPERIMENTAL GUIDES TO MEET & LEARN YOUR BIOSIGNALS". Se utilizó la conexión en el puerto A4 en el BiTalino y se realizó la colocación de los electrodos de acuerdo a la configuración del sistema internacional 10-20.
 
-* Colocación del electrodo positivo en la posición FP1 (cercano a la línea media del lado izquierdo de la cabeza) y electrodo negativo en la posición FP2 (cercano a la la linea media del lado derecho de la cabeza). Por último, el electrodo de referencia se coloca en una posición neutral como el hueso detrás de la oreja izquierda. Observar figura X.
+* Colocación del electrodo positivo en la posición FP1 (cercano a la línea media del lado izquierdo de la cabeza) y electrodo negativo en la posición FP2 (cercano a la la linea media del lado derecho de la cabeza). Por último, el electrodo de referencia se coloca en una posición neutral como el hueso detrás de la oreja izquierda. Observar figura 1.
 
-![alt text](XXX.png)
-Figura X. Colocación de electrodos según el sistema internacional 10-20 (forma 1)
+![alt text](image.png)
+Figura 1. Colocación de electrodos. En la izquierda la colocación de electrodos positivo y negativo. A la derecha la colocación del electrodo de referencia.
+
+![alt text](image-1.png)
+Figura 2. Colocación electrodos
 
 ## Procedimiento
 
-Se realizaron 2 mediciones de EEG. Una de ellas utilizando el BITalino y otra el Ultracortex Mark IV.
+Se utilizó BiTalino para la adquisión de señales de la actividad cerebral al realizar distintos procesos cognitivos. Se tuvo las siguientes consideraciones para la realización del EEG:
+- El sujeto de prueba debió suprimir cualquier activación muscular mientras se realiza la adquisición: movimientos en área facial (movimientos oculares y parpadeo), movimientos del cuello y la mandíbula (apretar/masticar).
+- Eliminación de artefactos de interferencia o distracciones. Se buscó que el sujeto mire a un punto fijo al tener los ojos abiertos.
+- No se utilizaron artefactos metálicos por parte del sujeto de prueba como lentes, aretes, piercings u otros, para no interferir con la adquisión de las señales.
 
 ### Prueba EEG 
 
 Para la prueba de electroencefalograma se realizaron 4 pasos secuenciales. 
 
 1. Registro de una línea base de señal (respiración normal, sin movimientos oculares, ojos cerrados) - 30 segundos
-2. Registro de cinco ciclos de "ojos abiertos - ojos cerrados" - 5 segundos por fase en un ciclo
-3. Registro de una nueva fase de referencia - 30 segundos 
-4. Registro realizando ejercicios mentales de acuerdo a  [https://link.springer.com/article/10.3758/s13415-019-00703-5/tables/1]
+![alt text](image-8.png)
+Figura 3. Fase base inicial
 
-***Nota**: Para el registro realizando ejercicios mentales se leerá al usuario tres ejercicios simples y tres ejercicios complejos en voz alta y se le pedirá mantener la mirada en un punto específico y no hablar
+2. Registro de cinco ciclos de "ojos abiertos - ojos cerrados" - 5 segundos por fase en un ciclo
+![alt text](image-9.png)
+Figura 4. Ojos cerrados a la izquierda, ojos abiertos a la derecha.
+
+3. Registro de una nueva fase de referencia - 30 segundos 
+![alt text](image-10.png)
+Figura 5. Segunda fase base
+
+4. Registro realizando ejercicios mentales de acuerdo a  [https://link.springer.com/article/10.3758/s13415-019-00703-5/tables/1]
+![alt text](image-11.png)
+Figura 6. Ejercicios mentales simples y complejos
+
+***Nota**: Para el registro realizando ejercicios mentales se leerá al usuario tres ejercicios simples y tres ejercicios complejos en voz alta y se le pedirá mantener la mirada en un punto específico y no hablar.
 
 ## BITalino
 
-| Figura X. Ejercicios realizados con el BITalino | 
-| ![alt text](XXXX.png)    | 
+A continuación, se muestran las señales obtenidas en cada una de las fases anteriormnete descritas. 
 
 | Estado | Señal obtenida |
 |:--------------:|:--------------:|
-| Figura XX. Primera fase de referencia | ![alt text](xxx.png)   |
-| Figura XX. Ciclos de "ojos abiertos - ojos cerrados " | ![alt text](xxx.png)|
-| Figura XX. Segunda fase de referencia | ![alt text](xxx.png)|
-| Figura XX. Ejercicio mental simple 1 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental simple 2 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental simple 3 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental complejo 1 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental complejo 2 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental complejo 3 | ![alt text](xx.png)|
+| Figura 7. Primera fase de referencia | ![alt text](image-2.png)  |
+| Figura 8. Fase 2 - Ciclo de "ojos cerrados " | ![alt text](image-3.png)|
+| Figura 9. Fase 2 - Ciclo de "ojos abiertos" | ![alt text](image-4.png)|
+| Figura 10. Segunda fase de referencia | ![alt text](image-5.png)|
+| Figura 11. Ejercicios mentales simples | ![alt text](image-6.png)|
+| Figura 12. Ejercicios mentales complejo | ![alt text](image-7.png)|
 
 
 A su vez, por medio de Python, se logró reproducir las señales obtenidas en el programa Open Signal. Las gráficas obtenidas se muestran a continuación:
@@ -91,37 +104,6 @@ A su vez, por medio de Python, se logró reproducir las señales obtenidas en el
 | Figura XX. Ejercicio mental complejo 2 | ![alt text](xx.png)|
 | Figura XX. Ejercicio mental complejo 3 | ![alt text](xx.png)|
 
-## Ultracortex Mark IV
-
-| Figura X. Ejercicios realizados con el Ultracortex Mark IV| 
-| ![alt text](XXXX.png)    | 
-
-| Estado | Señal obtenida |
-|:--------------:|:--------------:|
-| Figura XX. Primera fase de referencia | ![alt text](xxx.png)   |
-| Figura XX. Ciclos de "ojos abiertos - ojos cerrados " | ![alt text](xxx.png)|
-| Figura XX. Segunda fase de referencia | ![alt text](xxx.png)|
-| Figura XX. Ejercicio mental simple 1 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental simple 2 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental simple 3 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental complejo 1 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental complejo 2 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental complejo 3 | ![alt text](xx.png)|
-
-
-A su vez, por medio de Python, se logró reproducir las señales obtenidas en el programa Open Signal. Las gráficas obtenidas se muestran a continuación:
-
-| Estado | Señal obtenida |
-|:--------------:|:--------------:|
-| Figura XX. Primera fase de referencia | ![alt text](xxx.png)   |
-| Figura XX. Ciclos de "ojos abiertos - ojos cerrados " | ![alt text](xxx.png)|
-| Figura XX. Segunda fase de referencia | ![alt text](xxx.png)|
-| Figura XX. Ejercicio mental simple 1 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental simple 2 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental simple 3 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental complejo 1 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental complejo 2 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental complejo 3 | ![alt text](xx.png)|
 
 ***NOTA**: El ploteo de las señales se realizó en intervalos distintos, para una mejor apreciación de las señales.*
 
@@ -137,15 +119,10 @@ Durante el desarrollo de la prueba se notaron aspectos que impactaron de manera 
 
 ### BITalino Segunda fase de referencia
 
-### BITalino Ejercicios mentales
+### BITalino Ejercicios mentales fáciles
 
-### Ultracortex Mark IV Primera fase de referencia
+### BITalino Ejercicios mentales complejos
 
-### Ultracortex Mark IV Ciclos de "Ojos abiertos - ojos cerrados"
-
-### Ultracortex Mark IV Segunda fase de referencia
-
-### Ultracortex Mark IV Ejercicios mentales
 
 
 ##  Ploteo de Python
