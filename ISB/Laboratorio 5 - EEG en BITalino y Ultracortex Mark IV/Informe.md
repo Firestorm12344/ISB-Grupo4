@@ -145,6 +145,8 @@ Teóricamente, durante el reposo, las ondas alfa en el rango de frecuencia de 8.
 
 ### BITalino Ciclos de "Ojos abiertos - ojos cerrados"
 
+En la figura 9, podemos observar el EEG durante el período de ojos abiertos, el cual debería mostrarse como una señal caracterizada por ondas de baja amplitud y frecuencia, debido a que estas ondas reflejan la actividad cortical relacionada con la recepción de estímulos visuales y la atención dirigida hacia el entorno externo [X]. Sin embargo, lo que se obtuvo en cambio fue una señal con una alta amplitud, la cual llega hasta los 1.5 mV. Esto es probablemente debido a alguna interferencia electromagnética que esté afectando la medición.  
+Por otro lado, durante el periodo de ojos cerrados que se muestra en la figura 8, el EEG exhibe una disminución en la actividad cerebral, con ondas de menor amplitud y frecuencia en comparación con el periodo de ojos abiertos. En este caso, la actividad cerebral se centra más en estados de relajación y descanso, con menos estimulación visual externa. En la figura 8, se observan patrones de ondas más regulares y menos variabilidad, indicando un estado de tranquilidad y menor actividad cognitiva dirigida hacia el entorno [4]. Sin embargo, durante este estado, el cerebro debería exhibir patrones de ondas con mayor amplitud debido a que una mayor sincronización neuronal [Y], lo cual fue contrario a lo obtenido.  
 
 ### BITalino Segunda fase de referencia
 
