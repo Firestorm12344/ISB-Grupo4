@@ -123,25 +123,27 @@ A su vez, por medio de Python, se logró reproducir las señales obtenidas en el
 
 | Estado | Señal obtenida |
 |:--------------:|:--------------:|
-| Figura 7. Primera fase de referencia | ![alt text](image-14.png)|
-| Figura 8. Fase 2 - Ciclo de "ojos cerrados " |![alt text](image-15.png) |
-| Figura 9. Fase 2 - Ciclo de "ojos abiertos" | ![alt text](image-16.png)|
-| Figura 10. Segunda fase de referencia | ![alt text](image-17.png)|
-| Figura 11. Ejercicios mentales simples | ![alt text](image-18.png)|
-| Figura 12. Ejercicios mentales complejo | ![alt text](image-12.png)|
-| Figura 13. Ejercicios Extra: Resolución de Integral | ![alt text](image-13.png)|
+| Figura 7. Primera fase de referencia |![alt text](image-15.png) |
+| Figura 8. Fase 2 - Ciclo de "ojos cerrados " | ![alt text](image-17.png)|
+| Figura 9. Fase 2 - Ciclo de "ojos abiertos por 5 segundos" |![alt text](image-16.png) |
+| Figura 10. Segunda fase de referencia | ![alt text](image-18.png)|
+| Figura 11. Ejercicios mentales simples | ![alt text](image-19.png)|
+| Figura 12. Ejercicios mentales complejo | ![alt text](image-13.png)|
+| Figura 13. Ejercicios Extra: Resolución de Integral | ![alt text](image-14.png)|
 
 ***NOTA**: El ploteo de las señales se realizó en intervalos distintos, para una mejor apreciación de las señales.*
 
 ### Observaciones
 
-Durante el desarrollo de la prueba se notaron aspectos que impactaron de manera significativa en la obtención de las señales de EEG. Se observó que mientras se realizaba la toma de la señal de EEG y se acercaba un dispositivo electrónico como laptop o celular a la persona que realizaba la prueba, la señal se distorsionaba de manera significativa.
+Durante el desarrollo de la prueba se notaron aspectos que impactaron de manera significativa en la obtención de las señales de EEG. Se observó que mientras se realizaba la toma de la señal de EEG, la proximidad a un dispositivo electrónico como laptop o celular distorsionaba la señal de manera significativa. 
+
+De mismo modo, se tiene que recalcar que, por breves momentos, se prodicía el habla por parte de la persona que realizó la prueba, lo que podría significar una actividad cerebral adicional. 
 
 ## Explicación/ Discusión de resultados
 
 ### BITalino Primera fase de referencia
 
-Durante el reposo, se observa una predominancia de ondas alfa en el rango de frecuencia de 8.5 a 13 Hz, y de rango predominantemente entre 20 y 200 microvoltios [4, 5]. Estas ondas alfa están vinculadas con un estado de relajación y una reducción de la actividad mental. La amplitud de estas ondas durante el reposo tiende a ser mayor, lo cual indica una mayor sincronización de la actividad neuronal. Cuando los sujetos mantienen los ojos cerrados, se registra una intensificación de la actividad de las ondas alfa, ya que el cierre de los ojos limita la entrada de estímulos visuales, promoviendo una mayor relajación [4]. De los gráficos mostrados anteriormente, se observa que la amplitud de los picos de la señal en fase de referencia mantienen una amplitud menor a 20 microvoltios, que podría deberse a que el sujeto de prueba no mantuvo un estado de enfoque y relajación tan intenso, lo que se traduciría en mayor presencia de ondas de alta frecuencia y menor presencia de ondas de baja frecuencia [6]
+Teóricamente, durante el reposo, las ondas alfa en el rango de frecuencia de 8.5 a 13 Hz mantienen una predominancia respecto de las demas, y mantienen una amplitud de entre 20 y 200 microvoltios [4, 5]; pues, estas ondas están vinculadas con un estado de relajación y una reducción de la actividad mental. La amplitud de estas ondas durante el reposo tiende a ser mayor, lo cual indica una mayor sincronización de la actividad neuronal. Cuando los sujetos mantienen los ojos cerrados, se intensificaría la actividad de las ondas alfa, ya que el cierre de los ojos limita la entrada de estímulos visuales, promoviendo una mayor relajación [4]. Sin embargo, de los gráficos mostrados anteriormente, se observa que la amplitud de los picos de la señal en fase de referencia mantienen una amplitud menor a 20 microvoltios en la mayoría del tiempo, que podría deberse a que el sujeto de prueba no mantuvo un estado de enfoque y relajación tan intenso, lo que se traduciría en mayor presencia de ondas de alta frecuencia y menor presencia de ondas de baja frecuencia [6].
 
 ### BITalino Ciclos de "Ojos abiertos - ojos cerrados"
 
