@@ -99,6 +99,10 @@ Figura 5. Segunda fase base
 <img src="image-11.png" alt="alt text" width="500">
 
 Figura 6. Ejercicios mentales simples y complejos
+
+Video de Ejercicios Simples: https://drive.google.com/file/d/1R4kUy1i4MVUFj8ujhgPJwVTrzT4OsLVF/view?usp=sharing
+
+Video de Ejercicios Complejos: https://drive.google.com/file/d/1R4o1Tbo9mN1mSICVrkne-8uVQw13aweB/view?usp=sharing
 </div>
 
 ***Nota**: Para el registro realizando ejercicios mentales se leerá al usuario tres ejercicios simples y tres ejercicios complejos en voz alta y se le pedirá mantener la mirada en un punto específico y no hablar.
@@ -164,22 +168,19 @@ def get_values(path):
   df = pd.read_csv(path, sep='\t', skiprows=3)  # saltar las dos primeras filas (encabezado)
   novena_columna = df.iloc[:, 8].values
   n = [i/1000 for i in range(0, len(novena_columna))]
-  signal = [(float(valor)/(2**10)-1/2)*3.3/1009*1000*1000 for valor in novena_columna]
+  signal = [(float(valor)/(2**10)-1/2)*3.3/41782*1000000 for valor in novena_columna]
   return n, signal
-
 ```
 ``` python
 def plot_values(n, y, label, ini, fin):
   plt.plot(n[ini:fin], y[ini:fin])
-
-  # Etiquetas y título
   plt.xlabel('Tiempo (s)')
   plt.ylabel('Voltaje (uv)')
   plt.title(label)
-
-  # Mostrar el gráfico
+  plt.grid(True)
   plt.show()
 ```
+
 ``` python
 path = "url"
 [n, y] = get_values(path)
