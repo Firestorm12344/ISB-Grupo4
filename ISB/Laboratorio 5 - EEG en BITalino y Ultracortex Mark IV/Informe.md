@@ -115,15 +115,22 @@ Durante el desarrollo de la prueba se notaron aspectos que impactaron de manera 
 
 ### BITalino Primera fase de referencia
 
+Durante el reposo, se observa una predominancia de ondas alfa en el rango de frecuencia de 8.5 a 13 Hz, y de rango predominantemente entre 20 y 200 microvoltios [1] [2]. Estas ondas alfa están vinculadas con un estado de relajación y una reducción de la actividad mental. La amplitud de estas ondas durante el reposo tiende a ser mayor, lo cual indica una mayor sincronización de la actividad neuronal. Cuando los sujetos mantienen los ojos cerrados, se registra una intensificación de la actividad de las ondas alfa, ya que el cierre de los ojos limita la entrada de estímulos visuales, promoviendo una mayor relajación [1]. De los gráficos mostrados anteriormente, se observa que la amplitud de los picos de la señal en fase de referencia mantienen una amplitud menor a 20 microvoltios, que podría deberse a que el sujeto de prueba no mantuvo un estado de enfoque y relajación tan intenso, lo que se traduciría en mayor presencia de ondas de alta frecuencia y menor presencia de ondas de baja frecuencia [3]
+
 ### BITalino Ciclos de "Ojos abiertos - ojos cerrados"
+
 
 ### BITalino Segunda fase de referencia
 
+
 ### BITalino Ejercicios mentales fáciles
+
 
 ### BITalino Ejercicios mentales complejos
 
 
+
+### Protocolos para EEG
 
 ##  Ploteo de Python
 
@@ -159,3 +166,8 @@ plot_values(n, y, label, valor_inicial, valor_final)
 
 ## Referencias
 
+[1] A. A. Torres-García, C. A. Reyes-García, L. Villaseñor-Pineda, y J. M. Ramírez-Cortés, “Análisis de señales electroencefalográficas para la clasificación de habla imaginada”, Rev. mex. ing. bioméd., vol. 34, núm. 1, pp. 23–39, 2013.[Consultado: 28-abr-2024]
+
+[2] M. V. Miralles, “Ondas cerebrales y su significado”, clinicaalevia.com, 13-may-2019. [En línea]. Disponible en: https://www.clinicaalevia.com/ondas-cerebrales-y-su-significado/. [Consultado: 28-abr-2024].
+
+[3] P. R. R. Aguilar, “Análisis de espectrogramas de señales EEG”, Buap.mx. [En línea]. Disponible en: https://repositorioinstitucional.buap.mx/server/api/core/bitstreams/92e27f78-4f9d-4d2e-9d69-9f90cd87c0b1/content. [Consultado: 28-abr-2024].
