@@ -123,16 +123,13 @@ A su vez, por medio de Python, se logró reproducir las señales obtenidas en el
 
 | Estado | Señal obtenida |
 |:--------------:|:--------------:|
-| Figura XX. Primera fase de referencia | ![alt text](xxx.png)   |
-| Figura XX. Ciclos de "ojos abiertos - ojos cerrados " | ![alt text](xxx.png)|
-| Figura XX. Segunda fase de referencia | ![alt text](xxx.png)|
-| Figura XX. Ejercicio mental simple 1 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental simple 2 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental simple 3 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental complejo 1 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental complejo 2 | ![alt text](xx.png)|
-| Figura XX. Ejercicio mental complejo 3 | ![alt text](xx.png)|
-
+| Figura 7. Primera fase de referencia | ![alt text](image-14.png)|
+| Figura 8. Fase 2 - Ciclo de "ojos cerrados " |![alt text](image-15.png) |
+| Figura 9. Fase 2 - Ciclo de "ojos abiertos" | ![alt text](image-16.png)|
+| Figura 10. Segunda fase de referencia | ![alt text](image-17.png)|
+| Figura 11. Ejercicios mentales simples | ![alt text](image-18.png)|
+| Figura 12. Ejercicios mentales complejo | ![alt text](image-12.png)|
+| Figura 13. Ejercicios Extra: Resolución de Integral | ![alt text](image-13.png)|
 
 ***NOTA**: El ploteo de las señales se realizó en intervalos distintos, para una mejor apreciación de las señales.*
 
