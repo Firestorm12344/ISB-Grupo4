@@ -102,9 +102,9 @@ Figura 6. Ejercicios mentales simples y complejos
 
 - [Ejercicios simples Video](https://drive.google.com/file/d/1R4kUy1i4MVUFj8ujhgPJwVTrzT4OsLVF/view?usp=sharing)
 - [Ejercicios complejos Video](https://drive.google.com/file/d/1R4o1Tbo9mN1mSICVrkne-8uVQw13aweB/view?usp=sharing)
-- [Abrir y Cerrar Ojos].(https://drive.google.com/file/d/1wwqLiLJGMie7G6T0DhWT7KN236UmsUCI/view?usp=sharing).
-- [Reposo 2].(https://drive.google.com/file/d/1NADQ1Ur7WZnuSHcFPgiPnSZeoRNaJ_Uv/view?usp=sharing).
-- [Reposo 1].(https://drive.google.com/file/d/1ywoj2DPxDPdPWYUotYk7ooI2gVceVeYi/view?usp=sharing).
+- [Abrir y Cerrar Ojos](https://drive.google.com/file/d/1wwqLiLJGMie7G6T0DhWT7KN236UmsUCI/view?usp=sharing).
+- [Reposo 2](https://drive.google.com/file/d/1NADQ1Ur7WZnuSHcFPgiPnSZeoRNaJ_Uv/view?usp=sharing).
+- [Reposo 1](https://drive.google.com/file/d/1ywoj2DPxDPdPWYUotYk7ooI2gVceVeYi/view?usp=sharing).
 </div>
 
 ***Nota**: Para el registro realizando ejercicios mentales se leerá al usuario tres ejercicios simples y tres ejercicios complejos en voz alta y se le pedirá mantener la mirada en un punto específico y no hablar.**
