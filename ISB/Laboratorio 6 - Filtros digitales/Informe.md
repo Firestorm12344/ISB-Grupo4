@@ -37,6 +37,11 @@ Se utilizó el siguiente código como filtro IRR para las señales EMG, ECG y EE
 
 Se utilizó el siguiente código como filtro FIR para las señales EMG, ECG y EEG.
 
+### Diseño del Filtro EMG
+
+### Diseño del Filtro ECG
+
+### Diseño del Filtro EEG
 
 ## Resultados
 
@@ -113,6 +118,6 @@ Se tomó registro de la señal en el usuario en una primera y segunda fase de re
 
 ## Referencias
 
-1.
+1. 
 
 </div>
