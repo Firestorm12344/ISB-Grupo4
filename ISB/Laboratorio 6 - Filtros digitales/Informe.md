@@ -50,7 +50,7 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 
 | Posicionamiento de los electrodos |
 |:--------------:|
-| ![alt text](image-1.png) |
+| <img src="image-1.png" alt="Descripción de la imagen" width="300"/> |
 | Figura 1 |
 
 
@@ -69,7 +69,7 @@ Se tomó registro de la señal en el usuario en estado de reposo, hiperventilaci
 
 | Posicionamiento de los electrodos |
 |:--------------:|
-| ![alt text](image-2.png) |
+| <img src="image-2.png" alt="Descripción de la imagen" width="300"/> |
 | Figura X |
 
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
@@ -87,7 +87,7 @@ Se tomó registro de la señal en el usuario en una primera y segunda fase de re
 
 | Posicionamiento de los electrodos |
 |:--------------:|
-| ![alt text](image-3.png) |
+| <img src="image-3.png" alt="Descripción de la imagen" width="300"/> |
 | Figura X |
 
 | Campo| Señal Cruda | Filtro IRR | Filtro FIR |
