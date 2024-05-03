@@ -55,8 +55,9 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura X. Reposo | ![alt text](imageX.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
-| Figura X. Contracción muscular | ![alt text](imageX.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
+| Figura X. Señal completa| ![alt text](image-4.jpeg)| ![alt text](imageX.png)| ![alt text](imageX.png)|
+| Figura X. Reposo | ![alt text](image-4.png)| ![alt text](image-5.jpeg)| ![alt text](imageX.png)|
+| Figura X. Contracción muscular | ![alt text](image-6.jpeg)| ![alt text](imageX.png)| ![alt text](imageX.png)|
 
 #ECG
 
@@ -69,9 +70,9 @@ Se tomó registro de la señal en el usuario en estado de reposo, hiperventilaci
 | Figura 2 | ![alt text](image-2.png) |
 
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
-|:--------------:|:--------------:|
-| Figura X. Reposo | ![alt text](imageX.png)|
-| Figura X. Hiperventilación   | ![alt text](imageX.png) | ![alt text](imageX.png) | ![alt text](imageX.png)   |
+|:--------------:|:--------------:|:--------------:|:--------------:|
+| Figura X. Reposo | ![alt text](imageX.png)| ![alt text](imageX.png) | ![alt text](imageX.png) |
+| Figura X. Hiperventilación   | ![alt text](imageX.png)| ![alt text](imageX.png) | ![alt text](imageX.png)|
 | Figura X. Después de ejercicio| ![alt text](imageX.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
 | Figura X. Respiraciones largas | ![alt text](imageX.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
 
