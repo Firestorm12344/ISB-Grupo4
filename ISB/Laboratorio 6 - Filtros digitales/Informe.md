@@ -54,12 +54,11 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 | Figura 1 |
 
 
-
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura X. Señal completa| ![alt text](image-4.jpeg)| ![alt text](imageX.png)| ![alt text](imageX.png)|
-| Figura X. Reposo | ![alt text](image-5.jpeg)| ![alt text](imageX.jpeg)| ![alt text](imageX.png)|
-| Figura X. Contracción muscular | ![alt text](image-6.jpeg)| ![alt text](imageX.png)| ![alt text](imageX.png)|
+| Figura 2. Señal completa| ![alt text](image-4.jpeg)| ![alt text](imageX.png)| ![alt text](imageX.png)|
+| Figura 3. Reposo | ![alt text](image-5.jpeg)| ![alt text](imageX.jpeg)| ![alt text](imageX.png)|
+| Figura 4. Contracción muscular | ![alt text](image-6.jpeg)| ![alt text](imageX.png)| ![alt text](imageX.png)|
 
 #ECG
 
@@ -70,14 +69,14 @@ Se tomó registro de la señal en el usuario en estado de reposo, hiperventilaci
 | Posicionamiento de los electrodos |
 |:--------------:|
 | <img src="image-2.png" alt="Descripción de la imagen" width="300"/> |
-| Figura X |
+| Figura 5 |
 
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura X. Reposo | ![alt text](imageX.png)| ![alt text](imageX.png) | ![alt text](imageX.png) |
-| Figura X. Hiperventilación   | ![alt text](imageX.png)| ![alt text](imageX.png) | ![alt text](imageX.png)|
-| Figura X. Después de ejercicio| ![alt text](imageX.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
-| Figura X. Respiraciones largas | ![alt text](imageX.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
+| Figura 6. Reposo | ![alt text](image-7.png)| ![alt text](imageX.png) | ![alt text](imageX.png) |
+| Figura 7. Hiperventilación   | ![alt text](image-8.png)| ![alt text](imageX.png) | ![alt text](imageX.png)|
+| Figura 8. Después de ejercicio| ![alt text](image-9.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
+| Figura 9. Respiraciones largas | ![alt text](image-10.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
 
 #EEG
 
@@ -92,12 +91,12 @@ Se tomó registro de la señal en el usuario en una primera y segunda fase de re
 
 | Campo| Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura X. Primera fase de referencia | ![alt text](imageX.png) | ![alt text](imageX.png) | ![alt text](imageX.png) |
-| Figura X. Fase 2 - Ciclo de "ojos cerrados " | ![alt text](imageX.png) |![alt text](imageX.png) |![alt text](imageX.png) |
-| Figura X. Fase 2 - Ciclo de "ojos abiertos" | ![alt text](imageX.png) |![alt text](imageX.png) |![alt text](imageX.png) |
-| Figura X. Segunda fase de referencia | ![alt text](imageX.png) | ![alt text](imageX.png) |![alt text](imageX.png) |
-| Figura X. Ejercicios mentales simples | ![alt text](imageX.png) | ![alt text](imageX.png) |![alt text](imageX.png) |
-| Figura X. Ejercicios mentales complejo | ![alt text](imageX.png) | ![alt text](imageX.png) |![alt text](imageX.png) |
+| Figura X. Primera fase de referencia | ![alt text](image-11.png) | ![alt text](imageX.png) | ![alt text](imageX.png) |
+| Figura X. Fase 2 - Ciclo de "ojos cerrados " | ![alt text](image-12.png) |![alt text](imageX.png) |![alt text](imageX.png) |
+| Figura X. Fase 2 - Ciclo de "ojos abiertos" | ![alt text](image-13.png) |![alt text](imageX.png) |![alt text](imageX.png) |
+| Figura X. Segunda fase de referencia | ![alt text](image-14.png) | ![alt text](imageX.png) |![alt text](imageX.png) |
+| Figura X. Ejercicios mentales simples | ![alt text](image-15.png) | ![alt text](imageX.png) |![alt text](imageX.png) |
+| Figura X. Ejercicios mentales complejo | ![alt text](image-16.png) | ![alt text](imageX.png) |![alt text](imageX.png) |
 
 
 ## Discusión de resultados
