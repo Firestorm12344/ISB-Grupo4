@@ -49,14 +49,16 @@ Los electrodos fueron colocados como se observa en la figura 1. Los electrodos p
 Se tomó registro de la señal en el usuario en estado de reposo o silencio eléctrico y realizando la contracción muscular.
 
 | Posicionamiento de los electrodos |
-|:--------------:|:--------------:|
-| Figura 1 | ![alt text](image-1.png) |
+|:--------------:|
+| ![alt text](image-1.png) |
+| Figura 1 |
+
 
 
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
 | Figura X. Señal completa| ![alt text](image-4.jpeg)| ![alt text](imageX.png)| ![alt text](imageX.png)|
-| Figura X. Reposo | ![alt text](image-4.png)| ![alt text](image-5.jpeg)| ![alt text](imageX.png)|
+| Figura X. Reposo | ![alt text](image-5.jpeg)| ![alt text](imageX.jpeg)| ![alt text](imageX.png)|
 | Figura X. Contracción muscular | ![alt text](image-6.jpeg)| ![alt text](imageX.png)| ![alt text](imageX.png)|
 
 #ECG
@@ -66,8 +68,9 @@ Los electrodos fueron colocados como se observa en la figura 2. El electrodo pos
 Se tomó registro de la señal en el usuario en estado de reposo, hiperventilación, después de hacer ejercicio y al realizar respiraciones largas.
 
 | Posicionamiento de los electrodos |
-|:--------------:|:--------------:|
-| Figura 2 | ![alt text](image-2.png) |
+|:--------------:|
+| ![alt text](image-2.png) |
+| Figura X |
 
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
@@ -83,8 +86,9 @@ Los electrodos fueron colocados como se observa en la figura 3 de acuerdo a la c
 Se tomó registro de la señal en el usuario en una primera y segunda fase de referencia, en ciclos de ojos cerrados y abierto y realizando ejercicios mentales simples y complejos.
 
 | Posicionamiento de los electrodos |
-|:--------------:|:--------------:|
-| Figura 3 | ![alt text](image-3.png) |
+|:--------------:|
+| ![alt text](image-3.png) |
+| Figura X |
 
 | Campo| Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
