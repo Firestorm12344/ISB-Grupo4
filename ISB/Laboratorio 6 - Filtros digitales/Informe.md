@@ -48,7 +48,17 @@ Para procesar la señal de electromiografía, se recurre a un filtro IIR de tipo
 
 ### Diseño del Filtro ECG
 
+Para procesar la señal obtenida ECG, tal como fue realizado en [C], se implementarán dos filtros (IIR y FIR). En este caso, se utilizó un filtro FIR pasa bajas (orden #, fc = #) y un filtro pasa altas (orden 5, fc = 0.1 Hz), tal como se muestra en la figura 1. Cabe recalcar que el estudio mencionado no se especifica la frecuencia de corte pasa bajas pero menciona que busca suprimir las bandas de la red eléctrica de potencia (60 Hz); por ello, se diseña el filtro con las especificaciones expuestas para cumplir con dicho objetivo. 
+
+![alt text](image.png)
+Figura 1. Filtro diseñado por [C]
+
+[C] N.-T. Bui y G.-S. Byun, “The comparison features of ECG signal with different sampling frequencies and filter methods for real-time measurement”, Symmetry (Basel), vol. 13, núm. 8, p. 1461, 2021.
+
+
 ### Diseño del Filtro EEG
+
+
 
 ## Resultados
 
