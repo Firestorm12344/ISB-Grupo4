@@ -78,9 +78,9 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura 2. Señal completa| ![alt text](image-4.jpeg)| ![alt text](imageX.png)| ![alt text](imageX.png)|
-| Figura 3. Reposo | ![alt text](image-5.jpeg)| ![alt text](imageX.jpeg)| ![alt text](imageX.png)|
-| Figura 4. Contracción muscular | ![alt text](image-6.jpeg)| ![alt text](imageX.png)| ![alt text](imageX.png)|
+| Figura 2. Señal completa| ![alt text](image-20.png)| ![alt text](image-5.png)| ![alt text](imageX.png)|
+| Figura 3. Reposo | ![alt text](image-18.png)| ![alt text](image-17.png)| ![alt text](imageX.png)|
+| Figura 4. Contracción muscular | ![alt text](image-19.png)| ![alt text](image-6.png)| ![alt text](imageX.png)|
 
 #ECG
 
@@ -120,6 +120,243 @@ Se tomó registro de la señal en el usuario en una primera y segunda fase de re
 | Figura X. Ejercicios mentales simples | ![alt text](image-15.png) | ![alt text](imageX.png) |![alt text](imageX.png) |
 | Figura X. Ejercicios mentales complejo | ![alt text](image-16.png) | ![alt text](imageX.png) |![alt text](imageX.png) |
 
+
+## Código en Python
+
+``` python
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy import signal
+
+def get_values(path, col):
+  df = pd.read_csv(path, sep='\t', skiprows=3)  # saltar las dos primeras filas (encabezado)
+  novena_columna = df.iloc[:, col].values
+  n = [i/1000 for i in range(0, len(novena_columna))]
+  signal = [(float(valor)/(2**10)-1/2)*3.3/1009*1000 for valor in novena_columna]
+  return n, signal
+
+def get_valuesEEG(path, col):
+  df = pd.read_csv(path, sep='\t', skiprows=3)  # saltar las dos primeras filas (encabezado)
+  novena_columna = df.iloc[:, col].values
+  n = [i/1000 for i in range(0, len(novena_columna))]
+  signal = [(float(valor)/(2**10)-1/2)*3.3/41782*1000 for valor in novena_columna]
+  return n, signal
+
+def plot_values(n, y, label, ini, fin):
+  plt.plot(n[ini:fin], y[ini:fin])
+  plt.xlabel('Tiempo (s)')
+  plt.ylabel('Voltaje (mv)')
+  plt.title(label)
+  plt.grid(True)
+  plt.show()
+
+def FreqAnalysis (signal):
+  fs = 1000
+  fft_result = np.fft.fft(signal)
+  freqs = np.fft.fftfreq(len(signal), 1/fs)
+  plt.figure(figsize=(10, 5))
+  plt.plot(freqs, np.abs(fft_result))
+  plt.xlim(-50, 50)
+  plt.title('Magnitud de la Transformada Rápida de Fourier (FFT)')
+  plt.xlabel('Frecuencia (Hz)')
+  plt.ylabel('Magnitud')
+  plt.grid(True)
+  plt.show()
+
+```
+### Importación de Señales
+
+``` python
+
+# Señales EMG
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/EMG/BICEPS.txt"
+[n, EMGsignal] = get_values(path, 5)
+label = "EMG de los bíceps"
+
+
+# Señales ECG
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/RESPIRACION.txt"
+[n, ECGsignal] = get_values(path, 6)
+label = "ECG Durante respiración"
+
+
+
+# Señales EEG
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/EEG/dificil.txt"
+[n, EEGsignal] = get_valuesEEG(path, 8)
+label = "EEG Durante Ejercicio Difíciles"
+
+
+```
+
+### Filtrados para las Señales EMG
+
+``` python
+b,a = signal.butter(2, 10, 'highpass', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, EMGsignal)
+b,a = signal.butter(8, 400, 'lowpass', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [40, 80], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [100, 140], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [160, 200], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [220, 260], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [280, 320], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [340, 380], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+
+plt.figure(figsize=(10,4))
+plt.subplot(121)
+n = [i/1000 for i in range(0,len(EMGsignal))]
+plt.plot(n, EMGsignal)
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EMG sin filtro")
+plt.grid(True)
+plt.margins(0, 0.05)
+
+plt.subplot(122)
+plt.plot(n, filteredEMG)
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EMG filtrado")
+plt.grid(True)
+plt.margins(0, 0.05)
+plt.tight_layout()
+plt.show()
+
+plt.figure()
+n = [i/1000 for i in range(0,len(EMGsignal))]
+plt.plot(n[0:20000], EMGsignal[0:20000])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EMG sin filtro (EN REPOSO)")
+plt.grid(True)
+plt.ylim([-2, 2])
+plt.margins(0, 0.05)
+
+plt.figure()
+plt.plot(n[0:20000], filteredEMG[0:20000])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EMG filtrado (EN REPOSO)")
+plt.ylim([-2, 2])
+plt.grid(True)
+plt.margins(0, 0.05)
+plt.tight_layout()
+plt.show()
+
+plt.figure()
+n = [i/1000 for i in range(0,len(EMGsignal))]
+plt.plot(n[40000:68000], EMGsignal[40000:68000])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EMG sin filtro (EN EXITACIÓN)")
+plt.ylim([-1.2, 1.2])
+plt.grid(True)
+plt.margins(0, 0.05)
+
+plt.figure()
+plt.plot(n[40000:68000], filteredEMG[40000:68000])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EMG filtrado (EN EXITACIÓN)")
+plt.ylim([-1.2, 1.2])
+plt.margins(0, 0.05)
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+```
+ 
+### Filtrado para las señales ECG
+
+``` python
+b,a = signal.butter(2, 10, 'highpass', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, EMGsignal)
+b,a = signal.butter(8, 400, 'lowpass', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [40, 80], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [100, 140], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [160, 200], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [220, 260], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [280, 320], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [340, 380], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+
+plt.figure(figsize=(10,4))
+plt.subplot(121)
+n = [i/1000 for i in range(0,len(EMGsignal))]
+plt.plot(n, EMGsignal)
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EMG sin filtro")
+plt.margins(0, 0.05)
+
+plt.subplot(122)
+plt.plot(n, filteredEMG)
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EMG filtrado")
+plt.margins(0, 0.05)
+plt.tight_layout()
+plt.show()
+
+
+```
+### Filtrado para las señales EEG
+
+``` python
+b,a = signal.butter(2, 10, 'highpass', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, EMGsignal)
+b,a = signal.butter(8, 400, 'lowpass', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [40, 80], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [100, 140], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [160, 200], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [220, 260], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [280, 320], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+b,a = signal.butter(2, [340, 380], 'stop', fs=1000, output='ba')
+filteredEMG =signal.filtfilt(b,a, filteredEMG)
+
+plt.figure(figsize=(10,4))
+plt.subplot(121)
+n = [i/1000 for i in range(0,len(EMGsignal))]
+plt.plot(n, EMGsignal)
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EMG sin filtro")
+plt.margins(0, 0.05)
+
+plt.subplot(122)
+plt.plot(n, filteredEMG)
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EMG filtrado")
+plt.margins(0, 0.05)
+plt.tight_layout()
+plt.show()
+
+
+```
 
 ## Discusión de resultados
 
