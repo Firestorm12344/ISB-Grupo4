@@ -309,7 +309,46 @@ plt.show()
 
 ``` python
 
+t = [num / fs for num in n]; N=len(n)
+M = 37;
+Fc = 30
+wc = 2*np.pi*Fc/fs
+w = firwin(numtaps=M, cutoff=Fc, window='hamming', fs=1000, pass_zero=False)
+w = np.round(w,3)
+nm = np.arange(M)
+W = np.fft.fft(w,N)
+W = np.round(W[0:N//2],3)
+y_filtrado = lfilter(w, np.array(1),EMGsignal)
+plt.figure()
+n = [i/1000 for i in range(0,len(EMGsignal))]
+plt.plot(n[0: 20000], y_filtrado[0: 68000])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.ylim([-2, 2])
+plt.title("EMG filtrado (EN REPOSO)")
+plt.grid(True)
+plt.margins(0, 0.05)
 
+fs=1000 #Frecuencia de muestreo
+t = [num / fs for num in n]; N=len(n)
+M = 37;
+Fc = 30
+wc = 2*np.pi*Fc/fs
+w = firwin(numtaps=M, cutoff=Fc, window='hamming', fs=1000, pass_zero=False)
+w = np.round(w,3)
+nm = np.arange(M)
+W = np.fft.fft(w,N)
+W = np.round(W[0:N//2],3)
+y_filtrado = lfilter(w, np.array(1),EMGsignal)
+plt.figure()
+n = [i/1000 for i in range(0,len(EMGsignal))]
+plt.plot(n[40000: 68000], y_filtrado[40000: 68000])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.ylim([-1.2, 1.2])
+plt.title("EMG filtrado (EN EXITACIÓN)")
+plt.grid(True)
+plt.margins(0, 0.05)
 
 ```
  
