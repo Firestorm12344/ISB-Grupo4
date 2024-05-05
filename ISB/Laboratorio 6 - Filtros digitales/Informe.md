@@ -599,9 +599,9 @@ plt.margins(0, 0.05)
 
 ## Discusión de resultados
 
-###EMG
+### EMG
 
-###ECG
+### ECG
 
 Debido a que el ECG es una señal de baja frecuencia puede ser fácilmente influenciada por la corriente eléctrica suministrada por la red eléctrica así como interferencia por cambios en el nivel de referencia de una señal como la respiración del usuario u otros movimientos realizando durante la toma de datos  [1]. Por ende, el filtrado se utiliza para eliminar los componentes de frecuencia no deseados mientras se preserva la originalidad de la señal [9].
 
@@ -616,7 +616,7 @@ Al observar los resultados de ambos filtros aplicados a las señales de ECG, es 
 [Y] Saxena S, Jais R, Hota MK. Removal of Powerline Interference from ECG Signal using FIR, IIR, DWT and NLMS Adaptive Filter. En: 2019 International Conference on Communication and Signal Processing (ICCSP) [Internet]; 4-6 de abril de 2019; Chennai, India. [lugar desconocido]: IEEE; 2019 [consultado el 5 de mayo de 2024]. Disponible en: https://doi.org/10.1109/iccsp.2019.8698112 
 
 
-###EEG
+### EEG
 
 ### Observaciones
 
