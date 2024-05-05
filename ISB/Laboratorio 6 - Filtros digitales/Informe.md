@@ -82,9 +82,9 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura 2. Señal completa| ![alt text](image-19.png)|![alt text](image-5.png)| ![alt text](image-30.png)|
+| Figura 2. Señal completa| ![alt text](image-19.png)|![alt text](image-5.png)|![alt text](image-32.png)|
 | Figura 3. Reposo | ![alt text](image-18.png)| ![alt text](image-17.png)| ![alt text](image-31.png)|
-| Figura 4. Contracción muscular | ![alt text](image-10.png)| ![alt text](image-6.png)| ![alt text](image-32.png)|
+| Figura 4. Contracción muscular | ![alt text](image-10.png)| ![alt text](image-6.png)| ![alt text](image-30.png)|
 
 ### ECG
 
@@ -241,8 +241,7 @@ filteredEMG =signal.filtfilt(b,a, filteredEMG)
 b,a = signal.butter(2, [340, 380], 'stop', fs=1000, output='ba')
 filteredEMG =signal.filtfilt(b,a, filteredEMG)
 
-plt.figure(figsize=(10,4))
-plt.subplot(121)
+plt.figure()
 n = [i/1000 for i in range(0,len(EMGsignal))]
 plt.plot(n, EMGsignal)
 plt.ylabel("Amplitud (mv)")
@@ -251,7 +250,7 @@ plt.title("EMG sin filtro")
 plt.grid(True)
 plt.margins(0, 0.05)
 
-plt.subplot(122)
+plt.figure()
 plt.plot(n, filteredEMG)
 plt.ylabel("Amplitud (mv)")
 plt.xlabel("Tiempo (s)")
