@@ -64,7 +64,7 @@ Figura 1. Filtro diseñado por [C]
 
 ***NOTA**: El ploteo de las señales se realizó en intervalos distintos, para una mejor apreciación de las señales.*
 
-#EMG
+### EMG
 
 Los resultados analizados en la siguiente tabla se obtuvieron al realizar el EMG del bíceps. 
 Los electrodos fueron colocados como se observa en la figura 1. Los electrodos positivo y negativo será colocados en el músculo de interés, en este caso el bíceps mientras que el electrodo de referencia será colocado en una zona neutra como la muñeca.
@@ -82,7 +82,7 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 | Figura 3. Reposo | ![alt text](image-18.png)| ![alt text](image-17.png)| ![alt text](imageX.png)|
 | Figura 4. Contracción muscular | ![alt text](image-10.png)| ![alt text](image-6.png)| ![alt text](imageX.png)|
 
-#ECG
+### ECG
 
 Los resultados analizados en la siguiente tabla se obtuvieron al realizar el ECG. 
 Los electrodos fueron colocados como se observa en la figura 2. El electrodo positivo se posicionó en la clavícula izquierda, electrodo negativo en la clavícula derecha y electrodo de referencia en la cresta iliaca. 
@@ -99,7 +99,7 @@ Se tomó registro de la señal en el usuario en estado de reposo, hiperventilaci
 | Figura 7. Después de ejercicio| ![alt text](image-8.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
 | Figura 8. Respiraciones largas | ![alt text](image-9.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
 
-#EEG
+### EEG
 
 Los resultados analizados en la siguiente tabla se obtuvieron al realizar el EEG. 
 Los electrodos fueron colocados como se observa en la figura 3 de acuerdo a la configuración del sistema internacional 10-20.
