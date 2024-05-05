@@ -48,10 +48,7 @@ Para procesar la señal de electromiografía, se recurre a un filtro IIR de tipo
 
 ### Diseño del Filtro ECG
 
-Para procesar la señal obtenida ECG, tal como fue realizado en [C], se implementarán dos filtros (IIR y FIR). En este caso, se utilizó un filtro FIR pasa bajas (orden #, fc = #) y un filtro pasa altas (orden 5, fc = 0.1 Hz), tal como se muestra en la figura 1. Cabe recalcar que el estudio mencionado no se especifica la frecuencia de corte pasa bajas pero menciona que busca suprimir las bandas de la red eléctrica de potencia (60 Hz); por ello, se diseña el filtro con las especificaciones expuestas para cumplir con dicho objetivo. 
-
-![alt text](image.png)
-Figura 1. Filtro diseñado por [C]
+Para procesar la señal obtenida ECG, tal como fue realizado en [C], se implementarán dos filtros (IIR y FIR). En este caso, se utilizó un filtro FIR pasa bajas (orden #, fc = #) y un filtro pasa altas (orden 5, fc = 0.1 Hz). Cabe recalcar que el estudio mencionado no se especifica la frecuencia de corte pasa bajas pero menciona que busca suprimir las bandas de la red eléctrica de potencia (60 Hz); por ello, se diseña el filtro con las especificaciones expuestas para cumplir con dicho objetivo. 
 
 [C] N.-T. Bui y G.-S. Byun, “The comparison features of ECG signal with different sampling frequencies and filter methods for real-time measurement”, Symmetry (Basel), vol. 13, núm. 8, p. 1461, 2021.
 
@@ -95,9 +92,9 @@ Se tomó registro de la señal en el usuario en estado de reposo, hiperventilaci
 
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura 6. Estado Basal | ![alt text](image-7.png)| ![alt text](image-20.png) | ![alt text](imageX.png) |
-| Figura 7. Después de ejercicio| ![alt text](image-8.png)| ![alt text](image-21.png)| ![alt text](imageX.png)|
-| Figura 8. Respiraciones largas | ![alt text](image-9.png)| ![alt text](image-22.png)| ![alt text](imageX.png)|
+| Figura 6. Estado Basal | ![alt text](image-7.png)| ![alt text](image-20.png) | ![alt text](image-25.png) |
+| Figura 7. Después de ejercicio| ![alt text](image-8.png)| ![alt text](image-21.png)| ![alt text](image-24.png) |
+| Figura 8. Respiraciones largas | ![alt text](image-9.png)| ![alt text](image-22.png)| ![alt text](image-23.png)|
 
 ### EEG
 
@@ -201,7 +198,7 @@ label = "EEG Durante Ejercicio Difíciles"
 
 ```
 
-### Filtrados para las Señales EMG
+### Filtrados IIR para las Señales EMG
 
 ``` python
 b,a = signal.butter(2, 10, 'highpass', fs=1000, output='ba')
@@ -284,8 +281,16 @@ plt.tight_layout()
 plt.show()
 
 ```
+
+### Filtrado FIR para las señales EMG
+
+``` python
+
+
+
+```
  
-### Filtrado para las señales ECG
+### Filtrado IIR para las señales ECG 
 
 ``` python
 
@@ -324,7 +329,85 @@ plt.title("ECG en Estado de Respiración (Filtrado)")
 plt.grid(True)
 plt.margins(0, 0.05)
 ```
-### Filtrado para las señales EEG
+
+### Filtrado FIR para las señales ECG 
+
+``` python
+
+fs=1000 #Frecuencia de muestreo
+t = [num / fs for num in n]; N=len(n)
+M = 37
+Fc = 50
+wc = 2*np.pi*Fc/fs
+# filtro fir
+w = firwin(numtaps=M, cutoff=Fc, window='hamming', fs=1000)
+w = np.round(w,3)
+nm = np.arange(M)
+W = np.fft.fft(w,N)
+W = np.round(W[0:N//2],3)
+y_filtrado = lfilter(w, np.array(1),ECGsignal2)
+plt.figure()
+n = [i/1000 for i in range(0,len(filteredECG))]
+plt.plot(n[2600: 4200], y_filtrado[2600: 4200])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("ECG en Estado Basal (Filtrado)")
+plt.grid(True)
+plt.margins(0, 0.05)
+
+fs=1000 #Frecuencia de muestreo
+t = [num / fs for num in n]; N=len(n)
+M = 37
+Fc = 50
+wc = 2*np.pi*Fc/fs
+# filtro fir
+w = firwin(numtaps=M, cutoff=Fc, window='hamming', fs=1000)
+w = np.round(w,3)
+nm = np.arange(M)
+W = np.fft.fft(w,N)
+W = np.round(W[0:N//2],3)
+y_filtrado = lfilter(w, np.array(1),ECGsignal2)
+plt.figure()
+n = [i/1000 for i in range(0,len(filteredECG))]
+plt.plot(n[2600: 4200], y_filtrado[2600: 4200])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("ECG en Estado Basal (Filtrado)")
+plt.grid(True)
+plt.margins(0, 0.05)
+
+fs=1000 #Frecuencia de muestreo
+t = [num / fs for num in n]; N=len(n)
+M = 37
+Fc = 50
+wc = 2*np.pi*Fc/fs
+# filtro fir
+w = firwin(numtaps=M, cutoff=Fc, window='hamming', fs=1000)
+w = np.round(w,3)
+nm = np.arange(M)
+W = np.fft.fft(w,N)
+W = np.round(W[0:N//2],3)
+y_filtrado = lfilter(w, np.array(1),ECGsignal3)
+plt.figure()
+n = [i/1000 for i in range(0,len(filteredECG))]
+plt.plot(n[2600: 4200], y_filtrado[2600: 4200])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("ECG en Estado Basal (Filtrado)")
+plt.grid(True)
+plt.margins(0, 0.05)
+
+```
+
+### Filtrado IIR para las señales EEG
+
+``` python
+
+
+
+```
+
+### Filtrado FIR para las señales EEG
 
 ``` python
 
