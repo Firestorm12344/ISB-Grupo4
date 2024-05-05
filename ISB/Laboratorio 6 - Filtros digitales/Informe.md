@@ -78,9 +78,9 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura 2. Señal completa| ![alt text](image-20.png)| ![alt text](image-5.png)| ![alt text](imageX.png)|
+| Figura 2. Señal completa| ![alt text](image-19.png)|![alt text](image-5.png)| ![alt text](imageX.png)|
 | Figura 3. Reposo | ![alt text](image-18.png)| ![alt text](image-17.png)| ![alt text](imageX.png)|
-| Figura 4. Contracción muscular | ![alt text](image-19.png)| ![alt text](image-6.png)| ![alt text](imageX.png)|
+| Figura 4. Contracción muscular | ![alt text](image-10.png)| ![alt text](image-6.png)| ![alt text](imageX.png)|
 
 #ECG
 
