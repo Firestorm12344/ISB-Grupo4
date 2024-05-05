@@ -60,6 +60,7 @@ Para procesar la señal de electromiografía, se recurre a un filtro IIR de tipo
 Para el filtro de señales ECG, estudios [M,N] comparan el uso de filtros IIR como Butterworth o Chebyshev I y I; sin embargo, muestran que el filtro más adecuado para este tipo de señales es el Butterworth de orden 8. De manera específica, el estudio [N] muestra que un filtro Butterworth pasa bajas de orden 8 con una frecuencia de corte de 60 Hz muestra un Ratio Señal a Ruido (SNR por sus siglas en ingles) en decibelios 11.84, donde un alto valor de SNR indica que la señal no tenderá a perderse en el ruido. En comparación a otros filtros Butterworth implementados en el mismo estudio [N] pero con menor orden y distinta frecuencia de corte, este filtro resulta ser el que mejor ante el ruido. Por ello, se tomará como referencia este filtro Butterworth pasa bajas de orden 8 y fc= 60 Hz para el filtro IIR de las señales.
 
 [M] R. A. Rachman, I. D. G. H. Wisana, y P. C. Nugraha, “Development of a low-cost and effisient ECG devices with IIR digital filter design”, Indones.J.electronic.electromed.med.inf, vol. 3, núm. 1, pp. 21–28, 2021.
+
 [N] S. Basu y S. Mamud, “Comparative study on the effect of order and Cut off frequency of Butterworth Low Pass filter for removal of noise in ECG signal”, en 2020 IEEE 1st International Conference for Convergence in Engineering (ICCE), 2020, pp. 156–160.
 
 ### Diseño del Filtro EEG
