@@ -95,9 +95,9 @@ Se tomó registro de la señal en el usuario en estado de reposo, hiperventilaci
 
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura 6. Estado Basal | ![alt text](image-7.png)| ![alt text](imageX.png) | ![alt text](imageX.png) |
-| Figura 7. Después de ejercicio| ![alt text](image-8.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
-| Figura 8. Respiraciones largas | ![alt text](image-9.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
+| Figura 6. Estado Basal | ![alt text](image-7.png)| ![alt text](image-20.png) | ![alt text](imageX.png) |
+| Figura 7. Después de ejercicio| ![alt text](image-8.png)| ![alt text](image-21.png)| ![alt text](imageX.png)|
+| Figura 8. Respiraciones largas | ![alt text](image-9.png)| ![alt text](image-22.png)| ![alt text](imageX.png)|
 
 ### EEG
 
@@ -178,19 +178,19 @@ label = "EMG de los bíceps"
 # Señales ECG
 
 path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/J1.txt"
-[n, ECGsignal] = get_values(path, 6)
+[n, ECGsignal1] = get_values(path, 6)
 label = "ECG Estado Basal"
-plot_values(n, ECGsignal, label, 2600, 4200)
+plot_values(n, ECGsignal1, label, 2600, 4200)
 
 path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/POS EJERCICIO.txt"
-[n, ECGsignal] = get_values(path, 6)
+[n, ECGsignal2] = get_values(path, 6)
 label = "ECG Estado Post Ejercicio"
-plot_values(n, ECGsignal, label,  2600, 4200)
+plot_values(n, ECGsignal2, label,  2600, 4200)
 
 path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/RESPIRACION.txt"
-[n, ECGsignal] = get_values(path, 6)
+[n, ECGsignal3] = get_values(path, 6)
 label = "ECG Durante respiración"
-plot_values(n, ECGsignal, label,  2600, 4200)
+plot_values(n, ECGsignal3, label,  2600, 4200)
 
 # Señales EEG
 
@@ -288,80 +288,46 @@ plt.show()
 ### Filtrado para las señales ECG
 
 ``` python
-b,a = signal.butter(2, 10, 'highpass', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, EMGsignal)
-b,a = signal.butter(8, 400, 'lowpass', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
-b,a = signal.butter(2, [40, 80], 'stop', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
-b,a = signal.butter(2, [100, 140], 'stop', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
-b,a = signal.butter(2, [160, 200], 'stop', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
-b,a = signal.butter(2, [220, 260], 'stop', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
-b,a = signal.butter(2, [280, 320], 'stop', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
-b,a = signal.butter(2, [340, 380], 'stop', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
 
-plt.figure(figsize=(10,4))
-plt.subplot(121)
-n = [i/1000 for i in range(0,len(EMGsignal))]
-plt.plot(n, EMGsignal)
+b = [6.622623141047573e-07,5.2980985128380585e-06,1.8543344794933204e-05,3.7086689589866414e-05,4.635836198733302e-05,3.708668958986641e-05,1.8543344794933207e-05,5.2980985128380585e-06,6.622623141047573e-07]
+a = [1.0,-6.068790722024154,16.298664203810503,-25.26779226940654,24.70705645741085,-15.590167548706336,6.195189257371583,-1.4166345584748548,0.14264471917136207]
+
+filteredECG = signal.lfilter(b,a,ECGsignal1)
+
+plt.figure()
+n = [i/1000 for i in range(0,len(filteredECG))]
+plt.plot(n[2600: 4200], filteredECG[2600: 4200])
 plt.ylabel("Amplitud (mv)")
 plt.xlabel("Tiempo (s)")
-plt.title("EMG sin filtro")
+plt.title("ECG en Estado Basal (Filtrado)")
+plt.grid(True)
 plt.margins(0, 0.05)
 
-plt.subplot(122)
-plt.plot(n, filteredEMG)
+filteredECG = signal.lfilter(b,a,ECGsignal2)
+
+plt.figure()
+n = [i/1000 for i in range(0,len(filteredECG))]
+plt.plot(n[2600: 4200], filteredECG[2600: 4200])
 plt.ylabel("Amplitud (mv)")
 plt.xlabel("Tiempo (s)")
-plt.title("EMG filtrado")
+plt.title("ECG en Estado Post Ejercicio (Filtrado)")
+plt.grid(True)
 plt.margins(0, 0.05)
-plt.tight_layout()
-plt.show()
 
-
+filteredECG = signal.lfilter(b,a,ECGsignal3)
+plt.figure()
+n = [i/1000 for i in range(0,len(filteredECG))]
+plt.plot(n[2600: 4200], filteredECG[2600: 4200])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("ECG en Estado de Respiración (Filtrado)")
+plt.grid(True)
+plt.margins(0, 0.05)
 ```
 ### Filtrado para las señales EEG
 
 ``` python
-b,a = signal.butter(2, 10, 'highpass', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, EMGsignal)
-b,a = signal.butter(8, 400, 'lowpass', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
-b,a = signal.butter(2, [40, 80], 'stop', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
-b,a = signal.butter(2, [100, 140], 'stop', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
-b,a = signal.butter(2, [160, 200], 'stop', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
-b,a = signal.butter(2, [220, 260], 'stop', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
-b,a = signal.butter(2, [280, 320], 'stop', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
-b,a = signal.butter(2, [340, 380], 'stop', fs=1000, output='ba')
-filteredEMG =signal.filtfilt(b,a, filteredEMG)
 
-plt.figure(figsize=(10,4))
-plt.subplot(121)
-n = [i/1000 for i in range(0,len(EMGsignal))]
-plt.plot(n, EMGsignal)
-plt.ylabel("Amplitud (mv)")
-plt.xlabel("Tiempo (s)")
-plt.title("EMG sin filtro")
-plt.margins(0, 0.05)
-
-plt.subplot(122)
-plt.plot(n, filteredEMG)
-plt.ylabel("Amplitud (mv)")
-plt.xlabel("Tiempo (s)")
-plt.title("EMG filtrado")
-plt.margins(0, 0.05)
-plt.tight_layout()
-plt.show()
 
 
 ```
