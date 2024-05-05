@@ -24,9 +24,28 @@
 
 <div style="text-align: justify;">
 
-Filtros Digitales 
+__Filtros digitales__
 
-Filtros IRR y Filtros FIR
+En general, las técnicas de filtrado digital son más flexibles que las analógicas ya que se implementan en software en vez de hardware y pueden modificarse según sea necesario de manera más sencilla sobretodo en aplicaciones donde los parámetros del filtro son modificados continuamente [1]. Esto se debe a que no hay dependencias de las tolerancias de los componentes electrónicos como si lo hay en los filtros analógicos lo que hace que el ajuste de componentes que se suele hacer en estos se vuelva obsoleto [1]. Por ende, el comportamiento de los algoritmos implementados con los filtros digitales es predecible [1]. Asimismo, las frecuencias extremadamente bajas pueden ser procesadas sin los problemas que ocurren en los sistemas analógicos [1]. 
+
+Se han reportado varios métodos para la eliminación en tiempo real de la interferencia a partir de la corriente eléctrica suministrada por la red eléctrica así como interferencia por cambios en el nivel de referencia de una señal utilizando filtrado digital en las señales eléctricas como las evaluadas en el electromiograma (EMG), electrocardiograma (ECG) y encefalograma (EEG) [2]. La implementación de filtros digitales para dicha eliminación de ruido en línea también se ve promovida por la llegada de los primeros microprocesadores económicos [2]. 
+
+Dentro de los diferentes filtros utilizados en procesamiento de señales están los filtros IIR (de respuesta infinita al impulso) y FIR (de respuesta finita al impulso) [1]. Las diferentes expresiones matemáticas para las funciones de transferencia de los filtros FIR e IIR también resultan en métodos de diseño muy diferentes para ambos tipos de filtros [1]. Mientras que en el caso del primero se aproxima una respuesta de frecuencia dada mediante una función de transferencia en el plano complejo con polos y ceros el filtro FIR simplemente se caracteriza por ceros y un polinomio de z [1].
+
+
+__Filtros IRR__
+
+El método más conocido y frecuentemente utilizado para diseñar filtros digitales IIR (de respuesta infinita al impuesto) es la transformación bilineal de los filtros analógicos clásicos, como los Butterworth [3]. Esta técnica tiene la ventaja de contar con fórmulas establecidas para dichos filtros a partir de la identificación de polos y ceros [3]. No obstante, los filtros IIR diseñados de esta manera tienen tanto el numerador como el denominador con igual grado, lo que limita su flexibilidad. En ocasiones, resulta conveniente poder diseñar filtros con más ceros que polos para lograr un equilibrio mejorado entre rendimiento y complejidad de implementación [3]. 
+
+Específicamente el filtro pasabajos de Butterworth es utilizado para suavizar muchos tipos de datos biomecánicos, de movimiento porque son óptimamente planos en su banda de paso, tienen caídas relativamente altas y una respuesta rápida en el dominio del tiempo [4]. Sin embargo, una de sus limitaciones es que debido a que está subamortiguado sobrepasa o subestima los datos durante transiciones rápidas [4].
+
+
+__Filtros FIR__
+
+La complejidad de los filtros FIR puede ser significativa en aplicaciones comunes de filtrado, ya que requieren numerosas operaciones de multiplicación y suma para reproducir completamente la respuesta al impulso en el dominio temporal [1]. Esta complejidad se debe a la ausencia de técnicas de diseño en el dominio del tiempo continuo para los filtros FIR, a diferencia de los filtros IIR [1]. 
+
+Es por esta razón que cada diseño de filtro debe seguir un proceso completo de diseño matemático, comenzando por la elección de un método de aproximación mediante algoritmos iterativos o analíticos [1]. El objetivo principal es lograr una aproximación lo más cercana posible a una respuesta de frecuencia determinada utilizando un conjunto limitado de coeficientes de filtro FIR [1].
+
 
 Para la práctica se utilizó el programa Python para aplicar los filtros digitales mencionados, graficar las señales y analizarlas.
 
@@ -56,7 +75,7 @@ Para procesar la señal de electromiografía, se recurre a un filtro IIR de tipo
 
 ## Resultados
 
-***NOTA**: El ploteo de las señales se realizó en intervalos distintos, para una mejor apreciación de las señales.*
+***NOTA**: El ploteo de las señales se realizó en intervalos distintos, para una mejor apreciación de las señales. Asimismo, la frecuencia de muestreo fue de 1000 Hz.*
 
 ### EMG
 
@@ -482,6 +501,12 @@ plt.margins(0, 0.05)
 
 ## Referencias
 
-1. 
+1. Schlichthärle D. Digital Filters: Basics and Design [Internet]. Berlin, Heidelberg: Springer-Verlag Berlin Heidelberg; 2011 [consultado el 4 de mayo de 2024]. Disponible en: https://link.springer.com/book/10.1007/978-3-662-04170-3 
+
+2. Jagtap SK, Uplane MD. The impact of digital filtering to ECG analysis: Butterworth filter application. En: 2012 International Conference on Communication, Information & Computing Technology (ICCICT) [Internet]; 19-20 de octubre de 2012; Mumbai, India. [lugar desconocido]: IEEE; 2012 [consultado el 5 de mayo de 2024]. Disponible en: https://doi.org/10.1109/iccict.2012.6398145 
+
+3. Selesnick IW, Burrus CS. Generalized digital Butterworth filter design. IEEE Trans Signal Process [Internet]. Junio de 1998 [consultado el 5 de mayo de 2024];46(6):1688-94. Disponible en: https://doi.org/10.1109/78.678493
+
+4. Robertson DG, Dowling JJ. Design and responses of Butterworth and critically damped digital filters. J Electromyogr Kinesiol [Internet]. Diciembre de 2003 [consultado el 5 de mayo de 2024];13(6):569-73. Disponible en: https://doi.org/10.1016/s1050-6411(03)00080-4 
 
 </div>
