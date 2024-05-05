@@ -12,12 +12,11 @@
 ##  Objetivos
 - Comprender los fundamentos de filtros digitales, especialmente los IRR y FIR
 - Aplicar filtros IRR y FIR a señales de EMG, ECG y EEG.
-- Analizar las señales tras aplicar los filtros
+- Analizar las señales tras aplicar los filtros.
 
 ## Materiales
 | Material | Cantidad |
 |:--------------:|:--------------:|
-
 | Programa *Python* | N.A | 
 
 ## Introducción
@@ -52,17 +51,11 @@ Para la práctica se utilizó el programa Python para aplicar los filtros digita
 
 ## Metolodogía
 
-Se utilizó el siguiente código como filtro IRR para las señales EMG, ECG y EEG. En este caso el filtro es Butterworth.
-
-Se utilizó el siguiente código como filtro FIR para las señales EMG, ECG y EEG.
 
 ### Diseño del Filtro EMG
 
 Para procesar la señal de electromiografía, se recurre a un filtro IIR de tipo Butterworth debido a su uso recurrente en procesamiento de dichas señales [A, B]. Específicamente, el filtro contará con características idénticas así como el implementado por Mello R. G. T, et al en [B], que además mostró resultados óptimos. Los componentes del filtro general son un filtro pasa altas (orden 2, fc = 10 Hz), filtro pasa bajas (orden 8, fc = 400 Hz) y seis filtros rechaza banda (orden 2, 60 Hz y armónicos hasta 360 Hz).  
 
-[A] C. J. De Luca, L. Donald Gilmore, M. Kuznetsov, y S. H. Roy, “Filtering the surface EMG signal: Movement artifact and baseline noise contamination”, J. Biomech., vol. 43, núm. 8, pp. 1573–1579, 2010. Disponible en: https://www.bu.edu/nmrc/files/2010/06/103.pdf. Consultado [03-05-2024]
-
-[B] R. G. T. Mello, L. F. Oliveira, y J. Nadal, “Digital Butterworth filter for subtracting noise from low magnitude surface electromyogram”, Comput. Methods Programs Biomed., vol. 87, núm. 1, pp. 28–35, 2007. Disponible en: https://doi.org/10.1016/j.cmpb.2007.04.004. Consultado [03-05-2024]
 
 
 ### Diseño del Filtro ECG
@@ -508,5 +501,9 @@ plt.margins(0, 0.05)
 3. Selesnick IW, Burrus CS. Generalized digital Butterworth filter design. IEEE Trans Signal Process [Internet]. Junio de 1998 [consultado el 5 de mayo de 2024];46(6):1688-94. Disponible en: https://doi.org/10.1109/78.678493
 
 4. Robertson DG, Dowling JJ. Design and responses of Butterworth and critically damped digital filters. J Electromyogr Kinesiol [Internet]. Diciembre de 2003 [consultado el 5 de mayo de 2024];13(6):569-73. Disponible en: https://doi.org/10.1016/s1050-6411(03)00080-4 
+
+[A] C. J. De Luca, L. Donald Gilmore, M. Kuznetsov, y S. H. Roy, “Filtering the surface EMG signal: Movement artifact and baseline noise contamination”, J. Biomech., vol. 43, núm. 8, pp. 1573–1579, 2010. Disponible en: https://www.bu.edu/nmrc/files/2010/06/103.pdf. Consultado [03-05-2024]
+
+[B] R. G. T. Mello, L. F. Oliveira, y J. Nadal, “Digital Butterworth filter for subtracting noise from low magnitude surface electromyogram”, Comput. Methods Programs Biomed., vol. 87, núm. 1, pp. 28–35, 2007. Disponible en: https://doi.org/10.1016/j.cmpb.2007.04.004. Consultado [03-05-2024]
 
 </div>
