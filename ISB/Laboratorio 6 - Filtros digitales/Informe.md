@@ -172,17 +172,17 @@ label = "EMG de los bíceps"
 path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/J1.txt"
 [n, ECGsignal1] = get_values(path, 6)
 label = "ECG Estado Basal"
-plot_values(n, ECGsignal1, label, 2600, 4200)
+
 
 path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/POS EJERCICIO.txt"
 [n, ECGsignal2] = get_values(path, 6)
 label = "ECG Estado Post Ejercicio"
-plot_values(n, ECGsignal2, label,  2600, 4200)
+
 
 path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/RESPIRACION.txt"
 [n, ECGsignal3] = get_values(path, 6)
 label = "ECG Durante respiración"
-plot_values(n, ECGsignal3, label,  2600, 4200)
+
 
 # Señales EEG
 
@@ -190,6 +190,24 @@ path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biome�
 [n, EEGsignal] = get_valuesEEG(path, 8)
 label = "EEG Durante Ejercicio Difíciles"
 
+# Señales ECG
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/EEG/dificil.txt"
+[n, EEGsignal1] = get_valuesEEG(path, 8)
+label = "EEG Durante Ejercicio Difíciles"
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/EEG/paso1.txt"
+[n, EEGsignal3] = get_valuesEEG(path, 8)
+label = "EEG Estado Basal (Referencia)"
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/EEG/simples.txt"
+[n, EEGsignal2] = get_valuesEEG(path, 8)
+label = "EEG Durante Ejercicio Simples"
+plot_values(n, EEGsignal2, label, 0, 5000)
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/EEG/paso2.txt"
+[n, EEGsignal3] = get_valuesEEG(path, 8)
+label = "EEG Ojos cerrados-abiertos"
 
 ```
 
@@ -397,9 +415,49 @@ plt.margins(0, 0.05)
 ### Filtrado IIR para las señales EEG
 
 ``` python
+b,a = signal.butter(8, 35, 'lowpass', fs=1000, output='ba')
+filteredEEG =signal.filtfilt(b,a, EEGsignal2)
+plt.figure()
+n = [i/1000 for i in range(0,len(filteredEEG))]
+plt.plot(n[5000:10000], filteredEEG[5000:10000])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EEG en Estado Basal (Referencia) (Filtrado)")
+plt.grid(True)
+plt.margins(0, 0.05)
 
+b,a = signal.butter(8, 35, 'lowpass', fs=1000, output='ba')
+filteredEEG =signal.filtfilt(b,a, EEGsignal2)
+plt.figure()
+n = [i/1000 for i in range(0,len(filteredEEG))]
+plt.plot(n[0:5000], filteredEEG[0:5000])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EEG en Durante Ejericios Simples (Filtrado)")
+plt.grid(True)
+plt.margins(0, 0.05)
 
+b,a = signal.butter(8, 35, 'lowpass', fs=1000, output='ba')
+filteredEEG =signal.filtfilt(b,a, EEGsignal1)
+plt.figure()
+n = [i/1000 for i in range(0,len(filteredEEG))]
+plt.plot(n[6000:12000], filteredEEG[6000:12000])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EEG en Durante Ejericios Difíciles (Filtrado)")
+plt.grid(True)
+plt.margins(0, 0.05)
 
+b,a = signal.butter(8, 35, 'lowpass', fs=1000, output='ba')
+filteredEEG =signal.filtfilt(b,a, EEGsignal2)
+plt.figure()
+n = [i/1000 for i in range(0,len(filteredEEG))]
+plt.plot(n[0:18000], filteredEEG[0:18000])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EEG Ojos cerrados-abiertos (Filtrado)")
+plt.grid(True)
+plt.margins(0, 0.05)
 ```
 
 ### Filtrado FIR para las señales EEG
