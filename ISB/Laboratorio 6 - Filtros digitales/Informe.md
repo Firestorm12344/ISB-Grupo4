@@ -95,10 +95,9 @@ Se tomó registro de la señal en el usuario en estado de reposo, hiperventilaci
 
 | Campo | Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura 6. Reposo | ![alt text](image-7.png)| ![alt text](imageX.png) | ![alt text](imageX.png) |
-| Figura 7. Hiperventilación   | ![alt text](image-8.png)| ![alt text](imageX.png) | ![alt text](imageX.png)|
-| Figura 8. Después de ejercicio| ![alt text](image-9.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
-| Figura 9. Respiraciones largas | ![alt text](image-10.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
+| Figura 6. Estado Basal | ![alt text](image-7.png)| ![alt text](imageX.png) | ![alt text](imageX.png) |
+| Figura 7. Después de ejercicio| ![alt text](image-8.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
+| Figura 8. Respiraciones largas | ![alt text](image-9.png)| ![alt text](imageX.png)| ![alt text](imageX.png)|
 
 #EEG
 
@@ -178,11 +177,20 @@ label = "EMG de los bíceps"
 
 # Señales ECG
 
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/J1.txt"
+[n, ECGsignal] = get_values(path, 6)
+label = "ECG Estado Basal"
+plot_values(n, ECGsignal, label, 2600, 4200)
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/POS EJERCICIO.txt"
+[n, ECGsignal] = get_values(path, 6)
+label = "ECG Estado Post Ejercicio"
+plot_values(n, ECGsignal, label,  2600, 4200)
+
 path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/RESPIRACION.txt"
 [n, ECGsignal] = get_values(path, 6)
 label = "ECG Durante respiración"
-
-
+plot_values(n, ECGsignal, label,  2600, 4200)
 
 # Señales EEG
 
