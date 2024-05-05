@@ -116,10 +116,10 @@ Se tomó registro de la señal en el usuario en una primera y segunda fase de re
 
 | Campo| Señal Cruda | Filtro IRR | Filtro FIR |
 |:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura X. Primera fase de referencia |![alt text](image-16.png) | ![alt text](image-15.png) | ![alt text](imageX.png) |
-| Figura X. Fase 2 - Ciclo de "ojos cerrados-abiertos" |![alt text](image-12.png) |![alt text](image-11.png) |![alt text](imageX.png) |
-| Figura X. Ejercicios mentales simples | ![alt text](image-27.png)| ![alt text](image-26.png)|![alt text](imageX.png) |
-| Figura X. Ejercicios mentales complejo |![alt text](image-29.png)| ![alt text](image-28.png) |![alt text](imageX.png) |
+| Figura X. Primera fase de referencia |![alt text](image-36.png) | ![alt text](image-15.png) | ![alt text](image-16.png) |
+| Figura X. Fase 2 - Ciclo de "ojos cerrados-abiertos" |![alt text](image-12.png) |![alt text](image-11.png)|![alt text](image-35.png)|
+| Figura X. Ejercicios mentales simples | ![alt text](image-27.png)| ![alt text](image-26.png)|![alt text](image-33.png) |
+| Figura X. Ejercicios mentales complejo |![alt text](image-29.png)| ![alt text](image-28.png) |![alt text](image-34.png)|
 
 
 ## Código en Python
@@ -512,8 +512,89 @@ plt.margins(0, 0.05)
 
 ``` python
 
+fs=1000 #Frecuencia de muestreo
+t = [num / fs for num in n]; N=len(n)
+M = 37;
+Fc = 50
+wc = 2*np.pi*Fc/fs
+w = firwin(numtaps=M, cutoff=[8,12], window='blackman', fs=1000,pass_zero=False)
+w = np.round(w,3)
+nm = np.arange(M)
+W = np.fft.fft(w,N)
+W = np.round(W[0:N//2],3)
+y_filtrado = lfilter(w, np.array(1),EEGsignal3)
 
+plt.figure()
+n = [i/1000 for i in range(0,len(y_filtrado))]
+plt.plot(n[2600: 4200], y_filtrado[2600: 4200])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EEG en Estado Basal (Referencia) (Filtrado)")
+plt.grid(True)
+plt.margins(0, 0.05)
 
+fs=1000 #Frecuencia de muestreo
+t = [num / fs for num in n]; N=len(n)
+M = 37;
+Fc = 50
+wc = 2*np.pi*Fc/fs
+w = firwin(numtaps=M, cutoff=[30,40], window='blackman', fs=1000, pass_zero=False)
+w = np.round(w,3)
+nm = np.arange(M)
+W = np.fft.fft(w,N)
+W = np.round(W[0:N//2],3)
+y_filtrado = lfilter(w, np.array(1),EEGsignal2)
+
+plt.figure()
+n = [i/1000 for i in range(0,len(y_filtrado))]
+plt.plot(n[2600: 4200], y_filtrado[2600: 4200])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EEG en Durante Ejericios Simples (Filtrado)")
+plt.grid(True)
+plt.margins(0, 0.05)
+
+fs=1000 #Frecuencia de muestreo
+t = [num / fs for num in n]; N=len(n)
+M = 37;
+Fc = 50
+wc = 2*np.pi*Fc/fs
+w = firwin(numtaps=M, cutoff=[30,40], window='blackman', fs=1000, pass_zero=False)
+w = np.round(w,3)
+nm = np.arange(M)
+W = np.fft.fft(w,N)
+W = np.round(W[0:N//2],3)
+y_filtrado = lfilter(w, np.array(1),EEGsignal1)
+
+plt.figure()
+n = [i/1000 for i in range(0,len(y_filtrado))]
+plt.plot(n[2600: 4200], y_filtrado[2600: 4200])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EEG en Durante Ejericios Difíciles (Filtrado)")
+plt.grid(True)
+plt.margins(0, 0.05)
+
+fs=1000 #Frecuencia de muestreo
+t = [num / fs for num in n]; N=len(n)
+M = 37;
+Fc = 50
+wc = 2*np.pi*Fc/fs
+w = firwin(numtaps=M, cutoff=[8,12], window='blackman', fs=1000,pass_zero=False)
+w = np.round(w,3)
+nm = np.arange(M)
+W = np.fft.fft(w,N)
+W = np.round(W[0:N//2],3)
+y_filtrado = lfilter(w, np.array(1),EEGsignal4)
+
+plt.figure()
+n = [i/1000 for i in range(0,len(y_filtrado))]
+plt.plot(n[2600: 4200], y_filtrado[2600: 4200])
+plt.ylabel("Amplitud (mv)")
+plt.xlabel("Tiempo (s)")
+plt.title("EEG Ojos cerrados-abiertos (Filtrado)")
+plt.grid(True)
+plt.margins(0, 0.05)
 ```
 
 ## Discusión de resultados
