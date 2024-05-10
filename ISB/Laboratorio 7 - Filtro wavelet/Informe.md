@@ -57,11 +57,11 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 | Figura 1 |
 
 
-| Campo | Señal Cruda | Filtro IRR | Filtro FIR |
-|:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura 2. Señal completa| ![alt text](image-19.png)|![alt text](imageXX.png)|![alt text](imageXX.png)|
-| Figura 3. Reposo | ![alt text](image-18.png)| ![alt text](imageXX.png)| ![alt text](imageXX.png)|
-| Figura 4. Contracción muscular | ![alt text](image-10.png)| ![alt text](imageXX.png)| ![alt text](imageXX.png)|
+| Campo | Señal Cruda | Filtro wavelet | 
+|:--------------:|:--------------:|:--------------:|
+| Figura 2. Señal completa| ![alt text](image-19.png)|![alt text](imageXX.png)|
+| Figura 3. Reposo | ![alt text](image-18.png)| ![alt text](imageXX.png)| 
+| Figura 4. Contracción muscular | ![alt text](image-10.png)| ![alt text](imageXX.png)| 
 
 ### ECG
 
@@ -74,11 +74,11 @@ Se tomó registro de la señal en el usuario en estado de reposo, hiperventilaci
 | <img src="image-2.png" alt="Descripción de la imagen" width="300"/> |
 | Figura 5 |
 
-| Campo | Señal Cruda | Filtro IRR | Filtro FIR |
-|:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura 6. Estado Basal | ![alt text](image-7.png)| ![alt text](imageXX.png) | ![alt text](imageXX.png) |
-| Figura 7. Después de ejercicio| ![alt text](image-8.png)| ![alt text](imageXX.png)| ![alt text](imageXX.png) |
-| Figura 8. Respiraciones largas | ![alt text](image-9.png)| ![alt text](imageXX.png)| ![alt text](imageXX.png)|
+| Campo | Señal Cruda | Filtro wavelet |
+|:--------------:|:--------------:|:--------------:|
+| Figura 6. Estado Basal | ![alt text](image-7.png)| ![alt text](imageXX.png) | 
+| Figura 7. Después de ejercicio| ![alt text](image-8.png)| ![alt text](imageXX.png)| 
+| Figura 8. Respiraciones largas | ![alt text](image-9.png)| ![alt text](imageXX.png)| 
 
 ### EEG
 
@@ -91,12 +91,12 @@ Se tomó registro de la señal en el usuario en una primera y segunda fase de re
 | <img src="image-3.png" alt="Descripción de la imagen" width="300"/> |
 | Figura X |
 
-| Campo| Señal Cruda | Filtro IRR | Filtro FIR |
-|:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura X. Primera fase de referencia |![alt text](image-36.png) | ![alt text](imageXX.png) | ![alt text](imageXX.png) |
-| Figura X. Fase 2 - Ciclo de "ojos cerrados-abiertos" |![alt text](image-12.png) |![alt text](imageXX.png)|![alt text](imageXX.png)|
-| Figura X. Ejercicios mentales simples | ![alt text](image-27.png)| ![alt text](imageXX.png)|![alt text](imageXX.png) |
-| Figura X. Ejercicios mentales complejo |![alt text](image-29.png)| ![alt text](imageXX.png) |![alt text](imageXX.png)|
+| Campo| Señal Cruda | Filtro wavelet | 
+|:--------------:|:--------------:|:--------------:|
+| Figura X. Primera fase de referencia |![alt text](image-36.png) | ![alt text](imageXX.png) |
+| Figura X. Fase 2 - Ciclo de "ojos cerrados-abiertos" |![alt text](image-12.png) |![alt text](imageXX.png)|
+| Figura X. Ejercicios mentales simples | ![alt text](image-27.png)| ![alt text](imageXX.png)|
+| Figura X. Ejercicios mentales complejo |![alt text](image-29.png)| ![alt text](imageXX.png) |
 
 
 ## Código en Python
