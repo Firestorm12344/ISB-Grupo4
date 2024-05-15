@@ -34,7 +34,7 @@ Cabe resaltar que las “wavelets” son familias de funciones generadas a parti
 </p>
 
 <p align="justify">
-Para la práctica se utilizó el programa Python para aplicar el filtro wavelet, graficar las señales y analizarlas.
+Para la práctica se utilizó el programa Python para aplicar filtros wavelet, graficar las señales y analizarlas.
 </p>
 
 ## Metodología
