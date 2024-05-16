@@ -22,7 +22,7 @@
 ## Introducción
 
 <p align="justify">
-La transformada “wavelet” es una herramienta utilizada en el diseño de filtros para el análisis de señales e imágenes ya que permite filtrar el ruido de manera selectiva [1]. Esto se debe a que no describe una señal únicamente en el dominio de la frecuencia, sino también por la potencia (energía distribuida) en cada escala y posición [1]. Por ende, las diferentes técnicas desarrolladas a partir de esta transformada son representaciones de multirresolución de señales e imágenes que las reconstruyen y descomponen en diferentes niveles a detalles (como por ejemplo el tiempo, la frecuencia, entre otros) [1]. 
+La transformada “wavelet” es una herramienta utilizada en el diseño de filtros para el análisis de señales e imágenes ya que permite filtrar el ruido de manera selectiva [1]. Esto se debe a que no describe una señal únicamente en el dominio de la frecuencia, sino también por la potencia (energía distribuida) en cada escala y posición [1]. Por ende, las diferentes técnicas desarrolladas a partir de esta transformada son representaciones multirresolución de señales e imágenes que las descomponen en diferentes niveles a detalle (como por ejemplo el tiempo, la frecuencia, entre otros) [1]. 
 </p>
 
 <p align="justify">
