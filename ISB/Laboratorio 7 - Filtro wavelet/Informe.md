@@ -67,9 +67,9 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 
 | Campo | Señal Cruda | Filtro wavelet | 
 |:--------------:|:--------------:|:--------------:|
-| Figura 2. Señal completa| ![alt text](image-19.png)|![alt text](imageXX.png)|
-| Figura 3. Reposo | ![alt text](image-18.png)| ![alt text](imageXX.png)| 
-| Figura 4. Contracción muscular | ![alt text](image-10.png)| ![alt text](imageXX.png)| 
+| Figura 2. Señal completa| ![alt text](image-19.png)|![alt text](image.png)|
+| Figura 3. Reposo | ![alt text](image-18.png)|![alt text](image-4.png)| 
+| Figura 4. Contracción muscular | ![alt text](image-10.png)| ![alt text](image-5.png)| 
 
 ### ECG
 
@@ -84,9 +84,9 @@ Se tomó registro de la señal en el usuario en estado de reposo, hiperventilaci
 
 | Campo | Señal Cruda | Filtro wavelet |
 |:--------------:|:--------------:|:--------------:|
-| Figura 6. Estado Basal | ![alt text](image-7.png)| ![alt text](imageXX.png) | 
-| Figura 7. Después de ejercicio| ![alt text](image-8.png)| ![alt text](imageXX.png)| 
-| Figura 8. Respiraciones largas | ![alt text](image-9.png)| ![alt text](imageXX.png)| 
+| Figura 6. Estado Basal | ![alt text](image-7.png)| ![alt text](image-6.png)| 
+| Figura 7. Después de ejercicio| ![alt text](image-8.png)| ![alt text](image-11.png)| 
+| Figura 8. Respiraciones largas | ![alt text](image-9.png)| ![alt text](image-13.png)| 
 
 ### EEG
 
@@ -110,35 +110,148 @@ Se tomó registro de la señal en el usuario en una primera y segunda fase de re
 ## Código en Python
 
 ``` python
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy import signal
+from scipy.signal import lfilter, firwin
+import pywt
 
+def get_values(path, col):
+  df = pd.read_csv(path, sep='\t', skiprows=3)  # saltar las dos primeras filas (encabezado)
+  novena_columna = df.iloc[:, col].values
+  n = [i/1000 for i in range(0, len(novena_columna))]
+  signal = [(float(valor)/(2**10)-1/2)*3.3/1009*1000 for valor in novena_columna]
+  return n, signal
+
+def get_valuesEEG(path, col):
+  df = pd.read_csv(path, sep='\t', skiprows=3)  # saltar las dos primeras filas (encabezado)
+  novena_columna = df.iloc[:, col].values
+  n = [i/1000 for i in range(0, len(novena_columna))]
+  signal = [(float(valor)/(2**10)-1/2)*3.3/41782*1000 for valor in novena_columna]
+  return n, signal
+
+def plot_values(n, y, label, ini, fin):
+  plt.plot(n[ini:fin], y[ini:fin])
+  plt.xlabel('Tiempo (s)')
+  plt.ylabel('Voltaje (mv)')
+  plt.title(label)
+  plt.grid(True)
+  plt.show()
+
+def FreqAnalysis (signal):
+  fs = 1000
+  fft_result = np.fft.fft(signal)
+  freqs = np.fft.fftfreq(len(signal), 1/fs)
+
+  # Graficar la magnitud de la FFT
+  plt.figure(figsize=(10, 5))
+  plt.plot(freqs, np.abs(fft_result))
+  plt.xlim(-50, 50)
+  plt.title('Magnitud de la Transformada Rápida de Fourier (FFT)')
+  plt.xlabel('Frecuencia (Hz)')
+  plt.ylabel('Magnitud')
+  plt.grid(True)
+  plt.show()
 ```
 ### Importación de Señales
 
 # Señales EMG
  
 ``` python
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/EMG/BICEPS.txt"
+[n, EMGsignal] = get_values(path, 5)
+label = "EMG de los bíceps"
+plot_values(n, EMGsignal, label, 0, len(EMGsignal))
 ```
 
 # Señales ECG
 
 ``` python
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/J1.txt"
+[n, ECGsignal1] = get_values(path, 6)
+label = "ECG Estado Basal"
+plot_values(n, ECGsignal1, label, 2600, 4200)
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/POS EJERCICIO.txt"
+[n, ECGsignal2] = get_values(path, 6)
+label = "ECG Estado Post Ejercicio"
+plot_values(n, ECGsignal2, label,  2600, 4200)
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/ECG/RESPIRACION.txt"
+[n, ECGsignal3] = get_values(path, 6)
+label = "ECG Durante respiración"
+plot_values(n, ECGsignal3, label,  2600, 4200)
 ```
 
 # Señales EEG
 
 ``` python
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/EEG/dificil.txt"
+[n, EEGsignal1] = get_valuesEEG(path, 8)
+label = "EEG Durante Ejercicio Difíciles"
+plot_values(n, EEGsignal1, label, 6000, 12000)
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/EEG/simples.txt"
+[n, EEGsignal2] = get_valuesEEG(path, 8)
+label = "EEG Durante Ejercicio Simples"
+plot_values(n, EEGsignal2, label, 0, 5000)
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/EEG/paso1.txt"
+[n, EEGsignal3] = get_valuesEEG(path, 8)
+label = "EEG Estado Basal (Referencia)"
+plot_values(n, EEGsignal3, label, 5000, 10000)
+
+path = "/content/drive/MyDrive/PUCP/7mo ciclo/Instruducción a Señales Biomédicas/Laboratorios/EEG/paso2.txt"
+[n, EEGsignal4] = get_valuesEEG(path, 8)
+label = "EEG Ojos cerrados-abiertos"
+plot_values(n, EEGsignal4, label, 0, 18000)
 ```
 
 ### Filtrado wavelet para las Señales EMG
 
 ``` python 
+# Aplicar la transformada wavelet
+coeffs = pywt.wavedec(EMGsignal, 'db5', level=9)
+
+# Filtrar los coeficientes
+threshold = 0.2
+filtered_coeffs = [pywt.threshold(coeff, threshold, mode='hard') for coeff in coeffs]
+
+# Reconstruir la señal filtrada
+filtered_signal = pywt.waverec(filtered_coeffs, 'db5')
+plt.figure()
+plt.plot(n[40000:70000], filtered_signal[40000:70000])
+plt.title('Señal filtrada')
+plt.xlabel('Tiempo')
+plt.ylabel('Amplitud')
+plt.ylim([-1.2, 1.2])
+plt.grid(True)
+plt.tight_layout()
+plt.show()
 
 ```
 
 ### Filtrado wavelet para las señales ECG
 
 ``` python
+# Aplicar la transformada wavelet
+coeffs = pywt.wavedec(ECGsignal1, 'db8', level=8)
 
+# Filtrar los coeficientes
+threshold = 0.2
+filtered_coeffs = [pywt.threshold(coeff, threshold, mode='soft') for coeff in coeffs]
+
+# Reconstruir la señal filtrada
+filtered_signal = pywt.waverec(filtered_coeffs, 'db8')
+plt.figure()
+plt.plot(n[2600:4200], filtered_signal[2600:4200])
+plt.title('Señal filtrada')
+plt.xlabel('Tiempo')
+plt.ylabel('Amplitud')
+plt.grid(True)
+plt.tight_layout()
+plt.show()
 ```
 
 ### Filtrado wavelet para las señales EEG
