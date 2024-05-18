@@ -279,7 +279,24 @@ plt.show()
 ### Filtrado wavelet para las señales EEG
 
 ``` python
+## Aplicar la transformada wavelet
+coeffs = pywt.wavedec(EEG_signal, 'db8', level=6)
 
+# Filtrar los coeficientes
+threshold = 0.3674
+filtered_coeffs = [pywt.threshold(coeff, threshold, mode='hard') for coeff in coeffs]
+
+# Reconstruir la señal filtrada
+filtered_signal = pywt.waverec(filtered_coeffs, 'db8')
+plt.figure()
+plt.plot(n[6000:18000], filtered_signal[6000:18000])
+plt.title('Señal filtrada')
+plt.xlabel('Tiempo')
+plt.ylabel('Amplitud')
+plt.ylim([-1.2, 1.2])
+plt.grid(True)
+plt.tight_layout()
+plt.show()
 ```
  
 
