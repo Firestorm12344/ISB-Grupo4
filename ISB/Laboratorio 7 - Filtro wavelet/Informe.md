@@ -42,6 +42,9 @@ Para la práctica se utilizó el programa Python para aplicar filtros wavelet, g
 
 ### Diseño del Filtro EMG
 
+<p align="justify">
+Para el filtrado de la señal EMG, se adoptan los parámetros utilizados por X.Ren et al. en [4]. Tipo de wavelet: Daubechies 5 , nivel de la wavelet: 9, threshold: hard. El objetivo de este estudio fue extraer y clasificar los potenciales de acción de diferentes unidades motoras. Como parte el procesamiento de las señales, se pretendió remover ruidos potencial a partir de filtrado con ondas wavelet, con las características mencionadas anteriormente. 
+</p>
 
 ### Diseño del Filtro ECG
 
@@ -296,7 +299,7 @@ plt.show()
 
 3. Weaver JB, Xu Y, Healy DM, Cromwell LD. Filtering noise from images with wavelet transforms. Magn Reson Med [Internet]. Octubre de 1991 [consultado el 15 de mayo de 2024];21(2):288-95. Disponible en: https://doi.org/10.1002/mrm.1910210213
 
-4.  ...
+4. X. Ren, X. Hu, Z. Wang, y Z. Yan, “MUAP extraction and classification based on wavelet transform and ICA for EMG decomposition”, Med. Biol. Eng. Comput., vol. 44, núm. 5, pp. 371–382, 2006.
 
 5.  N. Li et al., “The identification of ECG signals using WT-UKF and IPSO-SVM”, Sensors (Basel), vol. 22, núm. 5, p. 1962, 2022. doi: 10.3390/s22051962
 
