@@ -123,10 +123,10 @@ Se tomó registro de la señal en el usuario en una primera y segunda fase de re
 
 | Campo| Señal Cruda | Filtro wavelet | 
 |:--------------:|:--------------:|:--------------:|
-| Figura 10. Primera fase de referencia |![alt text](image-16.png) | ![alt text](imageXX.png) |
-| Figura 11. Fase 2 - Ciclo de "ojos cerrados-abiertos" |![alt text](image-18.png) |![alt text](imageXX.png)|
-| Figura 12. Ejercicios mentales simples | ![alt text](image-20.png)| ![alt text](imageXX.png)|
-| Figura 13. Ejercicios mentales complejo |![alt text](image-22.png)| ![alt text](imageXX.png) |
+| Figura 10. Primera fase de referencia |![alt text](image-23.png) | ![alt text](image-24.png) |
+| Figura 11. Fase 2 - Ciclo de "ojos cerrados-abiertos" |![alt text](image-25.png) |![alt text](image-26.png)|
+| Figura 12. Ejercicios mentales simples | ![alt text](image-27.png)| ![alt text](image-28.png)|
+| Figura 13. Ejercicios mentales complejo |![alt text](image-29.png)| ![alt text](image-30.png) |
 
 
 ## Código en Python
