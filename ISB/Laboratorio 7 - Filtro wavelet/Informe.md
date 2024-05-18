@@ -332,6 +332,17 @@ Por lo tanto, se puede concluir que el filtrado es eficaz porque aprovecha la ca
 
 ### EEG
 
+<p align="justify">
+Las señales de EEG pueden ser fácilmente contaminadas por ruido externo generado por dispositivos cercanos o movimientos faciales tales como parpadear, movimientos oculares, hablar u otros, lo que dificulta la extracción de información sobre esta señal. Ante ello, el artículo [6], del cual se utilizaron los parámetros para el filtro de la señal, busca remover el ruido provocado principalmente por el parpadeo. Para ello, se utiliza la wavelet "db8" como la wavelet madre para la descomposición de la señal de EEG, ya que proporciona la máxima relación de energía a entropía de Shannon en comparación con otras funciones de wavelet, con un nivel de descomposición igual a 6.
+</p>
+
+<p align="justify">
+De los gráficos de puede apreciar que la señal filtrada presenta menor cantidad de oscilaciones en ciertas zonas, donde originalmente la señal se mostraba muy variable en intervalos breves de tiempo. Debido a esto, se puede observar y distinguir patrones de las 3 señales con mayor facilidad que en las originales; lo que sugiere que el filtrado de las señales EEG mediante la DWT con una db8 es eficiente eliminando ruido. Sin embargo, se tiene que contemplar que la amplitud de las características de interés de la señal no fueron afectas (solo atenuó el ruido). Además, se puede apreciar que no existe un desface, pues la señal original y la filtrada han sido graficadas en el mismo intervalo de tiempo. 
+</p>
+
+<p align="justify">
+De todo lo mencionado anteriormente, se puede concluir que el procesamiento de extracción de características de las señales EEG por medio de DWT es altamente eficiente, ya que no produce efectos secundarios (shifting, atenuación, amplificación, etc).
+</p>
 
 ## Referencias
 
