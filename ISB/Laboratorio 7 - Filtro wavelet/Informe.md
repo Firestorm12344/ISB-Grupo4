@@ -62,6 +62,7 @@ Tabla X. Parámetros de Wavelet para ECG [5]
 
 ### Diseño del Filtro EEG
 
+El diseño del filtro para las señales EEG fue basado principalmente en dos artículos. Primero, la investigación de Phadikar et al. [6] consiste en un método automático para eliminar señales indeseadas causados por parpadeos de ojos en señales de EEG corruptas. Este método utiliza la transformada discreta de wavelet (DWT) y un umbral optimizado mediante metaheurísticas. En este artículo, se menciona que la wavelet que se adecúa para el filtrado de EEG es la wavelet db8 con 6 niveles de descomposición. Luego, Wan et al. [7] nos habla de la propuesta de un método para discriminar estados de ira al conducir con diferente intensidad según las características espectrales del electroencefalograma (EEG). En este artículo se mencionan algunos valores de threshold para las ondas beta y theta según el nivel de ira. Por ello, se decidió usar un threshold de 0.3674.
 
 ## Resultados
 
@@ -298,5 +299,10 @@ plt.show()
 4.  ...
 
 5.  N. Li et al., “The identification of ECG signals using WT-UKF and IPSO-SVM”, Sensors (Basel), vol. 22, núm. 5, p. 1962, 2022. doi: 10.3390/s22051962
+
+6.  S. Phadikar, N. Sinha, and R. Ghosh, “Automatic eyeblink artifact removal from EEG signal using wavelet transform with heuristically optimized threshold,” IEEE Journal of Biomedical and Health Informatics, vol. 25, no. 2, pp. 475–484, Feb. 2021. doi:10.1109/jbhi.2020.2995235
+   
+7.  P. Wan, C. Wu, Y. Lin, and X. Ma, “Optimal threshold determination for discriminating driving anger intensity based on EEG wavelet features and ROC curve analysis,” Information, vol. 7, no. 3, p. 52, Aug. 2016. doi:10.3390/info7030052 
+
 
 </div>
