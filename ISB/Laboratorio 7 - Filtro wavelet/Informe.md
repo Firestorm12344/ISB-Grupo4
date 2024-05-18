@@ -313,7 +313,7 @@ El proceso de filtrado wavelet implementado en este estudio se alinea con la met
 </p>
 
 <p align="justify">
-Por lo tanto, la descomposición permite separar la señal en coeficientes que representan diferentes componentes de frecuencia y tiempo, lo que facilita la identificación y eliminación de interferencias no deseadas conversando la señal de interés [4]. Es por esta razón que al umbralizar estos coeficientes, se pueden eliminar los componentes de baja amplitud. [8].
+Por lo tanto, la descomposición permite separar la señal en coeficientes que representan diferentes componentes de frecuencia y tiempo, lo que facilita la identificación y eliminación de interferencias no deseadas en la señal de interés [4]. Es por esta razón que al umbralizar estos coeficientes, se pueden eliminar los componentes de baja amplitud. [8].
 </p>
 
 ### ECG
