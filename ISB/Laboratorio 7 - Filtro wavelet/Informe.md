@@ -3,10 +3,10 @@
 ## Tabla de contenidos
 - [Objetivos](#objetivos)
 - [Materiales](#materiales)
-- [Introducción](#introduccion)
+- [Introducción](#introducción)
 - [Metolodogía](#metodología)
 - [Resultados](#resultados)
-- [Discusión de resultados](#Explicación/-Discusión-de-resultados)
+- [Discusión de resultados](#Discusión-de-resultados)
 - [Referencias](#referencias)
   
 ##  Objetivos
