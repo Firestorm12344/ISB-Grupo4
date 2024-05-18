@@ -50,22 +50,26 @@ Para el filtrado de la señal EMG, se adoptan los parámetros utilizados por X.R
 
 <p align="justify">
 Para la implementación de la transformada Wavelet se utilizó como principal fuente de referencia el artículo “The Identification of ECG Signals Using WT-UKF and IPSO-SVM” [5] . El artículo propone un método de identificación de señales de ECG basado en una transformada wavelet de múltiples escalas junto con al algoritmo de filtro de Kalman (WT-UKF), con el propósito de eliminar el ruido presente y, a su vez, preservar las características locales de la señal de ECG. Además, con el fin de extraer puntos característicos del complejo QRS, utiliza la transformada wavelet spline diádica y la aplicación de procesamiento en ventanas para eliminar interferencias de los puntos máximos de ondas R y extraer características de las ondas P y T. 
+</p>
 
+<p align="justify">
 Para el desarrollo de este laboratorio, solo se tomarán en cuenta los valores o parámetros mencionados por el artículo para la realización de la etapa de filtrado de la señal, mas no la detección de características específicas. Los parámetros utilizados se muestran a continuación:
+</p>
 
 | Tipo de Wavelet madre | Niveles/Escalas |
 |:--------------:|:--------------:|
 | Daubechies 8 (db8)| 8| 
 
-Tabla X. Parámetros de Wavelet para ECG [5]
+Tabla 1. Parámetros de Wavelet para ECG [5]
 
 - Por otro lado, se optó por usar un thresholding suave de 0.2. 
-</p>
 
 
 ### Diseño del Filtro EEG
 
+<p align="justify">
 El diseño del filtro para las señales EEG fue basado principalmente en dos artículos. Primero, la investigación de Phadikar et al. [6] consiste en un método automático para eliminar señales indeseadas causados por parpadeos de ojos en señales de EEG corruptas. Este método utiliza la transformada discreta de wavelet (DWT) y un umbral optimizado mediante metaheurísticas. En este artículo, se menciona que la wavelet que se adecúa para el filtrado de EEG es la wavelet db8 con 6 niveles de descomposición. Luego, Wan et al. [7] nos habla de la propuesta de un método para discriminar estados de ira al conducir con diferente intensidad según las características espectrales del electroencefalograma (EEG). En este artículo se mencionan algunos valores de threshold para las ondas beta y theta según el nivel de ira. Por ello, se decidió usar un threshold de 0.3674.
+</p>
 
 ## Resultados
 
@@ -85,9 +89,9 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 
 | Campo | Señal Cruda | Filtro wavelet | 
 |:--------------:|:--------------:|:--------------:|
-| Figura 2. Señal completa| ![alt text](image-19.png)|![alt text](image.png)|
-| Figura 3. Reposo | ![alt text](image-18.png)|![alt text](image-4.png)| 
-| Figura 4. Contracción muscular | ![alt text](image-10.png)| ![alt text](image-5.png)| 
+| Figura 2. Señal completa| ![alt text](image-2.png)|![alt text](image-3.png)|
+| Figura 3. Reposo | ![alt text](image-4.png)|![alt text](image-5.png)| 
+| Figura 4. Contracción muscular | ![alt text](image-6.png)| ![alt text](image-7.png)| 
 
 ### ECG
 
@@ -97,14 +101,14 @@ Se tomó registro de la señal en el usuario en estado de reposo, hiperventilaci
 
 | Posicionamiento de los electrodos |
 |:--------------:|
-| <img src="image-2.png" alt="Descripción de la imagen" width="300"/> |
+| <img src="image-8.png" alt="Descripción de la imagen" width="300"/> |
 | Figura 5 |
 
 | Campo | Señal Cruda | Filtro wavelet |
 |:--------------:|:--------------:|:--------------:|
-| Figura 6. Estado Basal | ![alt text](image-7.png)| ![alt text](image-6.png)| 
-| Figura 7. Después de ejercicio| ![alt text](image-8.png)| ![alt text](image-11.png)| 
-| Figura 8. Respiraciones largas | ![alt text](image-9.png)| ![alt text](image-13.png)| 
+| Figura 6. Estado Basal | ![alt text](image-9.png)| ![alt text](image-10.png)| 
+| Figura 7. Después de ejercicio| ![alt text](image-11.png)| ![alt text](image-12.png)| 
+| Figura 8. Respiraciones largas | ![alt text](image-13.png)| ![alt text](image-14.png)| 
 
 ### EEG
 
@@ -114,15 +118,15 @@ Se tomó registro de la señal en el usuario en una primera y segunda fase de re
 
 | Posicionamiento de los electrodos |
 |:--------------:|
-| <img src="image-3.png" alt="Descripción de la imagen" width="300"/> |
-| Figura X |
+| <img src="image-15.png" alt="Descripción de la imagen" width="300"/> |
+| Figura 9 |
 
 | Campo| Señal Cruda | Filtro wavelet | 
 |:--------------:|:--------------:|:--------------:|
-| Figura X. Primera fase de referencia |![alt text](image-36.png) | ![alt text](imageXX.png) |
-| Figura X. Fase 2 - Ciclo de "ojos cerrados-abiertos" |![alt text](image-12.png) |![alt text](imageXX.png)|
-| Figura X. Ejercicios mentales simples | ![alt text](image-27.png)| ![alt text](imageXX.png)|
-| Figura X. Ejercicios mentales complejo |![alt text](image-29.png)| ![alt text](imageXX.png) |
+| Figura 10. Primera fase de referencia |![alt text](image-16.png) | ![alt text](imageXX.png) |
+| Figura 11. Fase 2 - Ciclo de "ojos cerrados-abiertos" |![alt text](image-18.png) |![alt text](imageXX.png)|
+| Figura 12. Ejercicios mentales simples | ![alt text](image-20.png)| ![alt text](imageXX.png)|
+| Figura 13. Ejercicios mentales complejo |![alt text](image-22.png)| ![alt text](imageXX.png) |
 
 
 ## Código en Python
@@ -283,10 +287,31 @@ plt.show()
 
 ### EMG
 
+<p align="justify">
+El filtro implementado utiliza la transformada “wavelet” para descomponer la señal EMG en coeficientes (en este caso, utilizando la wavelet 'db5' y 9 niveles de descomposición), los cuales son posteriormente filtrados mediante umbralización [8]. En este caso, se aplicó un umbral de 0.2 para eliminar componentes no deseados de la señal. Las figuras 2-4 muestran la señal original en comparación con la EMG filtrada, en la cual se destaca una reducción significativa de ruido en comparación con la señal original. Se observa que la forma de onda de la señal filtrada se encuentra suavizada por lo que se sugiere que se ha reducido el ruido y la calidad de la señal ha mejorado.
+</p>
+
+<p align="justify">
+El proceso de filtrado wavelet implementado en este estudio se alinea con la metodología propuesta en el siguiente artículo  [4]. En este se precisa que la eliminación efectiva del ruido en la señal EMG es esencial para mejorar la precisión en la detección de potenciales de acción de unidades motoras (MUAPs) [4]. Por ende, la transformada wavelet se emplea para filtrar la señal y estimar umbrales de forma eficiente, lo que contribuye a la detección de MUAPs mediante un filtrado de amplitud individual [4]. Cabe resaltar que el filtro utiliza la transformada wavelet discreta (DWT) porque esta permite descomponer la señal EMG en coeficientes a diferentes niveles de resolución lo que favorece la identificación y eliminación de componentes de baja amplitud asociados al ruido mediante umbralización [8]. Es así como posteriormente se reconstruye la señal filtrada a partir de los coeficientes modificados. [8].
+</p>
+
+<p align="justify">
+Por lo tanto, la descomposición permite separar la señal en coeficientes que representan diferentes componentes de frecuencia y tiempo, lo que facilita la identificación y eliminación de interferencias no deseadas conversando la señal de interés [4]. Es por esta razón que al umbralizar estos coeficientes, se pueden eliminar los componentes de baja amplitud. [8].
+</p>
 
 ### ECG
 
+<p align="justify">
+El filtro implementado utiliza la transformada “wavelet” para descomponer la señal ECG en coeficientes (en este caso, utilizando la wavelet 'db8' y 8 niveles de descomposición), los cuales son posteriormente filtrados mediante umbralización [5]. En este caso, se aplicó un umbral de 0.2 para eliminar componentes no deseados de la señal como aquellos de baja amplitud relacionados al ruido [9]. Las figuras 6-8 muestran la señal original en comparación con la señal ECG filtrada destacando una reducción significativa de ruido en comparación con la señal original. Adicionalmente, se preservan de forma clara las características de la señal deseada como las ondas P, QRS y T para su posterior análisis. Asimismo, observa que la forma de onda de la señal filtrada se encuentra suavizada con menor cantidad de fluctuaciones no relacionadas por lo que se sugiere que se ha reducido el ruido y la calidad de la señal ha mejorado. Cabe resaltar que las señales ECG son típicamente de baja frecuencia [5]
+</p>
 
+<p align="justify">
+El proceso de filtrado wavelet implementado en este estudio se alinea con la metodología propuesta en el siguiente artículo [5]. Dado que la transformada wavelet es un método de análisis de localización en tiempo-frecuencia con una ventana de área fija y ventanas de tiempo y frecuencia variables, es adaptable a diferentes tipos de señales [5]. En este caso, la descomposición y reconstrucción a múltiples escalas se lleva a cabo utilizando el algoritmo de Mallat [5]. Tras la descomposición, las señales presentan diferentes resoluciones de tiempo y frecuencia en cada escala [5]. Las señales con alta resolución temporal contienen información más detallada y de alta frecuencia, mientras que las señales con baja resolución temporal contienen información global [5]. Finalmente, la señal filtrada se reconstruye a partir de los coeficientes de aproximación modificados (los cuales son asociados a componentes de bajas frecuencias) tras el procesamiento de umbral [9]. En general, las señales ECG reconstruidas son las señales resultantes del filtrado a múltiples escalas [5]. Cabe resaltar que el filtro wavelet implementado utiliza la transformada wavelet discreta (DWT) [9]. 
+</p>
+
+<p align="justify">
+Por lo tanto, se puede concluir que el filtrado es eficaz porque aprovecha la capacidad de la transformada wavelet para analizar señales en múltiples escalas de tiempo y frecuencia, lo que permite la eliminación de ruido sin perder la calidad de la señal preservando las características esenciales de la señal ECG [5].
+</p>
 
 ### EEG
 
@@ -301,11 +326,14 @@ plt.show()
 
 4. X. Ren, X. Hu, Z. Wang, y Z. Yan, “MUAP extraction and classification based on wavelet transform and ICA for EMG decomposition”, Med. Biol. Eng. Comput., vol. 44, núm. 5, pp. 371–382, 2006.
 
-5.  N. Li et al., “The identification of ECG signals using WT-UKF and IPSO-SVM”, Sensors (Basel), vol. 22, núm. 5, p. 1962, 2022. doi: 10.3390/s22051962
+5. N. Li et al., “The identification of ECG signals using WT-UKF and IPSO-SVM”, Sensors (Basel), vol. 22, núm. 5, p. 1962, 2022. doi: 10.3390/s22051962
 
-6.  S. Phadikar, N. Sinha, and R. Ghosh, “Automatic eyeblink artifact removal from EEG signal using wavelet transform with heuristically optimized threshold,” IEEE Journal of Biomedical and Health Informatics, vol. 25, no. 2, pp. 475–484, Feb. 2021. doi:10.1109/jbhi.2020.2995235
+6. S. Phadikar, N. Sinha, and R. Ghosh, “Automatic eyeblink artifact removal from EEG signal using wavelet transform with heuristically optimized threshold,” IEEE Journal of Biomedical and Health Informatics, vol. 25, no. 2, pp. 475–484, Feb. 2021. doi:10.1109/jbhi.2020.2995235
    
-7.  P. Wan, C. Wu, Y. Lin, and X. Ma, “Optimal threshold determination for discriminating driving anger intensity based on EEG wavelet features and ROC curve analysis,” Information, vol. 7, no. 3, p. 52, Aug. 2016. doi:10.3390/info7030052 
+7. P. Wan, C. Wu, Y. Lin, and X. Ma, “Optimal threshold determination for discriminating driving anger intensity based on EEG wavelet features and ROC curve analysis,” Information, vol. 7, no. 3, p. 52, Aug. 2016. doi:10.3390/info7030052 
 
+8. Boyer M, Bouyer L, Roy JS, Campeau-Lecours A. Reducing Noise, Artifacts and Interference in Single-Channel EMG Signals: A Review. Sensors [Internet]. 8 de marzo de 2023 [consultado el 18 de mayo de 2024];23(6):2927. Disponible en: https://doi.org/10.3390/s23062927
+
+9. Seena V, Yomas J. A review on feature extraction and denoising of ECG signal using wavelet transform. En: 2014 2nd International Conference on Devices, Circuits and Systems (ICDCS) [Internet]; 6-8 de marzo de 2014; Combiatore, India. [lugar desconocido]: IEEE; 2014 [consultado el 18 de mayo de 2024]. Disponible en: https://doi.org/10.1109/icdcsyst.2014.6926190
 
 </div>
