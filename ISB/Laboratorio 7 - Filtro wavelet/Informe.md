@@ -48,13 +48,17 @@ Para la práctica se utilizó el programa Python para aplicar filtros wavelet, g
 <p align="justify">
 Para la implementación de la transformada Wavelet se utilizó como principal fuente de referencia el artículo “The Identification of ECG Signals Using WT-UKF and IPSO-SVM” [5] . El artículo propone un método de identificación de señales de ECG basado en una transformada wavelet de múltiples escalas junto con al algoritmo de filtro de Kalman (WT-UKF), con el propósito de eliminar el ruido presente y, a su vez, preservar las características locales de la señal de ECG. Además, con el fin de extraer puntos característicos del complejo QRS, utiliza la transformada wavelet spline diádica y la aplicación de procesamiento en ventanas para eliminar interferencias de los puntos máximos de ondas R y extraer características de las ondas P y T. 
 Para el desarrollo de este laboratorio, solo se tomarán en cuenta los valores o parámetros mencionados por el artículo para la realización de la etapa de filtrado de la señal, mas no la detección de características específicas. Los parámetros utilizados se muestran a continuación:
+</p>
 
-| Tipo de wavelet madre | Niveles/Escalas |
+<p align="center">
+
+| Tipo de Wavelet madre | Niveles/Escalas |
 |:--------------:|:--------------:|
 | Daubechies 8 (db8)| 8| 
-   
-Por otro lado, se optó por usar un thresholding suave de 0.2. 
+Tabla X. Parámetros de Wavelet para ECG [5]
 </p>
+Por otro lado, se optó por usar un thresholding suave de 0.2. 
+
 
 ### Diseño del Filtro EEG
 
@@ -290,5 +294,9 @@ plt.show()
 2. Erdol N, Basbug F. Wavelet transform based adaptive filters: analysis and new results. IEEE Trans Signal Process [Internet]. 1996 [consultado el 15 de mayo de 2024];44(9):2163-71. Disponible en: https://doi.org/10.1109/78.536674
 
 3. Weaver JB, Xu Y, Healy DM, Cromwell LD. Filtering noise from images with wavelet transforms. Magn Reson Med [Internet]. Octubre de 1991 [consultado el 15 de mayo de 2024];21(2):288-95. Disponible en: https://doi.org/10.1002/mrm.1910210213
+
+4.  ...
+
+5.  N. Li et al., “The identification of ECG signals using WT-UKF and IPSO-SVM”, Sensors (Basel), vol. 22, núm. 5, p. 1962, 2022. doi: 10.3390/s22051962
 
 </div>
