@@ -1,1 +1,3 @@
-<iframe src="https://drive.google.com/file/d/1jJ3vYVhZfazzq6O6WJS_Il26AjAQhJDA/preview" width="640" height="480" allow="autoplay"></iframe>
+Video respecto a la Revisión avance de proyecto : Protocolo de adquisición y análisis
+
+Link: https://drive.google.com/file/d/1jJ3vYVhZfazzq6O6WJS_Il26AjAQhJDA/view
