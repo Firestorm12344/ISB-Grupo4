@@ -103,7 +103,26 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 | PSD señal cruda | PSD señal filtrada | 
 |:--------------:|:--------------:|
 | ![alt text](image-11.png) | ![alt text](image-12.png)| 
-| FIgura 10 | Figura 11 | 
+| Figura 10 | Figura 11 | 
+
+| Parámetros de frecuencia | Valor en reposo (Hz) | Valor en exitación (Hz) |
+|:--------------:|:--------------:|:--------------:|
+|  Frecuencia pico | 1.0 | 21.433 |
+|  Mediana | 0.00018 |  0.1231 |
+| Promedio  | 1.9076 | 77.465 |
+
+
+| Parámetros de tiempo | Valor en reposo | Valor en exitación |
+|:--------------:|:--------------:|:--------------:|
+| Mean Absolute Value | 6.3*10^-5 | 0.0361 |
+| Root Mean Square | 0.00016 | 0.0496 |
+| Mean Absolute Value Slope  | 1.8175 |  0.0159|
+| Variance | 2.0411 | 0.0063 |
+| iEMG | 7337.02 | 7337.015 |
+|  Waveform Length (WL)| 153449 | 153449 |
+| Zeros Crosses (ZC) | 29410 | 29410 |
+| Sign Signal Change (SSC) | 72504 | 72504 |
+
 
 ## Código en Python
 
