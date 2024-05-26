@@ -63,8 +63,7 @@ El artículo “MUAP extraction and classification based on wavelet transform an
 ### Extracción de características
 
 <p align="justify">
-
-
+Un segmento es una secuencia de datos dada en un intervalo de tiempo y se utiliza para la extracción de las características de la señal [5]. Por ende, al tomar segmentos tantos cortos como largos se pueden generar inconvenientes como sesgo y varianza en la estimación de dichas características y también limitación computacional sobretodo en aplicaciones en tiempo real  [5]. Asimismo, se debe tomar en cuenta el tiempo de procesamiento al momento de escoger la longitud del segmento [5]. Existen dos métodos de segmentación conocidos como segmentación disjunta y segmentación superpuesta siendo esta última la que demanda una mayor carga computacional [5]. Para la segmentación de la señal en este trabajo utilizamos el método de segmentación disjunta con segmentos cada 200 ms ya que es el intervalo mínimo entre dos contracciones distintas en la mano por lo que un segmento de este tamaño contiene información suficiente para estimar el movimiento en los músculos de esta sin exceder las limitaciones computacionales presentadas [5]. 
 </p>
 
 
@@ -363,4 +362,5 @@ def Periodogram(signal):
 2. Boyer M, Bouyer L, Roy JS, Campeau-Lecours A. Reducing Noise, Artifacts and Interference in Single-Channel EMG Signals: A Review. Sensors [Internet]. 8 de marzo de 2023 [consultado el 26 de mayo de 2024];23(6):2927. Disponible en: https://doi.org/10.3390/s23062927
 3. Phinyomark A, Nuidod A, Phukpattaranont P, Limsakul C. Feature Extraction and Reduction of Wavelet Transform Coefficients for EMG Pattern Classification. Electron Electr Eng [Internet]. 11 de junio de 2012 [consultado el 26 de mayo de 2024];122(6). Disponible en: https://doi.org/10.5755/j01.eee.122.6.1816
 4. X. Ren, X. Hu, Z. Wang, y Z. Yan, “MUAP extraction and classification based on wavelet transform and ICA for EMG decomposition”, Med. Biol. Eng. Comput., vol. 44, núm. 5, pp. 371–382, 2006. DOI: 10.1007/s11517-006-0051-3
+5. Oskoei MA, Huosheng Hu. Support Vector Machine-Based Classification Scheme for Myoelectric Control Applied to Upper Limb. IEEE Trans Biomed Eng [Internet]. Agosto de 2008 [consultado el 26 de mayo de 2024];55(8):1956-65. Disponible en: https://doi.org/10.1109/tbme.2008.919734
 </div>
