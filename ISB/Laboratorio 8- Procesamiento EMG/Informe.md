@@ -40,6 +40,11 @@ Las señales de EMG suelen ser adquiridas junto a ruido (ruido de base, ruido de
 
 Para la determinación del mejor filtro, se optó por comparar los filtros ya utilizados (IIR, FIR y Wavelet). Para ello, un parámetro a considerar será la relación señal/ruido (SNR) de las señales obtenidas luego de cada filtro respectivo. 
 
+| Filtro IIR - Butterworth | Filtro FIR | Filtro Wavelet |
+|:--------------:|:--------------:| :--------------:|
+| <img src="image-1.png" alt="alt text" width="400" height="200"> |<img src="image-2.png" alt="alt text" width="400" height="200">  | <img src="image.png" alt="alt text" width="400" height="200">|
+| SNR = 2.3529 | SNR = -2.4112 | SNR = 8.7686 |
+
 Luego de los cálculos respectivos, se observa que la señal con un SNR más alto es la señal obtenida tras el uso del filtro Wavelet, lo cual indica una mayor atenuación del ruido en comparación a los otros filtros.
 
 El artículo “MUAP extraction and classification based on wavelet transform and ICA for EMG decomposition” [B], presenta el uso de un filtro wavelet frente a los filtros digitales comunes, debido a que sugiere que estos último pueden causar demoras en el dominio del tiempo (time-delay). Para el filtrado de la señal EMG, se adoptarán los parámetros utilizados por este artículo: 
