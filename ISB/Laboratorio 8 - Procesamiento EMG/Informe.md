@@ -63,13 +63,11 @@ Un segmento es una secuencia de datos dada en un intervalo de tiempo y se utiliz
 ### Extracción de características
 
 <p align="justify">
-La segmentación se llevó a cabo mediante ventanas de 200 ms (200 muestras) en los periodos de 0 a 20s, que corresponde a la etapa de reposo, y de 40 a 70s, que refiere a la etapa en excitación. Dicha longitud de ventana se extrajo de ... . 
+La segmentación se llevó a cabo mediante ventanas de 200 ms (200 muestras) en los periodos de 0 a 20s, que corresponde a la etapa de reposo, y de 40 a 70s, que refiere a la etapa en excitación. 
 
-Los parámetros a temporales a considerar, tal como N. Burhan et al [X], son el Valor Medio Absoluto (MAV), Raiz Cuadrada Media (RMS), Valor Medio Absoluto de Pendiente (MAVS), Varianza, señal EMG integrado (iEMG), Longitud de forma de onda (WL), Intersecciones con cero (ZC) y Cambio de Signo de la Señal (SSC).
+Los parámetros a temporales a considerar, tal como N. Burhan et al [6], son el Valor Medio Absoluto (MAV), Raiz Cuadrada Media (RMS), Valor Medio Absoluto de Pendiente (MAVS), Varianza, señal EMG integrado (iEMG), Longitud de forma de onda (WL), Intersecciones con cero (ZC) y Cambio de Signo de la Señal (SSC). Del mismo artículo, se menciona que el análisis frecuencial se debe realizar mediante parámetros como la Densidad de Potencia Espectral (PSD), Frecuencia Promedio y Frecuencia Mediana. Sin embargo, adicional a la PSD, se compara el espectro de Fourier antes y después del filtro empleado 
 
-Del mismo artículo, se menciona que el análisis frecuencial se debe realizar mediante parámetros como la Densidad de Potencia Espectral (PSD), Frecuencia Promedio y Frecuencia Mediana. Sin embargo, adicional a la PSD, se compara el espectro de Fourier antes y después del filtro empleado 
 
-[X] N. Burhan, M. Kasno, y R. Ghazali, “Feature extraction of surface electromyography (sEMG) and signal processing technique in wavelet transform: A review”, en 2016 IEEE International Conference on Automatic Control and Intelligent Systems (I2CACIS), 2016, pp. 141–146.
 </p>
 
 
@@ -439,4 +437,5 @@ freqChar(excitementSegments)
 3. Phinyomark A, Nuidod A, Phukpattaranont P, Limsakul C. Feature Extraction and Reduction of Wavelet Transform Coefficients for EMG Pattern Classification. Electron Electr Eng [Internet]. 11 de junio de 2012 [consultado el 26 de mayo de 2024];122(6). Disponible en: https://doi.org/10.5755/j01.eee.122.6.1816
 4. X. Ren, X. Hu, Z. Wang, y Z. Yan, “MUAP extraction and classification based on wavelet transform and ICA for EMG decomposition”, Med. Biol. Eng. Comput., vol. 44, núm. 5, pp. 371–382, 2006. DOI: 10.1007/s11517-006-0051-3
 5. Oskoei MA, Huosheng Hu. Support Vector Machine-Based Classification Scheme for Myoelectric Control Applied to Upper Limb. IEEE Trans Biomed Eng [Internet]. Agosto de 2008 [consultado el 26 de mayo de 2024];55(8):1956-65. Disponible en: https://doi.org/10.1109/tbme.2008.919734
+6. N. Burhan, M. Kasno, y R. Ghazali, “Feature extraction of surface electromyography (sEMG) and signal processing technique in wavelet transform: A review”, en 2016 IEEE International Conference on Automatic Control and Intelligent Systems (I2CACIS), 2016, pp. 141–146.
 </div>
