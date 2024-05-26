@@ -36,7 +36,7 @@ Para la práctica se utilizó el programa Python para aplicar el filtro seleccio
 ### Diseño del Filtro EMG
 
 <p align="justify">
-Las señales de EMG suelen ser adquiridas junto a ruido (ruido de base, ruido de interferencia, ruido de artefactos, etc.), el cual, dependiendo de su naturaleza, puede tener efecto tanto en el dominio del tiempo como la frecuencia [A]. El artículo “Reducing Noise, Artifacts and Interference in Single-Channel EMG Signals: A Review” [A] sugiere que, debido a la variedad de características de cada posible contaminante dentro de la señal, no es posible identificar un método único de filtrado que funcione bien para todos los tipos de contaminantes o ruidos. Dicho artículo menciona características de diversos filtros que son capaces de filtrar el ruido y reconstruir la señal, garantizando la conservación de la mayor cantidad posible de información contenida en la señal EMG; entre ellos menciona el filtro Wavelet y resalta la capacidad de adaptabilidad de sus parámetros basado en las características de la señal. 
+Las señales de EMG suelen ser adquiridas junto a ruido (ruido de base, ruido de interferencia, ruido de artefactos, etc.), el cual, dependiendo de su naturaleza, puede tener efecto tanto en el dominio del tiempo como la frecuencia [2]. El artículo “Reducing Noise, Artifacts and Interference in Single-Channel EMG Signals: A Review” [2] sugiere que, debido a la variedad de características de cada posible contaminante dentro de la señal, no es posible identificar un método único de filtrado que funcione bien para todos los tipos de contaminantes o ruidos. Dicho artículo menciona características de diversos filtros que son capaces de filtrar el ruido y reconstruir la señal, garantizando la conservación de la mayor cantidad posible de información contenida en la señal EMG; entre ellos menciona el filtro Wavelet y resalta la capacidad de adaptabilidad de sus parámetros basado en las características de la señal. 
 
 Para la determinación del mejor filtro, se optó por comparar los filtros ya utilizados (IIR, FIR y Wavelet). Para ello, un parámetro a considerar será la relación señal/ruido (SNR) de las señales obtenidas luego de cada filtro respectivo. 
 
@@ -47,13 +47,10 @@ Para la determinación del mejor filtro, se optó por comparar los filtros ya ut
 
 Luego de los cálculos respectivos, se observa que la señal con un SNR más alto es la señal obtenida tras el uso del filtro Wavelet, lo cual indica una mayor atenuación del ruido en comparación a los otros filtros.
 
-El artículo “MUAP extraction and classification based on wavelet transform and ICA for EMG decomposition” [B], presenta el uso de un filtro wavelet frente a los filtros digitales comunes, debido a que sugiere que estos último pueden causar demoras en el dominio del tiempo (time-delay). Para el filtrado de la señal EMG, se adoptarán los parámetros utilizados por este artículo: 
+El artículo “MUAP extraction and classification based on wavelet transform and ICA for EMG decomposition” [4], presenta el uso de un filtro wavelet frente a los filtros digitales comunes, debido a que sugiere que estos último pueden causar demoras en el dominio del tiempo (time-delay). Para el filtrado de la señal EMG, se adoptarán los parámetros utilizados por este artículo: 
 - Tipo de wavelet: Daubechies 5 (db5)
 - Nivel de la wavelet: 9
 - Threshold: Hard.
-
-[A] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10059683/
-[B] https://link.springer.com/article/10.1007/s11517-006-0051-3 
 </p>
 
 ### Segmentación
@@ -365,5 +362,5 @@ def Periodogram(signal):
 1. Burhan N, Kasno MA, Ghazali R. Feature extraction of surface electromyography (sEMG) and signal processing technique in wavelet transform: A review. En: 2016 IEEE International Conference on Automatic Control and Intelligent Systems (I2CACIS) [Internet]; 22 de octubre de 2016; Selangor, Malaysia. [lugar desconocido]: IEEE; 2016 [consultado el 26 de mayo de 2024]. Disponible en: https://doi.org/10.1109/i2cacis.2016.7885304
 2. Boyer M, Bouyer L, Roy JS, Campeau-Lecours A. Reducing Noise, Artifacts and Interference in Single-Channel EMG Signals: A Review. Sensors [Internet]. 8 de marzo de 2023 [consultado el 26 de mayo de 2024];23(6):2927. Disponible en: https://doi.org/10.3390/s23062927
 3. Phinyomark A, Nuidod A, Phukpattaranont P, Limsakul C. Feature Extraction and Reduction of Wavelet Transform Coefficients for EMG Pattern Classification. Electron Electr Eng [Internet]. 11 de junio de 2012 [consultado el 26 de mayo de 2024];122(6). Disponible en: https://doi.org/10.5755/j01.eee.122.6.1816
-
+4. X. Ren, X. Hu, Z. Wang, y Z. Yan, “MUAP extraction and classification based on wavelet transform and ICA for EMG decomposition”, Med. Biol. Eng. Comput., vol. 44, núm. 5, pp. 371–382, 2006. DOI: 10.1007/s11517-006-0051-3
 </div>
