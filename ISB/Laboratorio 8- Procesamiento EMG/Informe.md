@@ -59,11 +59,15 @@ El artículo “MUAP extraction and classification based on wavelet transform an
 ### Segmentación
 
 <p align="justify">
+
+
 </p>
 
 ### Extracción de características
 
 <p align="justify">
+
+
 </p>
 
 
@@ -93,16 +97,266 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 
 ## Código en Python
 
+
+### Librerías
+
 ``` python
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import pywt
+from scipy import signal
+from scipy.signal import lfilter, firwin
 
 ```
 
+### Funciones Generales
+
+``` python
+
+def get_values(path, col):
+  df = pd.read_csv(path, sep='\t', skiprows=3)  # saltar las dos primeras filas (encabezado)
+  novena_columna = df.iloc[:, col].values
+  n = [i/1000 for i in range(0, len(novena_columna))]
+  signal = [(float(valor)/(2**10)-1/2)*3.3/1009*1000 for valor in novena_columna]
+  return n, signal
+
+
+def plot_values(n, y, label, ini, fin):
+  plt.plot(n[ini:fin], y[ini:fin])
+  plt.xlabel('Tiempo (s)')
+  plt.ylabel('Voltaje (mv)')
+  plt.title(label)
+  plt.grid(True)
+  plt.show()
+
+
+def FreqAnalysis_FFT (signal):
+  global fs
+  fs = 1000
+  fft_result = np.fft.fft(signal)
+  freqs = np.fft.fftfreq(len(signal), 1/fs)
+  # Graficar la magnitud de la FFT
+  plt.figure(figsize=(10, 5))
+  plt.plot(freqs, np.abs(fft_result))
+  plt.xlim(-600, 600)
+  plt.title('Magnitud de la Transformada Rápida de Fourier (FFT)')
+  plt.xlabel('Frecuencia (Hz)')
+  plt.ylabel('Magnitud')
+  plt.grid(True)
+  plt.show()
+  return fft_result
+
+```
+
+### Funciones para Filtros
+
+
+```python
+
+def WaveletFiltering(signal, ini, fin):
+    coeffs = pywt.wavedec(signal, 'db5', level=9)
+    # sigma = np.median(coeffs[-1])/0.6745
+    # print(sigma)
+    # thresh = sigma*np.sqrt(2*np.log10(len(signal)))
+    # print(thresh)
+    # Filtrar los coeficientes
+    threshold = 0.2
+    filtered_coeffs = [pywt.threshold(coeff, threshold, mode='hard') for coeff in coeffs]
+
+    # Reconstruir la señal filtrada
+    filtered_signal = pywt.waverec(filtered_coeffs, 'db5')
+    plt.figure()
+    plt.plot(signal[ini:fin], label='Señal original')
+    plt.plot(filtered_signal[ini:fin], label='Señal filtrada')
+    plt.title('Señal filtrada')
+    plt.xlabel('Tiempo')
+    plt.ylabel('Amplitud')
+    plt.ylim([-1.2, 1.2])
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+    return filtered_signal
+
+def IIR_Butter(EMGsignal, ini, fin):
+  b,a = signal.butter(2, 10, 'highpass', fs=1000, output='ba')
+  filteredEMG =signal.filtfilt(b,a, EMGsignal)
+  b,a = signal.butter(8, 400, 'lowpass', fs=1000, output='ba')
+  filteredEMG =signal.filtfilt(b,a, filteredEMG)
+  b,a = signal.butter(2, [40, 80], 'stop', fs=1000, output='ba')
+  filteredEMG =signal.filtfilt(b,a, filteredEMG)
+  b,a = signal.butter(2, [100, 140], 'stop', fs=1000, output='ba')
+  filteredEMG =signal.filtfilt(b,a, filteredEMG)
+  b,a = signal.butter(2, [160, 200], 'stop', fs=1000, output='ba')
+  filteredEMG =signal.filtfilt(b,a, filteredEMG)
+  b,a = signal.butter(2, [220, 260], 'stop', fs=1000, output='ba')
+  filteredEMG =signal.filtfilt(b,a, filteredEMG)
+  b,a = signal.butter(2, [280, 320], 'stop', fs=1000, output='ba')
+  filteredEMG =signal.filtfilt(b,a, filteredEMG)
+  b,a = signal.butter(2, [340, 380], 'stop', fs=1000, output='ba')
+  filteredEMG =signal.filtfilt(b,a, filteredEMG)
+  plt.figure()
+  plt.plot(EMGsignal[ini:fin], label='Señal original')
+  plt.plot(filteredEMG[ini:fin], label='Señal filtrada')
+  plt.title('Señal filtrada')
+  plt.xlabel('Tiempo')
+  plt.ylabel('Amplitud')
+  plt.ylim([-1.2, 1.2])
+  plt.legend()
+  plt.grid(True)
+  plt.tight_layout()
+  plt.show()
+  return filteredEMG
+
+def FIR(EMGsignal, ini, fin):
+  n = [i/1000 for i in range(0,len(EMGsignal))]
+  t = [num / fs for num in n]; N=len(n)
+  M = 37
+  Fc = 30
+  wc = 2*np.pi*Fc/fs
+  w = firwin(numtaps=M, cutoff=Fc, window='hamming', fs=1000, pass_zero=False)
+  w = np.round(w,3)
+  nm = np.arange(M)
+  W = np.fft.fft(w,N)
+  W = np.round(W[0:N//2],3)
+  y_filtrado = lfilter(w, np.array(1),EMGsignal)
+  plt.figure()
+  plt.plot(n[ini: fin], EMGsignal[ini: fin], label="Señal Original")
+  plt.plot(n[ini: fin], y_filtrado[ini: fin], label="Señal Filtrada")
+  plt.ylabel("Amplitud (mv)")
+  plt.xlabel("Tiempo (s)")
+  plt.title("EMG")
+  plt.legend()
+  plt.grid(True)
+  plt.margins(0, 0.05)
+  return y_filtrado
+
+def SNR(signal, filtered_signal):
+    power_signal = np.mean(np.square(signal))
+    noise = signal - filtered_signal
+    power_noise = np.mean(np.square(noise))
+    snr = 10 * np.log10(power_signal / power_noise)
+    return snr
+
+```
+
+### Funciones de Segmentación
+
+```python
+
+def split_signal(signal, N):
+    num_segments = len(signal) // N  # Número de pedazos completos
+    segments = [signal[i*N:(i+1)*N] for i in range(num_segments)]
+    return segments
+
+# Selección de segmentos de señal en etapas de reposo y exitación
+# Tiempo de reposo 0 a 20 s
+# Tiempo de exitación de 40 a 70 s
+
+signalSet = split_signal(EMGsignal_NoDC, 200)
+restSegments = signalSet[0:100]
+excitementSegments = signalSet[200:350]
+
+```
+
+### Funciones de Características en Tiempo
+
+``` python
+
+def timeChar(segments):
+  mavlist = []
+  rmslist = []
+  mavslist = []
+  varlist = []
+  iemglist = []
+  wllist = []
+  zclist = []
+  ssclist = []
+  for i in segments:
+    mav = np.mean(np.abs(EMGsignal))
+    rms = np.sqrt(np.mean(np.square(EMGsignal)))
+    mavs = np.mean(np.abs(np.diff(EMGsignal)))
+    var = np.var(EMGsignal)
+
+    # Calcular el iEMG (integral de la EMG)
+    iemg_value = np.sum(np.abs(EMGsignal_NoDC))
+    # Calcular la longitud de la forma de onda (WL)
+    wl_value = len(EMGsignal_NoDC)
+    # Calcular los cruces por cero (ZC)
+    zc_value = np.sum(np.diff(np.sign(EMGsignal_NoDC)) != 0)
+    # Calcular los cambios en el signo de la pendiente (SSC)
+    ssc_value = np.sum(np.diff(np.sign(np.diff(EMGsignal_NoDC))) != 0)
+    mavlist.append(mav)
+    rmslist.append(rms)
+    mavslist.append(mavs)
+    varlist.append(var)
+    iemglist.append(iemg_value)
+    wllist.append(wl_value)
+    zclist.append(zc_value)
+    ssclist.append(ssc_value)
+
+    mav_mean = np.mean(mavlist)
+    rms_mean = np.mean(rmslist)
+    mavs_mean = np.mean(mavslist)
+    var_mean = np.mean(varlist)
+    iemg_mean = np.mean(iemglist)
+    wl_mean = np.mean(wllist)
+    zc_mean = np.mean(zclist)
+    ssc_mean = np.mean(ssclist)
+
+  print("Mean Absolute Value: ", mav_mean)
+  print("Root Mean Square: ", rms_mean)
+  print("Mean Absolute Value Slope: ", mavs_mean)
+  print("Variance: ", var_mean);
+  print("iEMG:", iemg_value)
+  print("Waveform Length (WL):", wl_value)
+  print("Zeros Crosses (ZC):", zc_value)
+  print("Sign Signal Change (SSC):", ssc_value) 
+
+
+def wavelength(signal):
+  n = [i for i in range(0, len(signal))]
+  t = n/1000
+  peak_indices = np.where(np.diff(np.sign(np.diff(signal))) < 0)[0]
+  # Calcular la longitud de onda como la distancia entre dos picos consecutivos
+  if len(peak_indices) >= 2:
+      wavelength = t[peak_indices[1]] - t[peak_indices[0]]
+      print("Longitud de onda:", wavelength)
+  else:
+      print("No se encontraron suficientes picos para calcular la longitud de onda.")
+
+timeChar(restSegments)
+timeChar(excitementSegments)
+
+```
+
+### Funciones de Características en Frecuencia
+
+```python
+
+def Periodogram(signal):
+  powSpectralDensity = abs(np.fft.fft(signal))**2
+  freqs = np.fft.fftfreq(len(signal), 1/fs)
+  plt.plot(freqs, powSpectralDensity)
+  plt.title('Power Spectral Density')
+  plt.xlabel('Frecuencia')
+  plt.ylabel('Potencia')
+  plt.legend()
+  plt.grid(True)
+  plt.show()
+  return 
+
+```
 
 ## Discusión de resultados
 
 ### EMG
 
 <p align="justify">
+
+
 </p>
 
 
