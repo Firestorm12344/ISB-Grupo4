@@ -10,9 +10,9 @@
 - [Referencias](#referencias)
   
 ##  Objetivos
-- 
--
--
+- Comparar y seleccionar el filtro mas adecuado para la señal EMG
+- Extraer y discutir las características de la señal EMG
+- Comparar la señal procesada con una señal de referencia
 
 ## Materiales
 | Material | Cantidad |
@@ -23,8 +23,8 @@
 ## Introducción
 
 <p align="justify">
+La electromiografía de superficie (sEMG) es una técnica ampliamente utilizada en diversos campos como aplicaciones clínicas ya que nos arroja una señal eléctrica conocida como señal mioeléctrica generada a partir de los músculos esqueléticos lo que incluye información importante respecto a la contracción muscular [1]. Sin embargo, la calidad de esta señal puede verse alterada por diversos tipos de ruido como la interferencia y los artefactos lo que puede llevar a una interpretación errónea de esta [2]. Dentro de estos tenemos ruido inherente (de parte de otros equipos electrónicos), ruido ambiental, contaminación cruzada por parte de otros músculos activos cercanos al músculo esquelético de interés, entre otros [1]. Por ende, para obtener la señal EMG se debe tomar en cuenta las características adecuadas que se deben extraer de la señal tanto en el dominio del tiempo, de la frecuencia o del tiempo-frecuencia ya que de tomar un enfoque incorrecto también puede alterar la señal real [1]. En síntesis, la extracción de características en sEMG es el primer paso en el procesamiento de la señal y se utiliza para remover el ruido y obtener la señal real [1]. La extracción de características en el dominio del tiempo presenta el comportamiento de la señal en este y es utilizado en una amplia gama de aplicaciones como sistemas biológicos debido a que ofrece una reducción respecto a la complejidad relacionada a la extracción de características y facilidad de implementación [1]. Dentro de estas características se encuentran el valor de la media absoluta (MAV), la pendiente del valor de la media absoluta (MAVS), entre otros [1]. Cabe resaltar que esta señal es no estacionaria aunque al ser analizada en el dominio del tiempo se suele asumir que sí lo que conlleva ciertos problemas [1]. Una de las técnicas más utilizadas satisfactoriamente para el análisis de las señales no estacionarias como esta es la transformada de wavelet discreta en el dominio del tiempo aunque esta implica un vector de características de múltiples dimensiones lo que causa un aumento en los parámetros para la clasificación por lo que se debe reducir la dimensionalidad de dicho vector preservando la precisión de la clasificación de características [3]. 
 </p>
-
 
 <p align="justify">
 Para la práctica se utilizó el programa Python para aplicar el filtro seleccionado, graficar la señal y extraer sus características. Asimismo, se utilizo el programa Open Signal (r)evolution para comparar dicha señal.
@@ -362,5 +362,8 @@ def Periodogram(signal):
 
 ## Referencias
 
+1. Burhan N, Kasno MA, Ghazali R. Feature extraction of surface electromyography (sEMG) and signal processing technique in wavelet transform: A review. En: 2016 IEEE International Conference on Automatic Control and Intelligent Systems (I2CACIS) [Internet]; 22 de octubre de 2016; Selangor, Malaysia. [lugar desconocido]: IEEE; 2016 [consultado el 26 de mayo de 2024]. Disponible en: https://doi.org/10.1109/i2cacis.2016.7885304
+2. Boyer M, Bouyer L, Roy JS, Campeau-Lecours A. Reducing Noise, Artifacts and Interference in Single-Channel EMG Signals: A Review. Sensors [Internet]. 8 de marzo de 2023 [consultado el 26 de mayo de 2024];23(6):2927. Disponible en: https://doi.org/10.3390/s23062927
+3. Phinyomark A, Nuidod A, Phukpattaranont P, Limsakul C. Feature Extraction and Reduction of Wavelet Transform Coefficients for EMG Pattern Classification. Electron Electr Eng [Internet]. 11 de junio de 2012 [consultado el 26 de mayo de 2024];122(6). Disponible en: https://doi.org/10.5755/j01.eee.122.6.1816
 
 </div>
