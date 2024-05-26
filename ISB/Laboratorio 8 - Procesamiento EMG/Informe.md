@@ -64,10 +64,14 @@ Un segmento es una secuencia de datos dada en un intervalo de tiempo y se utiliz
 
 <p align="justify">
 La segmentación se llevó a cabo mediante ventanas de 200 ms (200 muestras) en los periodos de 0 a 20s, que corresponde a la etapa de reposo, y de 40 a 70s, que refiere a la etapa en excitación. 
+</p>
 
+<p align="justify">
 Los parámetros a temporales a considerar, tal como N. Burhan et al [6], son el Valor Medio Absoluto (MAV), Raiz Cuadrada Media (RMS), Valor Medio Absoluto de Pendiente (MAVS), Varianza, señal EMG integrado (iEMG), Longitud de forma de onda (WL), Intersecciones con cero (ZC) y Cambio de Signo de la Señal (SSC). Del mismo artículo, se menciona que el análisis frecuencial se debe realizar mediante parámetros como la Densidad de Potencia Espectral (PSD), Frecuencia Promedio y Frecuencia Mediana. Sin embargo, adicional a la PSD, se compara el espectro de Fourier antes y después del filtro empleado 
+</p>
 
-
+<p align="justify">
+Cabe resaltar que para la extracción de características se eliminó a partir de filtrado digital  el componente DC de la señal el cual puede surgir en la conversión A/D debido a inexactitudes en el convertidor y puede repercutir en algoritmos de procesamiento de señales [7]. 
 </p>
 
 
@@ -442,4 +446,5 @@ La varianza, que mide la dispersión de los valores de la señal, es mayor en re
 4. X. Ren, X. Hu, Z. Wang, y Z. Yan, “MUAP extraction and classification based on wavelet transform and ICA for EMG decomposition”, Med. Biol. Eng. Comput., vol. 44, núm. 5, pp. 371–382, 2006. DOI: 10.1007/s11517-006-0051-3
 5. Oskoei MA, Huosheng Hu. Support Vector Machine-Based Classification Scheme for Myoelectric Control Applied to Upper Limb. IEEE Trans Biomed Eng [Internet]. Agosto de 2008 [consultado el 26 de mayo de 2024];55(8):1956-65. Disponible en: https://doi.org/10.1109/tbme.2008.919734
 6. N. Burhan, M. Kasno, y R. Ghazali, “Feature extraction of surface electromyography (sEMG) and signal processing technique in wavelet transform: A review”, en 2016 IEEE International Conference on Automatic Control and Intelligent Systems (I2CACIS), 2016, pp. 141–146.
+7. Stranak P. Interfering DC Component, Suppression and Influence to Digital Signal Processing. Radioengineering [Internet]. 2008 [consultado el 25 de mayo de 2024];17:121-3. Disponible en: https://dspace.vut.cz/items/5a34027c-d5f1-4d26-a13c-15c47d8f02ad/full
 </div>
