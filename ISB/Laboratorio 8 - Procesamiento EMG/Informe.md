@@ -42,6 +42,7 @@ Para la determinación del mejor filtro, se optó por comparar los filtros ya ut
 
 | Filtro IIR - Butterworth | Filtro FIR | Filtro Wavelet |
 |:--------------:|:--------------:| :--------------:|
+| Figura 1 | Figura 2 | Figura 3 |
 | <img src="image-1.png" alt="alt text" width="400" height="200"> |<img src="image-2.png" alt="alt text" width="400" height="200">  | <img src="image.png" alt="alt text" width="400" height="200">|
 | SNR = 2.3529 | SNR = -2.4112 | SNR = 8.7686 |
 
@@ -64,6 +65,14 @@ El artículo “MUAP extraction and classification based on wavelet transform an
 
 <p align="justify">
 Un segmento es una secuencia de datos dada en un intervalo de tiempo y se utiliza para la extracción de las características de la señal [5]. Por ende, al tomar segmentos tantos cortos como largos se pueden generar inconvenientes como sesgo y varianza en la estimación de dichas características y también limitación computacional sobretodo en aplicaciones en tiempo real  [5]. Asimismo, se debe tomar en cuenta el tiempo de procesamiento al momento de escoger la longitud del segmento [5]. Existen dos métodos de segmentación conocidos como segmentación disjunta y segmentación superpuesta siendo esta última la que demanda una mayor carga computacional [5]. Para la segmentación de la señal en este trabajo utilizamos el método de segmentación disjunta con segmentos cada 200 ms ya que es el intervalo mínimo entre dos contracciones distintas en la mano por lo que un segmento de este tamaño contiene información suficiente para estimar el movimiento en los músculos de esta sin exceder las limitaciones computacionales presentadas [5]. 
+
+La segmentación se llevó a cabo mediante ventanas de 200 ms (200 muestras) en los periodos de 0 a 20s, que corresponde a la etapa de reposo, y de 40 a 70s, que refiere a la etapa en excitación. Dicha longitud de ventana se extrajo de ... . 
+
+Los parámetros a temporales a considerar, tal como N. Burhan et al [X], son el Valor Medio Absoluto (MAV), Raiz Cuadrada Media (RMS), Valor Medio Absoluto de Pendiente (MAVS), Varianza, señal EMG integrado (iEMG), Longitud de forma de onda (WL), Intersecciones con cero (ZC) y Cambio de Signo de la Señal (SSC).
+
+Del mismo artículo, se menciona que el análisis frecuencial se debe realizar mediante parámetros como la Densidad de Potencia Espectral (PSD), Frecuencia Promedio y Frecuencia Mediana. Sin embargo, adicional a la PSD, se compara el espectro de Fourier antes y después del filtro empleado 
+
+[X] N. Burhan, M. Kasno, y R. Ghazali, “Feature extraction of surface electromyography (sEMG) and signal processing technique in wavelet transform: A review”, en 2016 IEEE International Conference on Automatic Control and Intelligent Systems (I2CACIS), 2016, pp. 141–146.
 </p>
 
 
@@ -79,17 +88,25 @@ Se tomó registro de la señal en el usuario en estado de reposo o silencio elé
 
 | Posicionamiento de los electrodos |
 |:--------------:|
-| <img src="image-1.png" alt="Descripción de la imagen" width="300"/> |
-| Figura 1 |
+| <img src="image-1-1.png" alt="Descripción de la imagen" width="300"/> |
+| Figura 4 |
 
 
-| Campo | Señal Cruda | Filtro wavelet | Señal Referencial | 
-|:--------------:|:--------------:|:--------------:|:--------------:|
-| Figura 2. Señal completa| ![alt text](imageXX.png)|![alt text](imageXX.png)|![alt text](imageXX.png)|
-| Figura 3. Reposo | ![alt text](imageXX.png)|![alt text](imageXX.png)| ![alt text](imageXX.png)|
-| Figura 4. Contracción muscular | ![alt text](imageXX.png)| ![alt text](imageXX.png)| ![alt text](imageXX.png)|
+| Campo | Señal Cruda | Filtro wavelet | 
+|:--------------:|:--------------:|:--------------:|
+| Figura 5. Señal completa| ![alt text](image-3.png) | ![alt text](image-4.png) |
+| Figura 6. Reposo | ![alt text](image-5.png)| ![alt text](image-6.png)| 
+| Figura 7. Contracción muscular | ![alt text](image-7.png) | ![alt text](image-8.png)|
 
+| FFT señal cruda | FFT señal filtrada | 
+|:--------------:|:--------------:|
+| ![alt text](image-9.png) | ![alt text](image-10.png)| 
+| FIgura 8 | Figura 9 | 
 
+| PSD señal cruda | PSD señal filtrada | 
+|:--------------:|:--------------:|
+| ![alt text](image-11.png) | ![alt text](image-12.png)| 
+| FIgura 10 | Figura 11 | 
 
 ## Código en Python
 
