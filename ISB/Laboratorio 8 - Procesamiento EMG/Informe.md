@@ -57,15 +57,12 @@ El artículo “MUAP extraction and classification based on wavelet transform an
 ### Segmentación
 
 <p align="justify">
-
-
+Un segmento es una secuencia de datos dada en un intervalo de tiempo y se utiliza para la extracción de las características de la señal [5]. Por ende, al tomar segmentos tantos cortos como largos se pueden generar inconvenientes como sesgo y varianza en la estimación de dichas características y también limitación computacional sobretodo en aplicaciones en tiempo real  [5]. Asimismo, se debe tomar en cuenta el tiempo de procesamiento al momento de escoger la longitud del segmento [5]. Existen dos métodos de segmentación conocidos como segmentación disjunta y segmentación superpuesta siendo esta última la que demanda una mayor carga computacional [5]. Para la segmentación de la señal en este trabajo utilizamos el método de segmentación disjunta con segmentos cada 200 ms ya que es el intervalo mínimo entre dos contracciones distintas en los músculos de la mano por lo que un segmento de este tamaño contiene información suficiente para estimar el movimiento en estos sin exceder las limitaciones computacionales presentadas [5]. 
 </p>
 
 ### Extracción de características
 
 <p align="justify">
-Un segmento es una secuencia de datos dada en un intervalo de tiempo y se utiliza para la extracción de las características de la señal [5]. Por ende, al tomar segmentos tantos cortos como largos se pueden generar inconvenientes como sesgo y varianza en la estimación de dichas características y también limitación computacional sobretodo en aplicaciones en tiempo real  [5]. Asimismo, se debe tomar en cuenta el tiempo de procesamiento al momento de escoger la longitud del segmento [5]. Existen dos métodos de segmentación conocidos como segmentación disjunta y segmentación superpuesta siendo esta última la que demanda una mayor carga computacional [5]. Para la segmentación de la señal en este trabajo utilizamos el método de segmentación disjunta con segmentos cada 200 ms ya que es el intervalo mínimo entre dos contracciones distintas en la mano por lo que un segmento de este tamaño contiene información suficiente para estimar el movimiento en los músculos de esta sin exceder las limitaciones computacionales presentadas [5]. 
-
 La segmentación se llevó a cabo mediante ventanas de 200 ms (200 muestras) en los periodos de 0 a 20s, que corresponde a la etapa de reposo, y de 40 a 70s, que refiere a la etapa en excitación. Dicha longitud de ventana se extrajo de ... . 
 
 Los parámetros a temporales a considerar, tal como N. Burhan et al [X], son el Valor Medio Absoluto (MAV), Raiz Cuadrada Media (RMS), Valor Medio Absoluto de Pendiente (MAVS), Varianza, señal EMG integrado (iEMG), Longitud de forma de onda (WL), Intersecciones con cero (ZC) y Cambio de Signo de la Señal (SSC).
