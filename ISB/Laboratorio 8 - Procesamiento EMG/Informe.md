@@ -243,6 +243,8 @@ def FIR(EMGsignal, ini, fin):
   plt.margins(0, 0.05)
   return y_filtrado
 
+
+
 def SNR(signal, filtered_signal):
     power_signal = np.mean(np.square(signal))
     noise = signal - filtered_signal
@@ -284,7 +286,7 @@ def timeChar(segments):
   wllist = []
   zclist = []
   ssclist = []
-  for i in segments:
+  for EMGsignal in segments:
     mav = np.mean(np.abs(EMGsignal))
     rms = np.sqrt(np.mean(np.square(EMGsignal)))
     mavs = np.mean(np.abs(np.diff(EMGsignal)))
@@ -346,6 +348,44 @@ timeChar(excitementSegments)
 
 ```python
 
+def freqChar(segments):
+    peakFreqlist = []
+    medFreqlist = []
+    avgFreqlist = []
+    
+    for signal in segments:
+        freqs = np.fft.fftfreq(len(signal), 1/1000)
+        fft_spectrum = np.fft.fft(signal)
+        magnitude_spectrum = np.abs(fft_spectrum)
+        
+        # Encontrar la frecuencia pico
+        peak_freq_index = np.argmax(magnitude_spectrum)
+        peakFreq = freqs[peak_freq_index]
+        
+        # Calcular frecuencias positivas
+        positive_freqs = freqs[freqs >= 0]
+        positive_magnitude = magnitude_spectrum[freqs >= 0]
+
+        # Calcular promedio ponderado de magnitudes por frecuencias
+        if (np.sum(positive_magnitude)==0):
+          avgFreq = 0
+        else:
+          avgFreq = np.sum(positive_magnitude * positive_freqs) / np.sum(positive_magnitude)
+        
+        # Calcular mediana de las magnitudes del espectro de frecuencia
+        medFreq = np.median(positive_magnitude)
+        
+        peakFreqlist.append(peakFreq)
+        medFreqlist.append(medFreq)
+        avgFreqlist.append(avgFreq)
+    mPeak = np.mean(peakFreqlist)
+    mMed = np.mean(medFreqlist)
+    mAvg = np.mean(avgFreqlist)
+    
+    print("Peak Frequency: ", mPeak)
+    print("Median Frequency: ", mMed)
+    print("Mean Frequency: ", mAvg)
+
 def Periodogram(signal):
   powSpectralDensity = abs(np.fft.fft(signal))**2
   freqs = np.fft.fftfreq(len(signal), 1/fs)
@@ -357,6 +397,9 @@ def Periodogram(signal):
   plt.grid(True)
   plt.show()
   return 
+
+freqChar(restSegments)
+freqChar(excitementSegments)
 
 ```
 
