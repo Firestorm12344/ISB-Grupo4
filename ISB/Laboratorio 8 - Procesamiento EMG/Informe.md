@@ -12,13 +12,11 @@
 ##  Objetivos
 - Comparar y seleccionar el filtro mas adecuado para la señal EMG
 - Extraer y discutir las características de la señal EMG
-- Comparar la señal procesada con una señal de referencia
 
 ## Materiales
 | Material | Cantidad |
 |:--------------:|:--------------:|
 | Programa *Python* | N.A | 
-| Programa *Open Signal (r)evolution* | N.A | 
 
 ## Introducción
 
@@ -27,7 +25,7 @@ La electromiografía de superficie (sEMG) es una técnica ampliamente utilizada 
 </p>
 
 <p align="justify">
-Para la práctica se utilizó el programa Python para aplicar el filtro seleccionado, graficar la señal y extraer sus características. Asimismo, se utilizo el programa Open Signal (r)evolution para comparar dicha señal.
+Para la práctica se utilizó el programa Python para aplicar el filtro seleccionado, graficar la señal y extraer sus características. 
 </p>
 
 ## Metodología
