@@ -40,16 +40,47 @@ Como parte del pre procesamiento de las señales de ECG, se usará la implementa
 ### Picos R
 
 <p align="justify">
+En modelos de Inteligencia Artificial, la extracción de características de las señales como el intervalo R-R demuestra ser determinante para la óptima segmentación de las señales ECG [X]. Por ejemplo, D. Li et al consideran el entrenamiento de una CNN en base a intervalos de señal ECG correspondientes a cada latido; para lo cual se requirió determinar las posiciones de los picos R, y definiendo un intervalo de 100 muestras anteriores y posteriores a cada pico. 
 
+[X] D. Li, J. Zhang, Q. Zhang, y X. Wei, “Classification of ECG signals based on 1D convolution neural network”, en 2017 IEEE 19th International Conference on e-Health Networking, Applications and Services (Healthcom), 2017, pp. 1–6.
 </p>
 
-<p align="justify">
-
-</p>
 
 ### HRV
-<p align="justify">
 
+<p align="justify">
+El análisis del HRV puede realizarse en el dominio del tiempo o en el dominio de la frecuencia, siendo el análisis en el dominio del tiempo el método más sencillo para la extracción de características.
+</p>
+
+En el dominio del tiempo, se empleará el intervalo normal entre latidos (NN), el cual se define como el intervalo entre ondas R consecutivas en las señales de ECG [B]. Este se empelará para el cálculo de:
+- La desviación estándar de los intervalos NN (SDNN)
+- La raíz cuadrada de la media de las diferencias sucesivas de los intervalos NN (RMSSD)
+- La proporción del número de intervalos NN adyacentes cuyas duraciones difieren más de 50 ms con respecto al número total de intervalos NN (pNN50).
+
+![alt text](image-3.png)
+
+Fig #. Medidas de HRV relacionados a la variabilidad de picos RR [Z]
+
+<p align="justify">
+De estos parámetros, el SDNN depende de la longitud de la señal de ECG y su significancia clínica es la medida del riesgo cardíaco [B]. Por su parte, el RMSSD puede relacionarse con la arritmia sinusal respiratoria y los cambios de frecuencia en el ritmo cardíaco en respuesta a la respiración [B]. Finalmente, el pNN50 se relaciona con la actividad del sistema nervioso parasimpático [B].
+</p>
+
+<p align="justify">
+En el dominio de la frecuencia, realizar un análisis del Densidad Espectral de Potencia (PSD) puede ayudar a recopilar información sobre la dispersión de la varianza (potencia) en función de la frecuencia [C]. Del espectro, frecuencias entre 0 y 0.5 Hz se puede categorizar en cuatro bandas:
+
+- Alta frecuencia (HF) (0.15-0.4 Hz)
+- Banda de frecuencia baja (LF) (0.04-0.15 Hz)
+- Banda de frecuencia muy baja (VLF) (0.003-0.04Hz)
+- Banda de frecuencia ultra baja (ULF) (<0.003 Hz)
+
+Donde VLF, HF y LF son características del espectro a corto plazo y ULF a largo plazo. La suma de las cuatro bandas espectrales LF, HF, ULF y VLF y la varianza es la potencia total de la variabilidad de los intervalos RR [C]. 
+</p>
+
+[B] S. Sieciński, P. S. Kostka, y E. J. Tkacz, “Heart rate variability analysis on electrocardiograms, seismocardiograms and gyrocardiograms on healthy volunteers”, Sensors (Basel), vol. 20, núm. 16, p. 4522, 2020.
+
+[C] R. Tiwari, R. Kumar, S. Malik, T. Raj, y P. Kumar, “Analysis of heart rate variability and implication of different factors on heart rate variability”, Curr. Cardiol. Rev., vol. 17, núm. 5, 2021.
+
+[Z] M. Vollmer, “A robust, simple and reliable measure of heart rate variability using relative RR intervals”, en 2015 Computing in Cardiology Conference (CinC), 2015, pp. 609–612.
 </p>
 
 
