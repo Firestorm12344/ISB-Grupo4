@@ -1,4 +1,4 @@
-# Lab 8 - Procesamiento ECG
+# Lab 9 - Procesamiento ECG
 
 ## Tabla de contenidos
 - [Objetivos](#objetivos)
@@ -11,8 +11,9 @@
 
 
 ##  Objetivos
-- Comparar y seleccionar el filtro mas adecuado para la señal EMG
-- Extraer y discutir las características de la señal EMG
+- Aplicar el filtro mas adecuado para la señal ECG
+- Extraer los intervalos de picos R-R y la variación en tiempo entre cada latido del corazón, conocida como HRV, de la señal ECG
+- Discutir las características de la señal ECG
 
 ## Materiales
 | Material | Cantidad |
