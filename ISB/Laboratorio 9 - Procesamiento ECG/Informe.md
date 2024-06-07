@@ -37,7 +37,7 @@ Como parte del pre procesamiento de las señales de ECG, se usará la implementa
 [A] N. Li et al., “The identification of ECG signals using WT-UKF and IPSO-SVM”, Sensors (Basel), vol. 22, núm. 5, p. 1962, 2022. doi: 10.3390/s22051962
 </p>
 
-### Extracción de características
+### Picos R
 
 <p align="justify">
 </p>
@@ -45,6 +45,7 @@ Como parte del pre procesamiento de las señales de ECG, se usará la implementa
 <p align="justify">
 </p>
 
+### HRV
 <p align="justify">
 </p>
 
