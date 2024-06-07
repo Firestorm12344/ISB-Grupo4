@@ -40,21 +40,43 @@ Como parte del pre procesamiento de las señales de ECG, se usará la implementa
 ### Picos R
 
 <p align="justify">
+
 </p>
 
 <p align="justify">
+
 </p>
 
 ### HRV
 <p align="justify">
+
 </p>
 
 
 ## Resultados
 
+### Identificación de Picos R
+
+| Señal Filtrada | Identificación de Picos R |
+|:----------------------------------:|:---------------:|
+| ![alt text](image-10.png)| ![alt text](image-1.png)| 
+
 ***NOTA**: El ploteo de las señales se realizó en intervalos distintos, para una mejor apreciación de las señales. Asimismo, la frecuencia de muestreo fue de 1000 Hz.*
 
-### EMG
+### Calculo de parámetros HRV
+
+| Parámetros Calculados |
+|:--------------:|
+| Mean R-R: 0.7036 s |
+| SDRR :  0.0801 s |
+| RMSSSD : 0.0355 s |
+| pRR50 : 15.00 %|
+
+### Análisis en Frecuencia
+
+| Power Spectral Density |
+|:--------------:|
+| ![alt text](image-2.png)|
 
 ## Código en Python
 
