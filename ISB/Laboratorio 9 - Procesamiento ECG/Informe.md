@@ -29,10 +29,12 @@
 
 ## Metodología
 
-### Diseño del Filtro EMG
+### Diseño del Filtro ECG
 
 <p align="justify">
+Como parte del pre procesamiento de las señales de ECG, se usará la implementación del filtro Wavelet del laboratorio 7, el cual está toma de referencia el artículo “The Identification of ECG Signals Using WT-UKF and IPSO-SVM” [A], donde la transformada wavelet permite eliminar el ruido presente y, a su vez, preservar las características locales de la señal de ECG. Para el filtro el tipo de Wavelet madre a implementar es Daubechies 8 (db8) con 8 niveles de descomposición y un thresholding suave de 0.2.
 
+[A] N. Li et al., “The identification of ECG signals using WT-UKF and IPSO-SVM”, Sensors (Basel), vol. 22, núm. 5, p. 1962, 2022. doi: 10.3390/s22051962
 </p>
 
 ### Extracción de características
