@@ -66,7 +66,7 @@ En el dominio del tiempo, se empleará el intervalo normal entre latidos (NN), e
 
 ![alt text](image-3.png)
 
-Fig #. Medidas de HRV relacionados a la variabilidad de picos RR [9]
+Fig 1. Medidas de HRV relacionados a la variabilidad de picos RR [9]
 
 <p align="justify">
 De estos parámetros, el SDNN depende de la longitud de la señal de ECG y su significancia clínica es la medida del riesgo cardíaco [7]. Por su parte, el RMSSD puede relacionarse con la arritmia sinusal respiratoria y los cambios de frecuencia en el ritmo cardíaco en respuesta a la respiración [7]. Finalmente, el pNN50 se relaciona con la actividad del sistema nervioso parasimpático [7].
