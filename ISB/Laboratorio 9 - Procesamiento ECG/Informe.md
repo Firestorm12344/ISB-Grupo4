@@ -34,6 +34,10 @@ En general, el análisis de esta señal es importante para diagnosticar a pacien
 Por otro lado, el ritmo de los latidos del corazón contiene información relacionada con muchos factores fisiológicos [4]. Se ha observado que el intervalo RR varía de un latido a otro; en algunos individuos, esta variación es mínima, mientras que en otros puede ser considerable [4]. Esto se conoce como Variabilidad de la Frecuencia Cardíaca (HRV) [4]. El análisis de la HRV se basa en una serie de mediciones del intervalo entre latidos del corazón utilizando un sistema de registro adecuado [4]. A pesar de todas las precauciones, los datos pueden presentar errores con valores de frecuencia cardíaca excesivamente altos o bajos [4]. Estas observaciones se consideran ectópicas y se eliminan de los datos antes del análisis, ya que provocan un exceso de componentes de alta frecuencia en el espectro de potencia de los datos de HRV [4]. Es una práctica común eliminar los valores ectópicos de los datos de HRV estableciendo un umbral específico, por ejemplo, del 10, 15 o 20 por ciento [4]. Generalmente, si un intervalo entre latidos difiere del anterior por esta cantidad, la lectura se elimina de la serie de datos o se reemplaza por un valor estadísticamente más probable calculado utilizando la media de lecturas anteriores o algún criterio similar [4]. Además, si la eliminación de ectopias no se realiza de manera adecuada, puede introducir errores adicionales [4].
 </p>
 
+<p align="justify">. 
+Para la práctica se utilizó el programa Python para aplicar el filtro seleccionado, graficar la señal y extraer sus características especialmente el intervalo de picos R-R y el HRV.
+</p>
+
 ## Metodología
 
 ### Diseño del Filtro ECG
