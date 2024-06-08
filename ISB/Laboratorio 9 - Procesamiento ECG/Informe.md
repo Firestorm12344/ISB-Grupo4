@@ -208,10 +208,7 @@ print(f"pNN50: {pnn50:.2f} %")
 ## Referencias
 
 1. Chandra S, Sharma A, Singh GK. Feature extraction of ECG signal. J Med Eng Amp Technol [Internet]. 19 de mayo de 2018 [consultado el 8 de junio de 2024];42(4):306-16. Disponible en: https://doi.org/10.1080/03091902.2018.1492039
-   
 2. Malgina O, Milenkovic J, Plesnik E, Zajc M, Tasic JF. ECG signal feature extraction and classification based on R peaks detection in the phase space. En: 2011 IEEE GCC Conference and Exhibition (GCC) [Internet]; 19-22 de febrero de 2011; Dubai, United Arab Emirates. [lugar desconocido]: IEEE; 2011 [consultado el 8 de junio de 2024]. Disponible en: https://doi.org/10.1109/ieeegcc.2011.5752545
-   
-3. Gholam-Hosseini H, Nazeran H. Detection and extraction of the ECG signal parameters. En: 20th Annual International Conference of the IEEE Engineering in Medicine and Biology Society. Vol.20 Biomedical Engineering Towards the Year 2000 and Beyond [Internet]; Hong Kong, China. [lugar desconocido]: IEEE; [consultado el 8 de junio de 2024]. Disponible en: https://doi.org/10.1109/iembs.1998.745846
-   
+3. Gholam-Hosseini H, Nazeran H. Detection and extraction of the ECG signal parameters. En: 20th Annual International Conference of the IEEE Engineering in Medicine and Biology Society. Vol.20 Biomedical Engineering Towards the Year 2000 and Beyond [Internet]; Hong Kong, China. [lugar desconocido]: IEEE; [consultado el 8 de junio de 2024]. Disponible en: https://doi.org/10.1109/iembs.1998.745846 
 4.Akhter N, Gite H, Tharewal S, Kale KV. Computer based RR-Interval detection system with ectopy correction in HRV data. En: 2015 International Conference on Advances in Computing, Communications and Informatics (ICACCI) [Internet]; 10-13 de agosto de 2015; Kochi, India. [lugar desconocido]: IEEE; 2015 [consultado el 8 de junio de 2024]. Disponible en: https://doi.org/10.1109/icacci.2015.7275844 
 
