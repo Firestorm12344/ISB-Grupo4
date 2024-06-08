@@ -43,17 +43,13 @@ Para la práctica se utilizó el programa Python para aplicar el filtro seleccio
 ### Diseño del Filtro ECG
 
 <p align="justify">
-Como parte del pre procesamiento de las señales de ECG, se usará la implementación del filtro Wavelet del laboratorio 7, el cual está toma de referencia el artículo “The Identification of ECG Signals Using WT-UKF and IPSO-SVM” [A], donde la transformada wavelet permite eliminar el ruido presente y, a su vez, preservar las características locales de la señal de ECG. Para el filtro el tipo de Wavelet madre a implementar es Daubechies 8 (db8) con 8 niveles de descomposición y un thresholding suave de 0.2.
-
-[A] N. Li et al., “The identification of ECG signals using WT-UKF and IPSO-SVM”, Sensors (Basel), vol. 22, núm. 5, p. 1962, 2022. doi: 10.3390/s22051962
+Como parte del pre procesamiento de las señales de ECG, se usará la implementación del filtro Wavelet del laboratorio 7, el cual está toma de referencia el artículo “The Identification of ECG Signals Using WT-UKF and IPSO-SVM” [5], donde la transformada wavelet permite eliminar el ruido presente y, a su vez, preservar las características locales de la señal de ECG. Para el filtro el tipo de Wavelet madre a implementar es Daubechies 8 (db8) con 8 niveles de descomposición y un thresholding suave de 0.2.
 </p>
 
 ### Picos R
 
 <p align="justify">
-En modelos de Inteligencia Artificial, la extracción de características de las señales como el intervalo R-R demuestra ser determinante para la óptima segmentación de las señales ECG [X]. Por ejemplo, D. Li et al consideran el entrenamiento de una CNN en base a intervalos de señal ECG correspondientes a cada latido; para lo cual se requirió determinar las posiciones de los picos R, y definiendo un intervalo de 100 muestras anteriores y posteriores a cada pico. 
-
-[X] D. Li, J. Zhang, Q. Zhang, y X. Wei, “Classification of ECG signals based on 1D convolution neural network”, en 2017 IEEE 19th International Conference on e-Health Networking, Applications and Services (Healthcom), 2017, pp. 1–6.
+En modelos de Inteligencia Artificial, la extracción de características de las señales como el intervalo R-R demuestra ser determinante para la óptima segmentación de las señales ECG [6]. Por ejemplo, D. Li et al consideran el entrenamiento de una CNN en base a intervalos de señal ECG correspondientes a cada latido; para lo cual se requirió determinar las posiciones de los picos R, y definiendo un intervalo de 100 muestras anteriores y posteriores a cada pico. 
 </p>
 
 
@@ -63,37 +59,31 @@ En modelos de Inteligencia Artificial, la extracción de características de las
 El análisis del HRV puede realizarse en el dominio del tiempo o en el dominio de la frecuencia, siendo el análisis en el dominio del tiempo el método más sencillo para la extracción de características.
 </p>
 
-En el dominio del tiempo, se empleará el intervalo normal entre latidos (NN), el cual se define como el intervalo entre ondas R consecutivas en las señales de ECG [B]. Este se empelará para el cálculo de:
+En el dominio del tiempo, se empleará el intervalo normal entre latidos (NN), el cual se define como el intervalo entre ondas R consecutivas en las señales de ECG [7]. Este se empelará para el cálculo de:
 - La desviación estándar de los intervalos NN (SDNN)
 - La raíz cuadrada de la media de las diferencias sucesivas de los intervalos NN (RMSSD)
 - La proporción del número de intervalos NN adyacentes cuyas duraciones difieren más de 50 ms con respecto al número total de intervalos NN (pNN50).
 
 ![alt text](image-3.png)
 
-Fig #. Medidas de HRV relacionados a la variabilidad de picos RR [Z]
+Fig #. Medidas de HRV relacionados a la variabilidad de picos RR [9]
 
 <p align="justify">
-De estos parámetros, el SDNN depende de la longitud de la señal de ECG y su significancia clínica es la medida del riesgo cardíaco [B]. Por su parte, el RMSSD puede relacionarse con la arritmia sinusal respiratoria y los cambios de frecuencia en el ritmo cardíaco en respuesta a la respiración [B]. Finalmente, el pNN50 se relaciona con la actividad del sistema nervioso parasimpático [B].
+De estos parámetros, el SDNN depende de la longitud de la señal de ECG y su significancia clínica es la medida del riesgo cardíaco [B]. Por su parte, el RMSSD puede relacionarse con la arritmia sinusal respiratoria y los cambios de frecuencia en el ritmo cardíaco en respuesta a la respiración [B]. Finalmente, el pNN50 se relaciona con la actividad del sistema nervioso parasimpático [7].
 </p>
 
 <p align="justify">
-En el dominio de la frecuencia, realizar un análisis del Densidad Espectral de Potencia (PSD) puede ayudar a recopilar información sobre la dispersión de la varianza (potencia) en función de la frecuencia [C]. Del espectro, frecuencias entre 0 y 0.5 Hz se puede categorizar en cuatro bandas:
+En el dominio de la frecuencia, realizar un análisis del Densidad Espectral de Potencia (PSD) puede ayudar a recopilar información sobre la dispersión de la varianza (potencia) en función de la frecuencia [8]. Del espectro, frecuencias entre 0 y 0.5 Hz se puede categorizar en cuatro bandas:
+</p>
 
 - Alta frecuencia (HF) (0.15-0.4 Hz)
 - Banda de frecuencia baja (LF) (0.04-0.15 Hz)
 - Banda de frecuencia muy baja (VLF) (0.003-0.04Hz)
 - Banda de frecuencia ultra baja (ULF) (<0.003 Hz)
-
-Donde VLF, HF y LF son características del espectro a corto plazo y ULF a largo plazo. La suma de las cuatro bandas espectrales LF, HF, ULF y VLF y la varianza es la potencia total de la variabilidad de los intervalos RR [C]. 
+- 
+<p align="justify">
+Donde VLF, HF y LF son características del espectro a corto plazo y ULF a largo plazo. La suma de las cuatro bandas espectrales LF, HF, ULF y VLF y la varianza es la potencia total de la variabilidad de los intervalos RR [8]. 
 </p>
-
-[B] S. Sieciński, P. S. Kostka, y E. J. Tkacz, “Heart rate variability analysis on electrocardiograms, seismocardiograms and gyrocardiograms on healthy volunteers”, Sensors (Basel), vol. 20, núm. 16, p. 4522, 2020.
-
-[C] R. Tiwari, R. Kumar, S. Malik, T. Raj, y P. Kumar, “Analysis of heart rate variability and implication of different factors on heart rate variability”, Curr. Cardiol. Rev., vol. 17, núm. 5, 2021.
-
-[Z] M. Vollmer, “A robust, simple and reliable measure of heart rate variability using relative RR intervals”, en 2015 Computing in Cardiology Conference (CinC), 2015, pp. 609–612.
-</p>
-
 
 ## Resultados
 
@@ -209,7 +199,7 @@ print(f"pNN50: {pnn50:.2f} %")
 
 El análisis de la variabilidad de la frecuencia cardíaca (HRV) se pudo llevar a cabo gracias al filtro wavelet db8, el cual eliminó el ruido y preservó las características esenciales de la señal de ECG. Luego, este análisis inició con identificación precisa de los picos R, el cual permitió calcular los intervalos R-R necesarios para el análisis de HRV. En el dominio del tiempo, los parámetros obtenidos fueron la media del intervalo R-R (0.7036 s), la desviación estándar de los intervalos RR (SDRR) (0.0801 s), la raíz cuadrada de la media de las diferencias sucesivas de los intervalos RR (RMSSD) (0.0355 s), y la proporción del número de intervalos RR adyacentes que difieren en más de 50 ms respecto al total de intervalos RR (pRR50) (15.00 %). 
 
-Sabiendo la media del intervalo R-R, se puede calcular la frecuencia cardiaca promedio al hallar la inversa de este intervalo dando como resultado 85.28 latidos por minuto, lo cual se encuentra en el intervalo normal reflejando un ritmo cardíaco regular [X]. Basándonos en la revisión sistemática de Nunan et al. [W], podemos hacer una comparación de los resultados obtenidos con los valores normales de HRV a corto plazo en adultos saludables. Primero, la desviación estándar de los intervalos RR (SDRR) de 0.0801 segundos sugiere una variabilidad total saludable, ya que se encuentra dentro del rango (32-93 ms). La raíz cuadrada de la media de las diferencias sucesivas de los intervalos RR (RMSSD) de 0.0355 s también se encuentra en el rango saludable (19-75 ms), por lo que indica una adecuada función del sistema nervioso parasimpático. Finalmente, la revisión sistemática indica que el valor de pRR50 no fue incluido en el análisis final, por lo que se comparó con el rango dado por De la Cruz et al. [X]. Con ello, podemos ver que el pRR50 (15%) es cercano al promedio (9.94%), por lo que se refuerza la existencia de una buena variabilidad a corto plazo. 
+Sabiendo la media del intervalo R-R, se puede calcular la frecuencia cardiaca promedio al hallar la inversa de este intervalo dando como resultado 85.28 latidos por minuto, lo cual se encuentra en el intervalo normal reflejando un ritmo cardíaco regular [10]. Basándonos en la revisión sistemática de Nunan et al. [11], podemos hacer una comparación de los resultados obtenidos con los valores normales de HRV a corto plazo en adultos saludables. Primero, la desviación estándar de los intervalos RR (SDRR) de 0.0801 segundos sugiere una variabilidad total saludable, ya que se encuentra dentro del rango (32-93 ms). La raíz cuadrada de la media de las diferencias sucesivas de los intervalos RR (RMSSD) de 0.0355 s también se encuentra en el rango saludable (19-75 ms), por lo que indica una adecuada función del sistema nervioso parasimpático. Finalmente, la revisión sistemática indica que el valor de pRR50 no fue incluido en el análisis final, por lo que se comparó con el rango dado por De la Cruz et al. [10]. Con ello, podemos ver que el pRR50 (15%) es cercano al promedio (9.94%), por lo que se refuerza la existencia de una buena variabilidad a corto plazo. 
 
 
 ## Referencias
@@ -218,7 +208,10 @@ Sabiendo la media del intervalo R-R, se puede calcular la frecuencia cardiaca pr
 2. Malgina O, Milenkovic J, Plesnik E, Zajc M, Tasic JF. ECG signal feature extraction and classification based on R peaks detection in the phase space. En: 2011 IEEE GCC Conference and Exhibition (GCC) [Internet]; 19-22 de febrero de 2011; Dubai, United Arab Emirates. [lugar desconocido]: IEEE; 2011 [consultado el 8 de junio de 2024]. Disponible en: https://doi.org/10.1109/ieeegcc.2011.5752545
 3. Gholam-Hosseini H, Nazeran H. Detection and extraction of the ECG signal parameters. En: 20th Annual International Conference of the IEEE Engineering in Medicine and Biology Society. Vol.20 Biomedical Engineering Towards the Year 2000 and Beyond [Internet]; Hong Kong, China. [lugar desconocido]: IEEE; [consultado el 8 de junio de 2024]. Disponible en: https://doi.org/10.1109/iembs.1998.745846
 4. Akhter N, Gite H, Tharewal S, Kale KV. Computer based RR-Interval detection system with ectopy correction in HRV data. En: 2015 International Conference on Advances in Computing, Communications and Informatics (ICACCI) [Internet]; 10-13 de agosto de 2015; Kochi, India. [lugar desconocido]: IEEE; 2015 [consultado el 8 de junio de 2024]. Disponible en: https://doi.org/10.1109/icacci.2015.7275844
-   
-X. B. de la Cruz Torres, C.L. López, and J.N. Orellana, "Analysis of heart rate variability at rest and during aerobic exercise: A study in healthy people and cardiac patients," British Journal of Sports Medicine, vol. 42, no. 9, pp. 715-720, 2008, doi: 10.1136/bjsm.2007.043646.
-
-W. D. Nunan, G.R. Sandercock, and D.A. Brodie, "A quantitative systematic review of normal values for short-term heart rate variability in healthy adults," Pacing and Clinical Electrophysiology, vol. 33, no. 11, pp. 1407-1417, 2010, doi: 10.1111/j.1540-8159.2010.02841.x.
+5. N. Li et al., “The identification of ECG signals using WT-UKF and IPSO-SVM”, Sensors (Basel), vol. 22, núm. 5, p. 1962, 2022. doi: 10.3390/s22051962
+6. D. Li, J. Zhang, Q. Zhang, y X. Wei, “Classification of ECG signals based on 1D convolution neural network”, en 2017 IEEE 19th International Conference on e-Health Networking, Applications and Services (Healthcom), 2017, pp. 1–6.
+7. S. Sieciński, P. S. Kostka, y E. J. Tkacz, “Heart rate variability analysis on electrocardiograms, seismocardiograms and gyrocardiograms on healthy volunteers”, Sensors (Basel), vol. 20, núm. 16, p. 4522, 2020.
+8. R. Tiwari, R. Kumar, S. Malik, T. Raj, y P. Kumar, “Analysis of heart rate variability and implication of different factors on heart rate variability”, Curr. Cardiol. Rev., vol. 17, núm. 5, 2021.
+9. M. Vollmer, “A robust, simple and reliable measure of heart rate variability using relative RR intervals”, en 2015 Computing in Cardiology Conference (CinC), 2015, pp. 609–612.
+10. B. de la Cruz Torres, C.L. López, and J.N. Orellana, "Analysis of heart rate variability at rest and during aerobic exercise: A study in healthy people and cardiac patients," British Journal of Sports Medicine, vol. 42, no. 9, pp. 715-720, 2008, doi: 10.1136/bjsm.2007.043646.
+11. D. Nunan, G.R. Sandercock, and D.A. Brodie, "A quantitative systematic review of normal values for short-term heart rate variability in healthy adults," Pacing and Clinical Electrophysiology, vol. 33, no. 11, pp. 1407-1417, 2010, doi: 10.1111/j.1540-8159.2010.02841.x.
