@@ -1,4 +1,4 @@
-# Lab 9 - Procesamiento ECG
+# Lab 10 - Procesamiento EEG
 
 ## Tabla de contenidos
 - [Objetivos](#objetivos)
@@ -11,9 +11,9 @@
 
 
 ##  Objetivos
-- Aplicar el filtro mas adecuado para la señal ECG
-- Extraer los intervalos de picos R-R y la variación en tiempo entre cada latido del corazón, conocida como HRV, de la señal ECG
-- Discutir las características de la señal ECG
+- Aplicar el filtro más adecuado para la señal EEG
+- Realizar la normalización de la señal de EEG
+- Discutir las características extraídas de la señal EEG 
 
 ## Materiales
 | Material | Cantidad |
