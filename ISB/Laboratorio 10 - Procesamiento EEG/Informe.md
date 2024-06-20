@@ -63,10 +63,18 @@ Para normalizar una señal de EEG se pueden aplicar métodos como la normalizaci
 
 ![image](https://github.com/Firestorm12344/ISB-Grupo4/assets/164531550/aec99a61-72d4-49f9-ba24-8ff634c79878)
 
+Fig 1. Normalización min-máx
 
 ### Extracción de características
 <p align="justify">
+Para la extracción de características de una señal de EEG se recurre a la aplicación de transformadas wavelets continuas o discretas. El artículo "Feature extraction and classification for EEG signals using wavelet transform and machine learning techniques" [D], describe el uso de una transformada wavelet discreta para la extracción de características de EEG tomados en sujetos en reposo y actividad cognitiva, y obtener la energía wavelet relativa con el cálculo de los términos de coeficientes detallados y coeficientes de aproximación del último nivel de descomposición. Este artículo utiliza una wavelet madre Daubechies con cuatro niveles de descomposición (db4). Las energías totales y relativas de las subbandas se calcularon a partir de los coeficientes wavelet extraídos (D1-D4 y A4).
 
+![image](https://github.com/Firestorm12344/ISB-Grupo4/assets/164531550/f42bbbd4-bb81-492b-8588-1600a32b2551)
+
+Fig. 2 DWT descomposición
+
+
+[D] https://pubmed.ncbi.nlm.nih.gov/25649845/
 </p>
 
 ## Resultados
