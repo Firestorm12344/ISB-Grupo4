@@ -54,8 +54,12 @@ A continuación, se decribe el proceso seguido en cada paso del procesamiento de
 
 ### Preprocesamiento (normalización)
 <p align="justify">
-
+Para normalizar una señal de EEG se pueden aplicar métodos como la normalización con mínimos y máximos (min-máx) o la técnica de puntuación Z (Z-score). Para la elección del tipo de normalización, esta se basará en el artículo de "EEG-Based Automatic Sleep Staging Using Ontology and Weighting Feature Analysis" [A], cuyo procesamiento de EEG en estado de sueño o reposo se basa en el uso de mínimos y máximos. Asimismo, debido a que las señales obtenidas de la base de datos provienen de pacientes en estado de reposo, este fue un punto clave para optar por este tipo de normalización. La fórmula a emplear se muestra a continuación: 
 </p>
+[A] https://doi.org/10.1155/2018/6534041
+
+![image](https://github.com/Firestorm12344/ISB-Grupo4/assets/164531550/aec99a61-72d4-49f9-ba24-8ff634c79878)
+
 
 ### Extracción de características
 <p align="justify">
