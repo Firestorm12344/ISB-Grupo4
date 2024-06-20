@@ -79,12 +79,21 @@ Fig. 2 DWT descomposición
 
 ## Resultados
 
+| Paciente 1 : Canal 1 | Canal 2 | Canal 3 | Canal 4 |
+| --- | --- | --- | --- | 
+|    ![alt text](image-6.png) | ![alt text](image-2.png) | ![alt text](image-4.png) | ![alt text](image-5.png) |
+
+| Paciente 2 : Canal 1 | Canal 2 | Canal 3 | Canal 4 |
+| --- | --- | --- | --- | 
+|    ![alt text](image-6.png) | ![alt text](image-2.png) | ![alt text](image-4.png) | ![alt text](image-5.png) |
+
+
 ***NOTA**: El ploteo de las señales se realizó en intervalos distintos, para una mejor apreciación de las señales. Asimismo, la frecuencia de muestreo fue de 1000 Hz.*
 
 
 ## Código en Python
 
-
+***NOTA**: El código utilizado se encuentra en el archivo .ipynb de la carpeta*
 
 
 ## Discusión de resultados
