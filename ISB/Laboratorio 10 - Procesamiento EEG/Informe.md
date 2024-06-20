@@ -44,6 +44,9 @@ El procesamiento de una señal de EEG seguirá tres pasos fundamentales: el filt
 En experiencias previas de laboratorio, solo se logró obtener la señal de EEG utilizando BiTalino (solo un canal), por lo que se utilizará una señal extraída de Physionet.
 </p>
 
+La base de datos a emplear es "Auditory evoked potential EEG-Biometric dataset" [A], la cual es una base de datos abierta que consta de más de 240 registros EEG de dos minutos obtenidos de 20 voluntarios. Los datos incluyen experimentos en estado de reposo con ojos abiertos y ojos cerrados, y 6 estímulos auditivos (3 con estímulos auditivos intraoculares y 3 con estímulos auditivos de conducción ósea). Para la recolección de estos datos se utilizó una placa OpenBCI Ganglion, con una frecuencia de muestreo de 200 Hz y cuatro canales: T7, F8, Cz y P4.
+
+[A] https://physionet.org/content/auditory-eeg/1.0.0/
 A continuación, se decribe el proceso seguido en cada paso del procesamiento de la señal: 
 
 ### Diseño del Filtro EEG
@@ -56,7 +59,7 @@ A continuación, se decribe el proceso seguido en cada paso del procesamiento de
 <p align="justify">
 Para normalizar una señal de EEG se pueden aplicar métodos como la normalización con mínimos y máximos (min-máx) o la técnica de puntuación Z (Z-score). Para la elección del tipo de normalización, esta se basará en el artículo de "EEG-Based Automatic Sleep Staging Using Ontology and Weighting Feature Analysis" [A], cuyo procesamiento de EEG en estado de sueño o reposo se basa en el uso de mínimos y máximos. Asimismo, debido a que las señales obtenidas de la base de datos provienen de pacientes en estado de reposo, este fue un punto clave para optar por este tipo de normalización. La fórmula a emplear se muestra a continuación: 
 </p>
-[A] https://doi.org/10.1155/2018/6534041
+[C] https://doi.org/10.1155/2018/6534041
 
 ![image](https://github.com/Firestorm12344/ISB-Grupo4/assets/164531550/aec99a61-72d4-49f9-ba24-8ff634c79878)
 
