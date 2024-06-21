@@ -93,6 +93,9 @@ Fig. 2 DWT descomposición
 
 ## Discusión de resultados
 
+En los resultados se observan las señales EEG de dos pacientes, cada uno con registros de cuatro canales diferentes (T7, F8, Cz y P4) tomados de la base de datos "Auditory evoked potential EEG-Biometric dataset". Respecto al filtrado, se puede notar que los filtros butterworth y notch lograron eliminar gran parte del ruido manteniendo la estructura de las señales claramente visible. Luego, normalización de las señales basada en mínimos y máximos fue empleada correctamente, por lo que ahora las señales se encuentran en el rango de 0 a 1 haciendo posible su comparación.  Las señales procesadas mostraron variaciones consistentes con la actividad cerebral en estado de reposo, con diferencias individuales entre los dos pacientes en términos de amplitud y frecuencia de los picos.
+
+La extracción de características empleando una transformada wavelet discreta (DWT) con una wavelet madre Daubechies (db4) y cuatro niveles de descomposición permitió obtener energías totales y relativas de los coeficientes, los cuales son fundamentales para el análisis y clasificación de las señales EEG. Los resultados de la energía relativa muestran que la mayor parte de la energía de las señales EEG se concentra en los coeficientes de aproximación, con valores superiores al 97% en todos los casos, mientras que los coeficientes de detalle contienen una fracción mucho menor de la energía total. 
 
 
 ## Referencias
