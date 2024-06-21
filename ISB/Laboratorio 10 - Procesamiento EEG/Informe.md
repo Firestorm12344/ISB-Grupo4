@@ -80,10 +80,20 @@ Fig. 2 DWT descomposición
 
 | Paciente 2 : Canal 1 | Canal 2 | Canal 3 | Canal 4 |
 | --- | --- | --- | --- | 
-|    ![alt text](image-6.png) | ![alt text](image-2.png) | ![alt text](image-4.png) | ![alt text](image-5.png) |
+|    ![alt text](image-7.png)| ![alt text](image-8.png) | ![alt text](image-9.png) | ![alt text](image-10.png) |
 
 
 ***NOTA**: El ploteo de las señales se realizó en intervalos distintos, para una mejor apreciación de las señales. Asimismo, la frecuencia de muestreo fue de 1000 Hz.*
+
+Las energías calculadas para los coeficientes de aproximación y de detalle de cada una de las señales de ambos pacientes fueron las siguientes: 
+
+| Paciente 1 | Canal 1 | Canal 2 | Canal 3 | Canal 4 |
+| --- | --- | --- | --- | --- |
+| **Energía** |  Aprox: 0.99; Detalle:  0.005,  0.003 0.001, 0.0001   |  Aprox: 0.99; Detalle: 0.0009, 0.0005, 0.0002, 3.32 | Aprox: 0.97; Detalle: 0.012, 0.007, 0.002, 0.0003 |   Aprox: 0.97; Detalle: 0.013, 0.007, 0.002, 0.0003 | 
+
+| Paciente 2 | Canal 1 | Canal 2 | Canal 3 | Canal 4 |
+| --- | --- | --- | --- | --- |
+| **Energía** |  Aprox: 0.99; Detalle:  0.001,  0.0006,  0.0001, 2.86   |  Aprox: 0.99; Detalle: 0.0003, 0.0001, 5.54, 5.25 | Aprox: 0.99; Detalle: 0.0021, 0.0006, 0.0001, 2.42 |   Aprox: 0.99; Detalle: 0.002, 0.0008, 0.0002, 3.73 |
 
 
 ## Código en Python
