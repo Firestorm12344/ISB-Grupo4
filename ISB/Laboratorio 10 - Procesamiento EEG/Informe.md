@@ -40,7 +40,7 @@ Para la práctica se utilizó la interfaz Jupyter Notebook con el lenguaje de pr
 
 ## Metodología
 <p align="justify">
-El procesamiento de una señal de EEG seguirá tres pasos fundamentales: el filtrado de la señal en base a un filtro wavelet-ICA, un preprocesamiento de la señal basado en su normalización y alineamiento, y finalmente la extracción de características. 
+El procesamiento de una señal de EEG seguirá tres pasos fundamentales: el filtrado de la señal en base a un filtro butterworth y notch, un preprocesamiento de la señal basado en su normalización y alineamiento, y finalmente la extracción de características. 
 En experiencias previas de laboratorio, solo se logró obtener la señal de EEG utilizando BiTalino (solo un canal), por lo que se utilizará una señal extraída de Physionet.
 </p>
 
