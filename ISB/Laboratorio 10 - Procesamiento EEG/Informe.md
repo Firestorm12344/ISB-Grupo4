@@ -51,7 +51,7 @@ A continuación, se decribe el proceso seguido en cada paso del procesamiento de
 ### Diseño del Filtro EEG
 
 <p align="justify">
-
+El filtro a diseñar se basará en las características especificadas por la base de datos extraída de [4], donde se brinda la información sobre los filtros utilizados para el procesamiento de la señal. Los filtros a implementar están un filtro Butterworth de tipo pasa bandas entre las frecuencias entre 1 Hz y 40 Hz, normalizados a una frecuencia de sampleo de 200 Hz. Posteriormente, se le aplicará un filtro IIR notch con frecuencia de corte de 50 Hz
 </p>
 
 ### Preprocesamiento (normalización)
