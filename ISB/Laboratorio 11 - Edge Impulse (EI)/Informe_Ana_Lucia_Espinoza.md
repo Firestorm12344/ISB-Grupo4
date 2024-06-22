@@ -20,8 +20,20 @@
 
 
 ## Código en Python
+# EMG
+``` python
 
+```
 
+## ECG
+``` python
+
+```
+
+# EEG
+``` python
+
+```
 
 
 
