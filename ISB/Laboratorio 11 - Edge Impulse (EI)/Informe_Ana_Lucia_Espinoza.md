@@ -20,7 +20,7 @@
 # EMG
 
 # ECG
-![Uploading image.png…]()
+
 
 # EEG
 
