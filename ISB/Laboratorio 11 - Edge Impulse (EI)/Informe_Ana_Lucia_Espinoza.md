@@ -19,26 +19,26 @@
 ## Resultados
 Las señales utilizadas no fueron tratadas previamente y fueron subidas en formato CVS según los requerimientos de la plataforma Edge Impulse.
 
-# Ejemplo
+## Ejemplo
 ![Ejemplo"](Ejemplo_Ana_Lucia_Espinoza.jpg)
 Link del proyecto: https://studio.edgeimpulse.com/public/431094/live
 
-# EMG
+## EMG
 ![Señales subidas al proyecto "EMG - Ana Lucía Espinoza"](Resultados_EMG_Ana_Lucia_Espinoza.jpg)
 Link del proyecto: https://studio.edgeimpulse.com/public/431109/live
 
-# ECG
+## ECG
 ![Señales subidas al proyecto "ECG - Ana Lucía Espinoza"](Resultados_ECG_Ana_Lucia_Espinoza.jpg)
 Link del proyecto: https://studio.edgeimpulse.com/public/431110/live
 
-# EEG
+## EEG
 ![Señales subidas al proyecto "EEG - Ana Lucía Espinoza"](Resultados_EEG_Ana_Lucia_Espinoza.jpg)
 Link del proyecto: https://studio.edgeimpulse.com/public/431109/live
 
 
 ## Código en Python
 
-# Ejemplo
+## Ejemplo
 ``` python
 # Install requests via: `pip3 install requests`
 import requests
@@ -74,7 +74,7 @@ else:
           res.status_code, res.content)
 ```
 
-# EMG
+## EMG
 ``` python
 # Install requests via: pip3 install requests
 import requests
@@ -110,7 +110,7 @@ else:
           res.status_code, res.content)
 ```
 
-# ECG
+## ECG
 ``` python
 # Install requests via: pip3 install requests
 import requests
@@ -146,7 +146,7 @@ else:
           res.status_code, res.content)
 ```
 
-# EEG
+## EEG
 ``` python
 # Install requests via: pip3 install requests
 import requests
