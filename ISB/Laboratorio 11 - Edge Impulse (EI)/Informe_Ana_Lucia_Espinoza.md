@@ -17,6 +17,12 @@
 | Plataforma *Edge Impulse* | N.A | 
 
 ## Resultados
+# EMG
+
+# ECG
+![Uploading image.png…]()
+
+# EEG
 
 
 ## Código en Python
