@@ -29,7 +29,7 @@ Link del proyecto: https://studio.edgeimpulse.com/public/431110/live
 
 # EEG
 ![Señales subidas al proyecto "EEG - Ana Lucía Espinoza"](Resultados_EEG_Ana_Lucia_Espinoza.jpg)
-Link del proyecto:
+Link del proyecto: https://studio.edgeimpulse.com/public/431109/live
 
 
 ## Código en Python
@@ -107,7 +107,38 @@ else:
 
 # EEG
 ``` python
+# Install requests via: pip3 install requests
+import requests
+import os
+import json
+import csv
 
+api_key = 'ei_99bb4a09eb1dbf8e72051855a2155f3f2294e24b3232525c'
+
+# Add the files you want to upload to Edge Impulse
+
+files = [
+    'Señal_EEG02.csv'
+]
+# # Replace the label with your own.
+label = 'EEG - Señal cruda ejercicios mentales simples'
+
+# Upload the file to Edge Impulse using the API, and print the response.
+res = requests.post(url='https://ingestion.edgeimpulse.com/api/training/files',
+                    headers={
+                        'x-label': label,
+                        'x-api-key': api_key,
+                    },
+                    # Creating the data payload for the request.
+                    files=(('data', (os.path.basename(i), open(
+                        i, 'rb'), 'image/png')) for i in files)
+                    )
+
+if (res.status_code == 200):
+    print('Uploaded file(s) to Edge Impulse\n', res.status_code, res.content)
+else:
+    print('Failed to upload file(s) to Edge Impulse\n',
+          res.status_code, res.content)
 ```
 
 
