@@ -17,12 +17,19 @@
 | Plataforma *Edge Impulse* | N.A | 
 
 ## Resultados
+Las señales utilizadas no fueron tratadas previamente y fueron subidas en formato CVS según los requerimientos de la plataforma Edge Impulse.
+
 # EMG
+![Señales subidas al proyecto "EMG - Ana Lucía Espinoza"](https://github.com/usuario/repositorio/blob/main/Resultados_EMG_Ana_Lucia_Espinoza.png)
+Link del proyecto:
 
 # ECG
-
+![Señales subidas al proyecto "ECG - Ana Lucía Espinoza"](https://github.com/usuario/repositorio/blob/main/Resultados_ECG_Ana_Lucia_Espinoza.png)
+Link del proyecto:
 
 # EEG
+![Señales subidas al proyecto "EEG - Ana Lucía Espinoza"](https://github.com/usuario/repositorio/blob/main/Resultados_EEG_Ana_Lucia_Espinoza.png)
+Link del proyecto:
 
 
 ## Código en Python
