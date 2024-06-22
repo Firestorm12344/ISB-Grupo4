@@ -20,7 +20,7 @@
 Las señales utilizadas no fueron tratadas previamente y fueron subidas en formato CVS según los requerimientos de la plataforma Edge Impulse.
 
 # Ejemplo
-![Ejemplo"](Ejemplo_Ana_Lucia.jpg)
+![Ejemplo"](Ejemplo_Ana_Lucia_Espinoza.jpg)
 Link del proyecto: https://studio.edgeimpulse.com/public/431094/live
 
 # EMG
