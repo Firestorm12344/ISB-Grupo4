@@ -25,7 +25,7 @@ Link del proyecto:
 
 # ECG
 ![Señales subidas al proyecto "ECG - Ana Lucía Espinoza"](Resultados_ECG_Ana_Lucia_Espinoza.jpg)
-Link del proyecto:
+Link del proyecto: https://studio.edgeimpulse.com/public/431110/live
 
 # EEG
 ![Señales subidas al proyecto "EEG - Ana Lucía Espinoza"](Resultados_EEG_Ana_Lucia_Espinoza.jpg)
