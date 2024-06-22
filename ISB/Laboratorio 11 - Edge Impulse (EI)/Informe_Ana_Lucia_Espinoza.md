@@ -24,7 +24,7 @@ Las señales utilizadas no fueron tratadas previamente y fueron subidas en forma
 Link del proyecto:
 
 # ECG
-![Señales subidas al proyecto "ECG - Ana Lucía Espinoza"](Resultados_ECG_Ana_Lucia_Espinoza.png)
+![Señales subidas al proyecto "ECG - Ana Lucía Espinoza"]('Resultados_ECG_Ana_Lucia_Espinoza.png')
 Link del proyecto:
 
 # EEG
