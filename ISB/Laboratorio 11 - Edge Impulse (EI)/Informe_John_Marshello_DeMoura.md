@@ -31,7 +31,7 @@
 
 Para subir las señales recoletadas, se empleó el siguiente código: 
 
-###EMG
+### EMG
 
 ```python
 
@@ -73,10 +73,7 @@ def upload_files(files, label, api_key):
 upload_files(files_EMG, label, api_key)
 ```
 
-upload_files(files_EMG, label, api_key)
-```
-
-###ECG
+### ECG
 
 ```python
 
@@ -119,7 +116,7 @@ def upload_files(files, label, api_key):
 upload_files(files_ECG, label, api_key)
 ```
 
-###EEG
+### EEG
 
 ```python
 
