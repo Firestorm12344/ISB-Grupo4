@@ -19,6 +19,10 @@
 ## Resultados
 Las señales utilizadas no fueron tratadas previamente y fueron subidas en formato CVS según los requerimientos de la plataforma Edge Impulse.
 
+# Ejemplo
+![Ejemplo"](Ejemplo_Ana_Lucia.jpg)
+Link del proyecto: https://studio.edgeimpulse.com/public/431094/live
+
 # EMG
 ![Señales subidas al proyecto "EMG - Ana Lucía Espinoza"](Resultados_EMG_Ana_Lucia_Espinoza.jpg)
 Link del proyecto: https://studio.edgeimpulse.com/public/431109/live
@@ -33,6 +37,43 @@ Link del proyecto: https://studio.edgeimpulse.com/public/431109/live
 
 
 ## Código en Python
+
+# Ejemplo
+``` python
+# Install requests via: `pip3 install requests`
+import requests
+import os
+import json
+
+api_key = 'ei_2d86439d7e71d76954952aac22e195bdf51de5e0f0cc3f35'
+
+#ei_d14efbd616ba6fb50ef27c88225d63e95d47982a6c097b5a'
+# Add the files you want to upload to Edge Impulse
+
+files = [
+    'michael.jpg',
+    'mora.jpeg',
+]
+# # Replace the label with your own.
+label = 'animales'
+# Upload the file to Edge Impulse using the API, and print the response.
+res = requests.post(url='https://ingestion.edgeimpulse.com/api/training/files',
+                    headers={
+                        'x-label': label,
+                        'x-api-key': api_key,
+                    },
+                    # Creating the data payload for the request.
+                    files=(('data', (os.path.basename(i), open(
+                        i, 'rb'), 'image/png')) for i in files)
+                    )
+
+if (res.status_code == 200):
+    print('Uploaded file(s) to Edge Impulse\n', res.status_code, res.content)
+else:
+    print('Failed to upload file(s) to Edge Impulse\n',
+          res.status_code, res.content)
+```
+
 # EMG
 ``` python
 # Install requests via: pip3 install requests
