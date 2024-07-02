@@ -22,13 +22,17 @@ Somos estudiantes del 7mo ciclo de la carrera de Ingeniería Biomédica, que bus
 
 # Temática del Proyecto
 
-El proyecto consistirá en el diseño de un dispositivo __wearable__ capaz de adquirir señales ECG por medio de electrdos ...
-
+### Title: ECG signal processing and feature extraction to feed a Artificial Intelligence model
+### Título: Procesamiento de señales de ECG y extracción de características para alimentar un modelo de Inteligencia Artificial
 
 # Resumen
 
+<p align="center">
+Las arritmias, como la taquicardia y la bradicardia, son prevalentes en pacientes postoperatorios, especialmente durante la primera semana después de la cirugía. Estas condiciones pueden generar riesgos de salud significativos, particularmente en entornos con recursos de monitoreo insuficientes, como las zonas rurales de Perú. Este artículo propone un enfoque avanzado para la detección de arritmias utilizando el procesamiento de señales ECG y la extracción de características para alimentar modelos de inteligencia artificial (IA). Al optimizar los datos de entrenamiento y comparar las características de las señales ECG, este método pretende mejorar la precisión y eficiencia de la identificación de arritmias, mejorando así el monitoreo de pacientes y reduciendo los riesgos de salud asociados.
+</p>
 
 # Motivación
+
 
 
 # Principales Hallazgos
