@@ -16,8 +16,6 @@ Figura 1. Señal cerebral. Extraído de: https://www.prensa.com/impresa/vivir/Sa
 
 # Tabla de contenidos
 - [¿Qué es una bioseñal?](#qué-es-una-bioseñal)
-- [Materiales](#materiales)
-- [Metodología](#metodología)
 - [Temática del proyecto](#temática-del-proyecto)
 - [Contenido del curso](#Contenido-del-curso)
 - [Participantes](#Participantes)
@@ -35,13 +33,9 @@ Una bioseñal es un tipo de señal que puede ser medida y controlada continuamen
 [2] J. F. Guerrero Martínez, “Tema 2 Bioseñales”. Disponible en: http://ocw.uv.es/ingenieria-y-arquitectura/1-5/ib_material/IB_T2_OCW.pdf. [Consultado: 23-mar-2024].
 </div>
 
+# Temática del Proyecto
 
-# Materiales
-
-
-
-# Metodología
-
+### ECG signal processing and feature extraction to feed a Artificial Intelligence model
 
 # Contenido del curso
 ## UNIDAD 1: Introducción y adquisición de las señales EMG, ECG Y EEG
@@ -61,12 +55,6 @@ Figure 2. Señal de ECG. Extraída de: https://www.bmhvt.org/practice/cardiology
 
 <div style="text-align: justify">
 
-# Temática del Proyecto
-
-El proyecto consistirá en el diseño de un dispositivo __wearable__ capaz de adquirir señales ECG por medio de electrdos ...
-
-
-
 # Participantes
  - De Moura Mendoza, John Marshello (Colaborador) | john.de.moura@upch.pe
 
@@ -78,11 +66,9 @@ El proyecto consistirá en el diseño de un dispositivo __wearable__ capaz de ad
     About me: Estudiante de Ingeniería Biomédica de 7mo ciclo, interesada en la ingeniería de tejidos y caracterización de materiales.
 
 
-
  - Flores Pérez, María Alejandra (Colaborador) |  maria.flores.perez@upch.pe
 
-    About me: Estudiante de Ingeniería Biomédica de 7mo ciclo.
-
+    About me: Estudiante de Ingeniería Biomédica de 7mo ciclo, interesada en el área de biomecánica e ingeniería de tejidos. 
 
 
 
