@@ -1,21 +1,19 @@
 # Curso: Introducción a Señales Biomédicas
 
-<div style="text-align: justify"> 
+
 Bienvenidos al repositorio del Grupo 4 del curso de Introducción a Señales Biomédicas ...
 
-
+<p align="justify">
 Somos estudiantes del 7mo ciclo de la carrera de Ingeniería Biomédica, que busca proponer un proyecto para el curso con el fin de comprender la base fundamental de distintas señales biomédicas, desde su análisis y procesamiento hasta su aplicación en un contexto real.
-
-</div>
-
+</p>
 
 # Tabla de contenidos
 - [Temática del proyecto](#temática-del-proyecto)
 - [Resumen](#resumen)
-- [Motivacion](#Motivacion)
+- [Motivación](#motivación)
 - [Principales Hallazgos](#principales-hallazgos)
-- [Contenido del curso](#Contenido-del-curso)
-- [Participantes](#Participantes)
+- [Contenido del curso](#contenido-del-curso)
+- [Participantes](#participantes)
 - [Docentes del curso](#docentes-del-curso)
 - [Referencias](#referencias)
 
@@ -27,17 +25,28 @@ Somos estudiantes del 7mo ciclo de la carrera de Ingeniería Biomédica, que bus
 
 # Resumen
 
-<p align="center">
+<p align="justify">
 Las arritmias, como la taquicardia y la bradicardia, son prevalentes en pacientes postoperatorios, especialmente durante la primera semana después de la cirugía. Estas condiciones pueden generar riesgos de salud significativos, particularmente en entornos con recursos de monitoreo insuficientes, como las zonas rurales de Perú. Este artículo propone un enfoque avanzado para la detección de arritmias utilizando el procesamiento de señales ECG y la extracción de características para alimentar modelos de inteligencia artificial (IA). Al optimizar los datos de entrenamiento y comparar las características de las señales ECG, este método pretende mejorar la precisión y eficiencia de la identificación de arritmias, mejorando así el monitoreo de pacientes y reduciendo los riesgos de salud asociados.
 </p>
 
 # Motivación
 
+<p align="justify">
+La motivación para este proyecto surge de la necesidad de mejorar el monitoreo de arritmias en pacientes postoperatorios, especialmente en áreas rurales con recursos limitados. En el contexto de salud peruano, existe una disparidad significativa entre las áreas urbanas y rurales en términos de acceso a servicios médicos avanzados. Las zonas rurales a menudo carecen de infraestructura adecuada, personal médico especializado y equipos tecnológicos necesarios para el monitoreo efectivo de los pacientes. Esta situación aumenta el riesgo de complicaciones postoperatorias no detectadas a tiempo, como las arritmias, lo que puede llevar a consecuencias graves o incluso fatales.
+</p>
 
+<p align="justify">
+Es por ello que nuestra propuesta se centra en el uso de procesamiento de señales ECG y extracción de características para alimentar modelos de inteligencia artificial (IA). Al optimizar los datos de entrenamiento y comparar las características de las señales ECG, buscamos desarrollar un sistema más preciso y eficiente para la detección de arritmias. Esto mejorará el monitoreo de pacientes y reducirá los riesgos de salud al proporcionar alertas tempranas y precisas, permitiendo intervenciones médicas oportunas.
+</p>
+
+<p align="justify">
+Como estudiantes de ingeniería biomédica, buscamos aplicar nuestros conocimientos para abordar problemas críticos de salud como este, contribuyendo en la mejorara de la calidad de vida en el Perú, especialmente en comunidades con acceso limitado a servicios médicos.
+</p>
 
 # Principales Hallazgos
+<p align="justify">
 
-
+</p>
 
 # Contenido del curso
 ## UNIDAD 1: Introducción y adquisición de las señales EMG, ECG Y EEG
