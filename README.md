@@ -82,7 +82,7 @@ Figure 2. Señal de ECG. Extraída de: https://www.bmhvt.org/practice/cardiology
 
  - Flores Pérez, María Alejandra (Colaborador) |  maria.flores.perez@upch.pe
 
-    About me: Estudiante de Ingeniería Biomédica de 7mo ciclo. 
+    About me: Estudiante de Ingeniería Biomédica de 7mo ciclo, interesada en el área de biomecánica e ingeniería de tejidos. 
 
 
 
