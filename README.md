@@ -23,6 +23,8 @@ Somos estudiantes del 7mo ciclo de la carrera de Ingeniería Biomédica, que bus
 ### Title: ECG signal processing and feature extraction to feed a Artificial Intelligence model
 ### Título: Procesamiento de señales de ECG y extracción de características para alimentar un modelo de Inteligencia Artificial
 
+URL paperswithcode: https://paperswithcode.com/paper/processing-and-feature-extraction-of-ecg 
+
 # Resumen
 
 <p align="justify">
