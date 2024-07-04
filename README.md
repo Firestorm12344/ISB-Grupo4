@@ -93,7 +93,7 @@ Figure 2. Señal de ECG. Extraída de: https://www.bmhvt.org/practice/cardiology
 
  - Zavaleta Cavero, Juan Arturo (Colaborador) | juan.zavaleta@upch.pe
 
-    About me: Estudiante de Ingeniería Biomédica de 7mo ciclo, interesado en el Deep Learning aplicado a las Señales e Imágenes Médicas, y desarrollo de sistemas biomecánicos automatizados para miembros anatómicos y fisiológicos. Asimismo, me consideron entusiasta de IoT y sistemas embebidos para telemonitoreo y telecomunicación entre dispositivos. 
+    About me: Estudiante de Ingeniería Biomédica en su 7mo ciclo, con un profundo interés en el Deep Learning aplicado a las Señales e Imágenes Médicas, así como en el desarrollo de sistemas biomecánicos automatizados para miembros anatómicos y fisiológicos; y con notable interés en la ingeniería de tejidos y la modificación genética de células para aplicaciones biomédicas avanzadas."
 
 
 
