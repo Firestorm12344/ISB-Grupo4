@@ -23,8 +23,7 @@ Somos estudiantes del 7mo ciclo de la carrera de Ingeniería Biomédica, que bus
 ### Title: ECG signal processing and feature extraction to validate feature significance for arrythmia detection
 ### Título: Procesamiento de señales de ECG y extracción de características para validar la importancia de las características para la detección de arritmia
 
-URL paperswithcode: https://paperswithcode.com/paper/processing-and-feature-extraction-of-ecg 
-
+URL paperswithcode: https://paperswithcode.com/paper/ecg-signal-processing-and-feature-extraction
 # Resumen
 
 <p align="justify">
