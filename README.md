@@ -20,8 +20,8 @@ Somos estudiantes del 7mo ciclo de la carrera de Ingeniería Biomédica, que bus
 
 # Temática del Proyecto
 
-### Title: ECG signal processing and feature extraction to feed a Artificial Intelligence model
-### Título: Procesamiento de señales de ECG y extracción de características para alimentar un modelo de Inteligencia Artificial
+### Title: ECG signal processing and feature extraction to validate feature significance for arrythmia detection
+### Título: Procesamiento de señales de ECG y extracción de características para validar la importancia de las características para la detección de arritmia
 
 URL paperswithcode: https://paperswithcode.com/paper/processing-and-feature-extraction-of-ecg 
 

@@ -1,4 +1,4 @@
-# ECG signal processing and feature extraction to feed a Artificial Intelligence model
+# ECG signal processing and feature extraction to validate feature significance for arrythmia detection
 
 # Tabla de contenidos
 - [Temática del proyecto](#temática-del-proyecto)
@@ -10,7 +10,7 @@
 
 
 # Temática del Proyecto
-### Procesamiento de señales de ECG y extracción de características para alimentar un modelo de Inteligencia Artificial
+### Procesamiento de señales de ECG y extracción de características para validar la importancia de las características para la detección de arritmia
 
 # Resumen
 
